@@ -1,0 +1,364 @@
+"use client";
+import AnimatedText from "@/components/common/AnimatedText";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+
+const services = [
+  {
+    id: "assessment",
+    label: "Site Assessment",
+    number: "01",
+    title: "Site Assessment",
+    description:
+      "A driveway addition ties into what's already there — existing concrete, existing pavers, existing grade, and existing drainage. Getting the assessment right determines whether the addition looks and performs like it was always part of the property.",
+    cards: [
+      {
+        image: "/assets/tww-assets/amw-images/471491786_122131258538562324_5519239003258990660_n.jpg",
+        heading: "Existing Conditions",
+        body: "Before AMW scopes a driveway addition, we assess the existing surface condition, thickness, reinforcement, and the drainage pattern of the current driveway. Existing concrete that's cracked through, heaving at joints, or undermined at the edges isn't a good candidate for a clean tie-in — that needs to be disclosed upfront so the client can decide whether to add onto a failing surface or address the root problem first. Tying a new pour to a deteriorating slab creates two failing surfaces instead of one.",
+        bullets: ["Existing surface condition, thickness, and reinforcement assessed before quote", "Drainage pattern of current driveway confirmed — addition must drain with it, not against it", "Failing or undermined existing surface flagged before new work is scoped"],
+      },
+      {
+        image: "/assets/tww-assets/amw-images/468506890_122122825832562324_1654340029600896302_n.jpg",
+        heading: "Grade & Drainage Direction",
+        body: "Driveway additions in Arizona have to manage sheet flow — the monsoon volume that hits an expanded driveway surface is significant. AMW confirms the existing drainage direction and designs the addition so new surface water flows with the existing pattern, not across it or toward the structure. A driveway addition that creates a low point against the garage foundation or diverts sheet flow toward the house is a liability, not an improvement.",
+        bullets: ["Existing drainage direction confirmed before addition is designed", "New surface drains with existing pattern — no new low points against structure", "Sheet flow path for monsoon volume confirmed in design, not discovered after pour"],
+      },
+    ],
+  },
+  {
+    id: "widening",
+    label: "Driveway Widening",
+    number: "02",
+    title: "Driveway Widening",
+    description:
+      "The most common driveway addition in the East Valley — adding width to an existing single-car drive to accommodate two cars, or widening a two-car drive to give real clearance on both sides. The tie-in to the existing edge is where this job succeeds or fails.",
+    cards: [
+      {
+        image: "/assets/tww-assets/amw-images/IMG_0736.jpg",
+        heading: "The Tie-In",
+        body: "Where the new concrete or pavers meet the existing driveway edge is the most critical detail on a widening job. For concrete-to-concrete tie-ins, AMW saw-cuts the existing edge straight, drills and epoxy-sets rebar dowels into the existing slab at 18-inch centers, and pours the addition against a clean, prepared face. Doweled tie-ins prevent differential vertical movement at the joint — one slab can't rise or drop relative to the other, which eliminates trip edges and keeps the surface flush over time. Undoweled butt joints have nothing holding elevation and crack apart under Arizona thermal cycling within a few summers.",
+        bullets: ["Existing edge saw-cut straight before new pour", "Rebar dowels epoxy-set at 18\" centers — prevents differential movement at the joint", "Undoweled butt joints lose elevation and crack apart under AZ thermal cycling — we don't pour them"],
+      },
+      {
+        image: "/assets/tww-assets/amw-images/470184191_122127744806562324_7273177088857394801_n.jpg",
+        heading: "Width & Clearance",
+        body: "A functional two-car driveway needs a minimum of 18 feet of paved width — 20 feet is better for comfortable door clearance on both sides. Many older East Valley homes were built with 16-foot driveways that technically fit two cars but don't allow doors to open without hitting each other or the wall. AMW confirms functional target width with the client before designing the addition — adding 18 inches to a 16-foot drive still leaves a frustrating driveway.",
+        bullets: ["Minimum 18' width for functional two-car use — 20' recommended for door clearance", "Existing width measured and target width confirmed before design", "Client advised to confirm HOA approval requirements before design is finalized"],
+      },
+    ],
+  },
+  {
+    id: "parking-pad",
+    label: "Parking Pads",
+    number: "03",
+    title: "Parking Pads",
+    description:
+      "A parking pad adjacent to the driveway adds a dedicated space for a third vehicle, a boat, or an RV without expanding the full driveway width. The connection to the existing driveway and the drainage design are the two decisions that determine long-term performance.",
+    cards: [
+      {
+        image: "/assets/tww-assets/amw-images/IMG_1167.HEIC.jpg",
+        heading: "Size & Surface",
+        body: "A standard single-car parking pad is 9 feet wide by 18 feet deep minimum — 10 by 20 feet gives comfortable clearance for doors and the front overhang. Boat and trailer pads need to account for tongue length beyond the vehicle. RV pads require 12 by 40 feet or more depending on the rig. AMW sizes pads to the actual vehicle before concrete is poured — undersized pads are the most common complaint on parking pad work, and the fix is a full demolition and repour.",
+        bullets: ["Standard car pad: 10' × 20' minimum for comfortable use", "Boat and trailer: tongue length added to vehicle length for depth", "RV pad: 12'+ wide × 40'+ deep — sized to actual rig before pour"],
+      },
+      {
+        image: "/assets/tww-assets/amw-images/b33260_f4ff9761c34d43cfba6812afedfad2cb~mv2.jpg",
+        heading: "Connection & Drainage",
+        body: "The parking pad has to drain — either back to the street via the driveway surface or to a designated drainage point at the perimeter. A pad that drains toward the house, pools in the center, or flows back through the garage door threshold is a failure regardless of how well the concrete was poured. AMW establishes pad grade and drainage direction in the layout stage, before any base work begins. The drainage path for a 200-square-foot pad during a monsoon event is a real volume calculation, not a guess.",
+        bullets: ["Pad grade and drainage direction established in layout — before base work", "Drainage routed to street via driveway surface or perimeter outlet", "Grade and drainage direction confirmed before pour — finish tolerance targeted to eliminate ponding"],
+      },
+    ],
+  },
+  {
+    id: "rv-pad",
+    label: "RV Pads",
+    number: "04",
+    title: "RV Pads",
+    description:
+      "An RV pad is the heaviest residential driveway addition AMW installs. The issue isn't total vehicle weight — it's the concentrated point load from dual rear axles on a small contact patch. Standard residential concrete spec isn't built for that load repeated over years of parking, and the approach grade from the street determines whether the rig can get on and off without dragging.",
+    cards: [
+      {
+        image: "/assets/tww-assets/amw-images/469885095_122127000512562324_1416536638482593030_n.jpg",
+        heading: "Base & Thickness for RV Load",
+        body: "Standard residential concrete is 4 inches over a compacted base — adequate for passenger vehicles but undersized for the concentrated axle load of an RV. The problem isn't the total weight of the rig spread across the whole pad — it's the point load from dual rear axles bearing down on a small footprint every time the vehicle parks. AMW specs RV pads at 5–6 inches of concrete over 6 inches of compacted aggregate base, with #4 rebar on 18-inch centers rather than wire mesh. That spec handles repeated heavy axle loading without the progressive cracking that a standard residential pour develops over time.",
+        bullets: ["5–6\" concrete — not standard 4\" residential spec", "6\" compacted aggregate base under full pad area", "#4 rebar on 18\" centers — not wire mesh"],
+      },
+      {
+        image: "/assets/tww-assets/amw-images/472536733_122133547178562324_4552320897647043634_n.jpg",
+        heading: "Approach Angle & Clearance",
+        body: "Getting an RV onto a side pad from the street requires a transition grade that the rig can navigate without the rear overhang dragging or the front cap scraping on the approach. AMW calculates the approach grade from the vehicle's wheelbase and overhang dimensions and flags the numbers to the client before pad elevation is set — the client confirms against their actual rig. The pad width also needs to account for slide-outs fully extended; a pad that's too narrow for slides is a problem discovered at 10 PM after a long drive.",
+        bullets: ["Approach grade calculated from vehicle wheelbase and overhang — flagged to client before elevation is set", "Client confirms approach grade against actual rig before design is finalized", "Pad width accounts for slide-out clearance — confirmed with client before design"],
+      },
+    ],
+  },
+  {
+    id: "turnaround",
+    label: "Turnarounds",
+    number: "05",
+    title: "Turnarounds",
+    description:
+      "A driveway turnaround eliminates the need to back out to the street — a real safety and convenience improvement on properties where the existing driveway ends at a garage with no room to turn around. The design type and dimensions have to fit the actual vehicles using it and the space available.",
+    cards: [
+      {
+        image: "/assets/tww-assets/amw-images/IMG_3687.HEIC.jpg",
+        heading: "Turnaround Types & Design",
+        body: "Two design types handle most residential turnaround situations. A hammerhead — a T-shaped extension at the end of the driveway — works in narrow lots and allows a structured three-point turn. A circular apron with enough radius allows a true one-motion swing without multi-point maneuvering, but requires significantly more space. AMW determines which design the site can accommodate, sizes it from the actual vehicle dimensions, and confirms the turning path works on paper before any forming begins. Getting the design wrong means the turnaround doesn't function as intended.",
+        bullets: ["Hammerhead: three-point turn in narrow lots — width and crossbar depth sized to vehicle", "Circular apron: one-motion swing — requires more space, eliminates multi-point turn entirely", "Design confirmed from actual vehicle dimensions before forming begins"],
+      },
+      {
+        image: "/assets/tww-assets/amw-images/473177002_122133547196562324_3990472910039640132_n.jpg",
+        heading: "Material & Tie-In",
+        body: "Turnarounds are most commonly poured in concrete to match an existing concrete driveway, but pavers work well where the visual detail is important or where the existing driveway is pavers. For concrete turnarounds tying into an existing concrete drive, AMW dowels the connection the same way as a widening — saw-cut existing edge, epoxy-set rebar dowels, pour against a prepared face. For paver turnarounds, the pattern is laid out to flow naturally from the existing field without creating an obvious seam.",
+        bullets: ["Concrete or pavers — matched to existing driveway material", "Concrete tie-in: saw-cut edge, epoxy-set dowels, pour against prepared face", "Paver tie-in: pattern flows from existing field — no visible seam at junction"],
+      },
+    ],
+  },
+  {
+    id: "base-joints",
+    label: "Base & Joints",
+    number: "06",
+    title: "Base & Joints",
+    description:
+      "The base and the joint placement determine the long-term performance of any driveway addition — regardless of material. Arizona's thermal range and monsoon saturation cycles stress driveway concrete harder than most climates. These details are not optional.",
+    cards: [
+      {
+        image: "/assets/tww-assets/amw-images/471544742_122131259132562324_7592514666165949808_n.jpg",
+        heading: "Base Preparation",
+        body: "Every driveway addition AMW installs starts with excavation to the required depth, compaction of native sub-grade, and a 4–6 inch compacted aggregate base. In Arizona, caliche at shallow depth can create an uneven bearing layer that causes differential settling — AMW identifies and addresses caliche variations during base prep rather than pouring over them. A consistent, compacted base is what gives a driveway addition the best chance of staying level and performing long-term. Concrete will crack — control joints manage where.",
+        bullets: ["4–6\" compacted aggregate base on every addition", "Native sub-grade compacted before base material is placed", "Caliche variations identified and addressed at base prep — not poured over"],
+      },
+      {
+        image: "/assets/tww-assets/amw-images/IMG_4156.jpg",
+        heading: "Control Joints",
+        body: "Concrete expands and contracts with temperature — in Arizona, the daily and seasonal thermal range is significant. Control joints cut into the slab at planned intervals give the concrete a place to crack that doesn't compromise the surface. AMW cuts control joints at a maximum of 10 feet in each direction for residential driveway additions — tighter spacing in areas with direct sun exposure or significant thermal mass. Joints are cut to one-quarter the slab depth so they penetrate far enough to actually control where cracking occurs.",
+        bullets: ["Control joints at maximum 10' spacing — tighter in high sun-exposure areas", "Joints cut to 1/4 slab depth — penetrates far enough to control crack location", "Joint layout planned before pour — not cut randomly after the fact"],
+      },
+    ],
+  },
+];
+
+export default function AMWDrivewayService() {
+  const [modalSvc, setModalSvc] = useState(null);
+  const [cardIdx, setCardIdx] = useState(0);
+
+  function openModal(svc) { setModalSvc(svc); setCardIdx(0); }
+  function closeModal() { setModalSvc(null); setCardIdx(0); }
+  function prev() { setCardIdx((i) => Math.max(0, i - 1)); }
+  function next() { setCardIdx((i) => Math.min(modalSvc.cards.length - 1, i + 1)); }
+
+  const activeCard = modalSvc ? modalSvc.cards[cardIdx] : null;
+
+  return (
+    <div className="container position-relative">
+      <style>{`
+        .services-tabs .nav-link,
+        .services-tabs a {
+          font-size: 24px !important;
+          font-weight: 500 !important;
+          color: #555 !important;
+          opacity: 1 !important;
+        }
+        .services-tabs a.active,
+        .services-tabs .nav-link.active {
+          color: #111 !important;
+          font-weight: 700 !important;
+        }
+        .amw-service-img-wrap {
+          position: relative;
+          width: 100%;
+          height: 680px;
+          overflow: hidden;
+          border-radius: 4px;
+        }
+        @media (max-width: 1100px) {
+          .wvsvc-tabs-desktop { display: none !important; }
+          .wvsvc-tabs-mobile {
+            display: block !important;
+            width: 100%;
+            padding: 14px 18px;
+            font-size: 18px;
+            font-weight: 700;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background: #fff;
+            color: #111;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%23111' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            cursor: pointer;
+            margin-bottom: 24px;
+            max-width: 350px;
+          }
+        }
+        .wvsvc-tabs-mobile { display: none; }
+        @media (max-width: 991px) {
+          .wvsvc-tabs-mobile { max-width: 100% !important; }
+          .services-text { margin-top: 0 !important; }
+          .services-text-container { margin-left: 0 !important; }
+          .wvsvc-img-col { margin-top: 40px !important; }
+        }
+        @media (max-width: 767px) {
+          .wvsvc-img-col { margin-top: 32px !important; }
+        }
+        @media (max-width: 575px) {
+          .amw-service-img-wrap { height: 280px; }
+          .services-text { margin-top: 0 !important; }
+          .services-text-container { margin: 0 !important; padding: 16px 18px 20px !important; }
+          .services-text-container p { font-size: 14px !important; line-height: 1.65 !important; }
+          .services-text-container .services-title { font-size: 20px !important; margin-bottom: 8px !important; }
+        }
+        .services-text { position: relative; z-index: 2; margin-top: -180px; }
+        .services-text-container { background: #f5f5f5; padding: 28px 32px 32px; margin: 0 0 0 40px; }
+        .amw-modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.65); z-index: 9998; display: flex; align-items: center; justify-content: center; padding: 20px; }
+        .amw-modal { background: #fff; border-radius: 10px; max-width: 860px; width: 100%; max-height: 92vh; overflow: hidden; z-index: 9999; display: grid; grid-template-columns: 48% 52%; box-shadow: 0 24px 80px rgba(0,0,0,0.4); position: relative; }
+        @media (max-width: 640px) { .amw-modal { grid-template-columns: 1fr; max-height: 92vh; overflow-y: auto; } }
+        .amw-modal-img { position: relative; min-height: 340px; border-radius: 10px 0 0 10px; overflow: hidden; }
+        @media (max-width: 640px) { .amw-modal-img { min-height: 240px; border-radius: 10px 10px 0 0; } }
+        .amw-modal-body { padding: 44px 40px 36px; display: flex; flex-direction: column; justify-content: center; gap: 16px; overflow-y: auto; }
+        @media (max-width: 640px) { .amw-modal-body { padding: 30px 24px; } }
+        .amw-modal-close { position: absolute; top: 14px; right: 18px; background: rgba(255,255,255,0.92); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-size: 20px; line-height: 1; cursor: pointer; color: #444; z-index: 10000; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+        .amw-modal-close:hover { color: #111; background: #fff; }
+        .amw-modal-bullets { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 9px; border-top: 1px solid #eee; padding-top: 16px; }
+        .amw-modal-bullets li { padding-left: 20px; position: relative; color: #444; font-size: 13.5px; line-height: 1.45; }
+        .amw-modal-bullets li::before { content: '✓'; position: absolute; left: 0; color: #111; font-size: 11px; top: 2px; font-weight: 700; }
+        .amw-modal-nav { display: flex; align-items: center; gap: 10px; padding: 8px 0 4px; border-top: 1px solid #eee; }
+        .amw-modal-nav-btn { background: #111; border: none; border-radius: 50%; width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 22px; color: #fff; transition: background 0.15s; flex-shrink: 0; line-height: 1; }
+        .amw-modal-nav-btn:hover:not(:disabled) { background: #333; }
+        .amw-modal-nav-btn:disabled { opacity: 0.2; cursor: default; }
+        .amw-modal-nav-dots { display: flex; gap: 7px; flex: 1; justify-content: center; }
+        .amw-modal-dot { width: 9px; height: 9px; border-radius: 50%; background: #ccc; transition: background 0.15s, transform 0.15s; cursor: pointer; border: none; padding: 0; }
+        .amw-modal-dot:hover { background: #888; }
+        .amw-modal-dot.active { background: #111; transform: scale(1.3); }
+        @keyframes amw-shake { 0%, 90%, 100% { transform: translateX(0); } 92% { transform: translateX(-5px); } 94% { transform: translateX(5px); } 96% { transform: translateX(-4px); } 98% { transform: translateX(3px); } }
+        .amw-learn-more-btn { animation: amw-shake 6s ease-in-out infinite; animation-delay: 2s; }
+        .amw-learn-more-btn:hover { animation: none; }
+        .amw-modal-ctas { display: flex; gap: 10px; }
+        .amw-modal-cta-primary { flex: 1 1 auto; text-align: center; }
+        .amw-modal-cta-secondary { flex: 0 0 auto; white-space: nowrap; }
+        @media (max-width: 480px) { .amw-modal-ctas { flex-direction: column; } .amw-modal-cta-primary, .amw-modal-cta-secondary { flex: 1 1 auto; text-align: center; } }
+      `}</style>
+
+      <div className="row">
+        <div className="col-lg-6 mb-lg-0 mb-30">
+          <h2 className="section-title mb-30">
+            <AnimatedText text="Driveway Additions" />
+          </h2>
+          <div className="row">
+            <div className="col-lg-10">
+              <p className="section-descr mb-20 mb-sm-20 wow fadeInUp" data-wow-delay="0.4s">
+                Widening, parking pads, RV pads, and turnarounds — additions that tie into what&rsquo;s already there. The existing surface condition, drainage pattern, and tie-in detail are the decisions that determine whether the addition performs as one integrated driveway or starts separating at the joint after the first Arizona summer.
+              </p>
+            </div>
+          </div>
+          <ul className="nav nav-tabs services-tabs wvsvc-tabs-desktop wow fadeInUp" data-wow-delay="0.55s" role="tablist">
+            {services.map((svc, i) => (
+              <li key={svc.id} role="presentation">
+                <a
+                  href={`#wvsvc-${svc.id}`}
+                  className={i === 0 ? "active" : ""}
+                  aria-controls={`#wvsvc-${svc.id}`}
+                  role="tab"
+                  aria-selected={i === 0}
+                  data-bs-toggle="tab"
+                >
+                  {svc.label} <span className="number">{svc.number}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <select
+            className="wvsvc-tabs-mobile"
+            defaultValue={services[0].id}
+            onChange={(e) => {
+              const tab = document.querySelector(`a[href="#wvsvc-${e.target.value}"]`);
+              if (tab) tab.click();
+            }}
+          >
+            {services.map((svc) => (
+              <option key={svc.id} value={svc.id}>{svc.label}</option>
+            ))}
+          </select>
+          <div className="wow fadeInUp" data-wow-delay="0.7s">
+            <Link href="/#contact-form" className="btn btn-mod btn-large btn-round btn-hover-anim">
+              <span>Get a Free Estimate</span>
+            </Link>
+          </div>
+        </div>
+
+        <div className="col-lg-6 wvsvc-img-col d-flex wow fadeInLeft" data-wow-delay="0.55s" data-wow-offset={275}>
+          <div className="tab-content services-content" style={{ width: "100%" }}>
+            {services.map((svc, i) => (
+              <div
+                key={svc.id}
+                className={`tab-pane services-content-item fade ${i === 0 ? "show active" : ""}`}
+                id={`wvsvc-${svc.id}`}
+                role="tabpanel"
+              >
+                <div className="amw-service-img-wrap">
+                  <Image
+                    fill
+                    src={svc.cards[0].image}
+                    alt={svc.title}
+                    style={{ objectFit: "cover", objectPosition: "center", filter: "contrast(1.12) saturate(1.25) brightness(1.06)" }}
+                    sizes="(max-width: 992px) 100vw, 50vw"
+                    priority={i === 0}
+                    loading={i === 0 ? "eager" : "lazy"}
+                  />
+                </div>
+                <div className="services-text">
+                  <div className="services-text-container">
+                    <h4 className="services-title">{svc.title}</h4>
+                    <p className="text-gray mb-20">{svc.description}</p>
+                    <button className="btn btn-mod btn-small btn-round amw-learn-more-btn" onClick={() => openModal(svc)}>
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Modal */}
+      {modalSvc && activeCard && (
+        <div className="amw-modal-backdrop" onClick={closeModal}>
+          <div className="amw-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="amw-modal-img">
+              <Image fill src={activeCard.image} alt={activeCard.heading} style={{ objectFit: "cover", filter: "contrast(1.12) saturate(1.25) brightness(1.06)" }} sizes="430px" />
+            </div>
+            <div className="amw-modal-body">
+              <button className="amw-modal-close" onClick={closeModal} aria-label="Close">×</button>
+              <h3 style={{ fontSize: 22, fontWeight: 800, marginBottom: 0, lineHeight: 1.2, paddingRight: 20 }}>{activeCard.heading}</h3>
+              <p style={{ color: "#555", lineHeight: 1.75, marginBottom: 0, fontSize: 14 }}>{activeCard.body}</p>
+              {activeCard.bullets && (
+                <ul className="amw-modal-bullets">
+                  {activeCard.bullets.map((b, i) => <li key={i}>{b}</li>)}
+                </ul>
+              )}
+              {modalSvc.cards.length > 1 && (
+                <div className="amw-modal-nav">
+                  <button className="amw-modal-nav-btn" onClick={prev} disabled={cardIdx === 0} aria-label="Previous">‹</button>
+                  <div className="amw-modal-nav-dots">
+                    {modalSvc.cards.map((_, i) => (
+                      <button key={i} className={`amw-modal-dot${cardIdx === i ? " active" : ""}`} onClick={() => setCardIdx(i)} aria-label={`Card ${i + 1}`} />
+                    ))}
+                  </div>
+                  <button className="amw-modal-nav-btn" onClick={next} disabled={cardIdx === modalSvc.cards.length - 1} aria-label="Next">›</button>
+                </div>
+              )}
+              <div className="amw-modal-ctas">
+                <Link href="/#contact-form" className="btn btn-mod btn-large btn-round btn-hover-anim amw-modal-cta-primary" onClick={closeModal}><span>Free Estimate</span></Link>
+                <a href="tel:+14807216561" className="btn btn-mod btn-large btn-border btn-round amw-modal-cta-secondary">Call Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
