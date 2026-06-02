@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import "@/components/homes/amw/AMWContact.module.css";
 
 const cities = [
@@ -13,6 +14,23 @@ const cities = [
 
 export default function AMWServiceAreaLinks() {
   const [activeCity, setActiveCity] = useState(null);
+  const [portalRoot, setPortalRoot] = useState(null);
+
+  useEffect(() => {
+    setPortalRoot(document.body);
+  }, []);
+
+  useEffect(() => {
+    if (!activeCity) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e) => { if (e.key === "Escape") setActiveCity(null); };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [activeCity]);
 
   return (
     <>
@@ -28,7 +46,7 @@ export default function AMWServiceAreaLinks() {
         ))}
       </div>
 
-      {activeCity && (
+      {activeCity && portalRoot && createPortal(
         <div className="amw-city-modal-backdrop" onClick={() => setActiveCity(null)}>
           <div className="amw-city-modal" onClick={(e) => e.stopPropagation()}>
             <div className="amw-city-modal-header">
@@ -52,7 +70,8 @@ export default function AMWServiceAreaLinks() {
               title={`${activeCity.name} AZ map`}
             />
           </div>
-        </div>
+        </div>,
+        portalRoot
       )}
     </>
   );
