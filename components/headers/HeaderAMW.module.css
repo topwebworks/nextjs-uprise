@@ -235,6 +235,48 @@
   height: 64px;
   border-bottom: 1px solid rgba(255,255,255,0.08);
   flex-shrink: 0;
+  gap: 12px;
+  overflow: hidden;
+}
+
+:global(.amw-mobile-menu-header .amw-logo) {
+  gap: 10px !important;
+  padding: 0 !important;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+:global(.amw-mobile-menu-header .amw-logo-badge-wrap) {
+  width: 36px !important;
+  height: 32px !important;
+  border-radius: 6px !important;
+  flex-shrink: 0;
+}
+
+:global(.amw-mobile-menu-header .amw-logo-text) {
+  min-width: 0;
+  overflow: hidden;
+}
+
+:global(.amw-mobile-menu-header .amw-logo-primary) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+:global(.amw-mobile-menu-header .amw-logo-amw) {
+  font-size: 18px !important;
+  color: #fff !important;
+}
+
+:global(.amw-mobile-menu-header .amw-logo-hardscape) {
+  font-size: 18px !important;
+  color: rgba(255,255,255,0.85) !important;
+}
+
+:global(.amw-mobile-menu-header .amw-logo-solutions) {
+  display: none !important;
 }
 
 :global(.amw-mobile-menu-close) {
