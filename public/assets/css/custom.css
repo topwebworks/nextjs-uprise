@@ -69,7 +69,8 @@ a {
 
 /* Mobile: mn-sub is display:block but collapsed via max-height in style.css.
    Reveal it when the parent li has js-opened. */
-.main-nav.mobile-on .inner-nav li.js-opened > .mn-sub {
+.main-nav.mobile-on .inner-nav li.js-opened > .mn-sub,
+.inner-nav li.amw-services-dropdown.js-opened > .mn-sub {
   max-height: 400px !important;
   opacity: 1 !important;
 }
