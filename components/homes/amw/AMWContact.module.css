@@ -147,6 +147,51 @@
   font-family: 'Google Sans', Arial, sans-serif;
 }
 
+/* Next steps */
+:global(.amw-next-steps) {
+  background: #f7f7f5;
+  border-radius: 8px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+:global(.amw-next-steps-title) {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 2px;
+}
+
+:global(.amw-next-step) {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+:global(.amw-next-step-num) {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:global(.amw-next-step-text) {
+  font-size: 13.5px;
+  color: #333;
+  line-height: 1.4;
+}
+
 :global(.amw-city-modal-backdrop) {
   position: fixed;
   inset: 0;
