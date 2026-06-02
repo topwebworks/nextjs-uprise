@@ -1,3 +1,11 @@
+/* Prevent orphans sitewide */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+p, .section-descr, .alt-features-descr, .text-gray {
+  text-wrap: pretty;
+}
+
 /* Light-bg secondary button — dark border, light hover */
 .btn-secondary-light { background: transparent; color: #111; border-color: #111; }
 .btn-secondary-light.btn-hover-anim:before { background: #e8e8e6; }
