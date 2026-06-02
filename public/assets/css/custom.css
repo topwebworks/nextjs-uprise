@@ -2,7 +2,13 @@
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
-p, .section-descr, .alt-features-descr, .text-gray {
+p, li,
+.section-descr, .alt-features-descr, .text-gray,
+.amw-process-desc, .amw-process-title,
+.amw-review-quote, .amw-form-review-quote,
+.amw-next-step-text, .amw-about-intro,
+.amw-modal-body-text, .amw-modal-bullets li,
+.faqAnswer, .alt-features-descr {
   text-wrap: pretty;
 }
 
