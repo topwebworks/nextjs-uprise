@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import NextImageLightbox from "@/components/common/NextImageLightbox";
+import "@/components/homes/amw/AMWGallery.module.css";
 
 const filters = ["All", "Pavers", "Concrete", "Driveways", "Turf", "Rock"];
 
@@ -138,63 +139,6 @@ export default function AMWGallery() {
 
   return (
     <>
-      <style>{`
-        .amw-gallery-thumb {
-          cursor: zoom-in;
-          display: block;
-          position: relative;
-          overflow: hidden;
-          aspect-ratio: 1/1;
-          width: 100%;
-          border: 0;
-          padding: 0;
-          background: transparent;
-          color: inherit;
-          text-align: left;
-        }
-        .amw-gallery-thumb img {
-          filter: contrast(1.08) saturate(1.2) brightness(1.04);
-          transition: transform 0.4s ease, filter 0.4s ease;
-        }
-        .amw-gallery-thumb:hover img {
-          transform: scale(1.04);
-          filter: contrast(1.12) saturate(1.3) brightness(1.08);
-        }
-        @keyframes amw-shuffle-in {
-          0% { opacity: 0; transform: translateY(18px) scale(0.96); }
-          100% { opacity: 1; transform: translateY(0) scale(1); }
-        }
-        .amw-shuffle .amw-gallery-thumb {
-          animation: amw-shuffle-in 0.35s ease both;
-        }
-        .amw-filter-desktop { white-space: nowrap; flex-wrap: nowrap !important; }
-        .amw-filter-mobile { display: none; }
-        @media (max-width: 767px) {
-          .amw-filter-desktop { display: none !important; }
-          .amw-filter-mobile {
-            display: block;
-            width: 100%;
-            max-width: 350px;
-            padding: 14px 18px;
-            font-size: 18px;
-            font-weight: 700;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            background: #fff;
-            color: #111;
-            appearance: none;
-            -webkit-appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%23111' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 16px center;
-            cursor: pointer;
-          }
-        }
-        @media (max-width: 575px) {
-          .amw-filter-mobile { max-width: 100%; }
-        }
-      `}</style>
-
       <div className="container position-relative">
         <div className="row mb-10">
           <div className="col-md-8">
