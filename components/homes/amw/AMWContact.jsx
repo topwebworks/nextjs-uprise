@@ -12,9 +12,9 @@ export default function AMWContact() {
         <div className="col-lg-6">
           <div className="row mb-50">
             <div className="col-lg-10">
-              <h2 className="section-caption mb-xs-10">Contact Us</h2>
+              <h2 className="section-caption mb-xs-10">Free Estimate</h2>
               <h3 className="section-title mb-0">
-                <AnimatedText text="Request a free estimate." />
+                <AnimatedText text="Tell us about your project." />
               </h3>
             </div>
           </div>

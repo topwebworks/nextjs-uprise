@@ -63,6 +63,6 @@ export const navigationLinks = [
   { href: "/#gallery", text: "Our Work" },
   { href: "/about", text: "About" },
   { href: "/blog", text: "Blog" },
-  { href: "/support", text: "Support & Contact" },
-  { href: "/#contact", text: "Free Estimate" },
+  { href: "/support", text: "Contact Us" },
+  { href: "/#contact-form", text: "Free Estimate" },
 ];

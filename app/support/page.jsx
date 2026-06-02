@@ -7,10 +7,11 @@ import AMWContactSection from "@/components/homes/amw/AMWContactSection";
 import { buildMetadata } from "@/utils/seo";
 
 export const metadata = buildMetadata({
-  title: "Free Hardscape Estimate San Tan Valley AZ | Contact AMW Hardscape Solutions",
+  title: "Contact AMW Hardscape Solutions | San Tan Valley, Queen Creek & East Valley",
   description:
-    "Get a free hardscape estimate from AMW Hardscape Solutions. Licensed contractor serving San Tan Valley, Queen Creek, Gilbert, Mesa, Chandler, Apache Junction, Maricopa & the East Valley. Call (480) 721-6561 today.",
+    "Questions about a project, scheduling, or existing work? Contact AMW Hardscape Solutions — licensed hardscape contractor serving San Tan Valley, Queen Creek, Gilbert, Mesa, Chandler & Apache Junction.",
   path: "/support",
+  tags: ["contact", "hardscape contractor", "san tan valley", "queen creek", "gilbert", "east valley", "arizona hardscape"],
 });
 
 const cities = [
@@ -87,8 +88,7 @@ export default function MainAboutPage1() {
                                 className="wow charsAnimIn"
                                 data-splitting="chars"
                               >
-                                Questions about your&nbsp;project? We&rsquo;re here
-                                to&nbsp;help.
+                                Contact us. We&rsquo;re easy to reach.
                               </span>
                             </h1>
                           </div>
@@ -105,9 +105,9 @@ export default function MainAboutPage1() {
               {/* Contact Section */}
               <section className="page-section pt-0 amw-light-hero-next amw-support-contact-section" id="contact">
                 <AMWContactSection
-                  introTitle="We're here to help with your AMW project."
-                  introText="Have a question about your estimate, scheduling, materials, or a project already in motion? Send us a note and our team will help with the next step, from service details and timing to follow-up support after the work is done."
-                  formDisclaimer="All fields required. We'll follow up about your AMW request."
+                  introTitle="Questions, scheduling, or follow-up — we've got you."
+                  introText="Whether you have a question about materials, want to check on scheduling, or need to follow up on work already done — send us a message. We respond to every inquiry directly."
+                  formDisclaimer="All fields required. We'll follow up with you directly."
                   embedForm
                   formKey="contact"
                   formPlaceholderTitle="Get in Touch"
