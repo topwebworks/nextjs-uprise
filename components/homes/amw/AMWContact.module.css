@@ -245,3 +245,9 @@
 :global(.amw-city-modal-close:hover) {
   color: #111;
 }
+
+:global(.amw-city-modal iframe) {
+  flex: 1;
+  min-height: 0;
+  display: block;
+}
