@@ -1,0 +1,24 @@
+/* AMWContact — GHL form embed sizing */
+
+:global(.amw-estimate-embed) {
+  min-height: 620px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+:global(.amw-estimate-embed iframe) {
+  min-height: 620px;
+  display: block;
+}
+
+:global(.amw-estimate-embed.border) {
+  min-height: 360px;
+  padding: 48px 28px !important;
+}
+
+@media (max-width: 575px) {
+  :global(.amw-estimate-embed),
+  :global(.amw-estimate-embed iframe) {
+    min-height: 700px;
+  }
+}

@@ -2,32 +2,11 @@
 import AnimatedText from "@/components/common/AnimatedText";
 import ContactForm from "@/components/ghl/ContactForm";
 import site from "@/data/site";
+import "@/components/homes/amw/AMWContact.module.css";
 
 export default function AMWContact() {
   return (
     <div className="container position-relative">
-      <style>{`
-        .amw-estimate-embed {
-          min-height: 620px;
-          border-radius: 8px;
-          background: #fff;
-        }
-        .amw-estimate-embed iframe {
-          min-height: 620px;
-          display: block;
-        }
-        .amw-estimate-embed.border {
-          min-height: 360px;
-          padding: 48px 28px !important;
-        }
-        @media (max-width: 575px) {
-          .amw-estimate-embed,
-          .amw-estimate-embed iframe {
-            min-height: 700px;
-          }
-        }
-      `}</style>
-
       <div className="row">
         <div className="col-lg-6">
           <div className="row mb-50">
