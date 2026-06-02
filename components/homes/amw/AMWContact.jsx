@@ -73,8 +73,8 @@ export default function AMWContact() {
           <ContactForm
             form="estimate"
             className="amw-estimate-embed"
-            placeholderTitle="Estimate form embed placeholder."
-            placeholderText="This spot is ready for the estimate form embed once the AMW CRM account is connected."
+            placeholderTitle="Request a Free Estimate"
+            placeholderText="Tell us about your project — pavers, concrete, turf, rock, demolition, or driveway additions. We'll get back to you within 24 hours."
             placeholderFields={[
               "Name",
               "Phone",

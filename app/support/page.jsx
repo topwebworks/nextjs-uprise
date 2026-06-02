@@ -110,8 +110,8 @@ export default function MainAboutPage1() {
                   formDisclaimer="All fields required. We'll follow up about your AMW request."
                   embedForm
                   formKey="contact"
-                  formPlaceholderTitle="Support form embed placeholder."
-                  formPlaceholderText="This spot is ready for the AMW support form embed once the CRM account is connected."
+                  formPlaceholderTitle="Get in Touch"
+                  formPlaceholderText="Questions about a project, an existing job, or just want to talk through your options? Send us a message and we'll follow up within 24 hours."
                   formPlaceholderFields={[
                     "Name",
                     "Phone",
