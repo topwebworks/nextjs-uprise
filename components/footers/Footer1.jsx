@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { footerLinks, navigationLinks, serviceLinks } from "@/data/footer";
 import site from "@/data/site";
+import "@/components/footers/Footer1.module.css";
 
 export default function Footer1({ dark = false }) {
   const scrollToTop = (event) => {
@@ -23,22 +24,21 @@ export default function Footer1({ dark = false }) {
       <div className="container">
         <div className="row pb-120 pb-sm-80 pb-xs-50">
           <div className="col-md-4 col-lg-3 text-gray mb-sm-50">
-            <Link href={"/"} className="mb-30 d-inline-flex align-items-center text-decoration-none" style={{ gap: 4 }}>
-              <span style={{ flexShrink: 0, display: "block", position: "relative", overflow: "hidden", width: 72, height: 50, borderRadius: 10 }} role="img" aria-label="AMW logo">
+            <Link href={"/"} className="mb-30 d-inline-flex align-items-center text-decoration-none footer-logo-link">
+              <span className="footer-logo-badge" role="img" aria-label="AMW logo">
                 <Image
                   src="/assets/tww-assets/amw-images/IMG_9002_edited_edited.avif"
                   alt=""
                   fill
                   sizes="72px"
-                  style={{ objectFit: "contain", objectPosition: "center" }}
                 />
               </span>
-              <span style={{ display: "flex", flexDirection: "column", gap: 2 }}>
-                <span style={{ display: "block", lineHeight: 1 }}>
-                  <span style={{ fontSize: 22, fontWeight: 900, letterSpacing: "0.06em", textTransform: "uppercase", color: "#111" }}>AMW</span>
-                  <span style={{ fontSize: 22, fontWeight: 300, letterSpacing: "0.06em", textTransform: "uppercase", color: "#111" }}> Hardscape</span>
+              <span className="footer-logo-text">
+                <span className="footer-logo-primary">
+                  <span className="footer-logo-amw">AMW</span>
+                  <span className="footer-logo-hardscape"> Hardscape</span>
                 </span>
-                <span style={{ display: "block", fontSize: 10, fontWeight: 600, letterSpacing: "0.32em", textTransform: "uppercase", color: "rgba(0,0,0,0.45)", lineHeight: 1, whiteSpace: "nowrap" }}>S O L U T I O N S</span>
+                <span className="footer-logo-solutions">S O L U T I O N S</span>
               </span>
             </Link>
             <div className="clearlinks">
@@ -49,18 +49,18 @@ export default function Footer1({ dark = false }) {
             </div>
             <div className="mt-10">{site.address.city}, {site.address.state}</div>
             {site.roc && (
-              <div className="mt-10" style={{ color: "rgba(0,0,0,0.45)" }}>
+              <div className="mt-10 footer-roc">
                 {site.roc.join(" · ")}
               </div>
             )}
             <div className="mt-20 d-flex gap-3">
               {site.social.facebook && (
-                <a href={site.social.facebook} target="_blank" rel="noopener nofollow" style={{ color: "#111", fontSize: 18 }} aria-label="Facebook">
+                <a href={site.social.facebook} target="_blank" rel="noopener nofollow" className="footer-social-link" aria-label="Facebook">
                   <i className="fab fa-facebook-f" />
                 </a>
               )}
               {site.social.instagram && (
-                <a href={site.social.instagram} target="_blank" rel="noopener nofollow" style={{ color: "#111", fontSize: 18 }} aria-label="Instagram">
+                <a href={site.social.instagram} target="_blank" rel="noopener nofollow" className="footer-social-link" aria-label="Instagram">
                   <i className="fab fa-instagram" />
                 </a>
               )}

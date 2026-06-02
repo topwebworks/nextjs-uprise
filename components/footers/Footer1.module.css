@@ -1,0 +1,67 @@
+/* Footer1 — logo lockup and social icon styles */
+
+:global(.footer-logo-link) {
+  gap: 4px;
+}
+
+:global(.footer-logo-badge) {
+  flex-shrink: 0;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 72px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+:global(.footer-logo-badge img) {
+  object-fit: contain;
+  object-position: center;
+}
+
+:global(.footer-logo-text) {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+:global(.footer-logo-primary) {
+  display: block;
+  line-height: 1;
+}
+
+:global(.footer-logo-amw) {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #111;
+}
+
+:global(.footer-logo-hardscape) {
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #111;
+}
+
+:global(.footer-logo-solutions) {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.45);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+:global(.footer-roc) {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+:global(.footer-social-link) {
+  color: #111;
+  font-size: 18px;
+}
