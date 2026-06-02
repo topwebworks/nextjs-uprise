@@ -256,9 +256,9 @@ export default function HeaderAMW() {
             </ul>
           </li>
           <li>
-            <Link href="/#gallery" onClick={closeMobileMenu}>
+            <a href="/#gallery" onClick={closeMobileMenu}>
               Gallery
-            </Link>
+            </a>
           </li>
           <li>
             <Link href="/about" className={pathname === "/about" ? "active" : ""} onClick={closeMobileMenu}>
@@ -266,9 +266,9 @@ export default function HeaderAMW() {
             </Link>
           </li>
           <li>
-            <Link href="/#contact-form" onClick={closeMobileMenu}>
+            <a href="/#contact-form" onClick={closeMobileMenu}>
               FREE ESTIMATE
-            </Link>
+            </a>
           </li>
         </ul>
         <ul className="items-end clearlist">
