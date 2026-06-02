@@ -106,19 +106,50 @@ export default function AMWContact() {
           />
         </div>
 
-        <div className="col-md-6 d-flex align-items-stretch">
-          <div className="map-boxed">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d193000!2d-111.65!3d33.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1716000000000"
-              width={600}
-              height={450}
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="AMW Hardscape Solutions service area - San Tan Valley, Mesa, Queen Creek, Gilbert AZ"
-            />
+        <div className="col-md-6 d-flex flex-column gap-3">
+
+          {/* Trust bar */}
+          <div className="amw-form-trust-bar">
+            <div className="amw-form-trust-item">
+              <i className="mi-document-check amw-form-trust-icon" aria-hidden="true" />
+              <div>
+                <div className="amw-form-trust-label">AZ Licensed &amp; Insured</div>
+                <div className="amw-form-trust-sub">ROC #359843 · ROC #346552</div>
+              </div>
+            </div>
+            <div className="amw-form-trust-item">
+              <div className="amw-form-trust-stars" aria-label="5 stars">
+                {[...Array(5)].map((_, i) => (
+                  <i key={i} className="icon-star-rate amw-form-star" aria-hidden="true" />
+                ))}
+              </div>
+              <div>
+                <div className="amw-form-trust-label">5-Star Google Reviews</div>
+                <div className="amw-form-trust-sub">Rated 5 stars on Google Business</div>
+              </div>
+            </div>
           </div>
+
+          {/* Review cards */}
+          {[
+            { quote: "Brad and his crew did a great job on a patio extension and walkway. They were always on time, and communicated well throughout the whole project.", author: "Austin Bartley" },
+            { quote: "They answer the phone which is a HUGE plus — showed up on time and stayed until the job was completed 100%. We will use them again.", author: "Frost" },
+            { quote: "Honest, helpful, and happy I chose Brad and his crew to help me with my project of installing turf. Would recommend!", author: "BJ Carmack" },
+          ].map((r, i) => (
+            <div key={i} className="amw-form-review">
+              <div className="amw-form-review-stars">
+                {[...Array(5)].map((_, s) => (
+                  <i key={s} className="icon-star-rate amw-form-star" aria-hidden="true" />
+                ))}
+              </div>
+              <p className="amw-form-review-quote">&ldquo;{r.quote}&rdquo;</p>
+              <div className="amw-form-review-footer">
+                <span className="amw-form-review-author">{r.author}</span>
+                <span className="amw-form-review-g">G</span>
+              </div>
+            </div>
+          ))}
+
         </div>
       </div>
 
