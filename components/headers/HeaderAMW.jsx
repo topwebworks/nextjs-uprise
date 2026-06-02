@@ -34,15 +34,17 @@ function MobileMenu({ onClose }) {
 
       {/* Header bar */}
       <div className="amw-mobile-menu-header">
-        <Link href="/" className="logo amw-logo" onClick={onClose}>
-          <span className="amw-logo-badge-wrap" role="img" aria-label="AMW Hardscape Solutions logo">
-            <Image src="/assets/tww-assets/amw-images/IMG_9002_edited_edited.avif" alt="" fill sizes="42px" className="amw-logo-badge-image" />
-          </span>
-          <span className="amw-logo-text">
-            <span className="amw-logo-primary">
-              <span className="amw-logo-amw">AMW</span>
-              <span className="amw-logo-hardscape"> Hardscape</span>
-            </span>
+        <Link href="/" className="amw-mobile-logo" onClick={onClose}>
+          <Image
+            src="/assets/tww-assets/amw-images/IMG_9002_edited_edited.avif"
+            alt=""
+            width={36}
+            height={32}
+            className="amw-mobile-logo-badge"
+          />
+          <span className="amw-mobile-logo-text">
+            <span className="amw-mobile-logo-amw">AMW</span>
+            <span className="amw-mobile-logo-hardscape"> Hardscape</span>
           </span>
         </Link>
         <button className="amw-mobile-menu-close" onClick={onClose} aria-label="Close menu">

@@ -239,44 +239,43 @@
   overflow: hidden;
 }
 
-:global(.amw-mobile-menu-header .amw-logo) {
-  gap: 10px !important;
-  padding: 0 !important;
+:global(.amw-mobile-logo) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
   flex: 1;
   min-width: 0;
   overflow: hidden;
 }
 
-:global(.amw-mobile-menu-header .amw-logo-badge-wrap) {
-  width: 36px !important;
-  height: 32px !important;
-  border-radius: 6px !important;
+:global(.amw-mobile-logo-badge) {
   flex-shrink: 0;
+  border-radius: 6px;
+  object-fit: contain;
 }
 
-:global(.amw-mobile-menu-header .amw-logo-text) {
-  min-width: 0;
-  overflow: hidden;
-}
-
-:global(.amw-mobile-menu-header .amw-logo-primary) {
+:global(.amw-mobile-logo-text) {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  line-height: 1;
 }
 
-:global(.amw-mobile-menu-header .amw-logo-amw) {
-  font-size: 18px !important;
-  color: #fff !important;
+:global(.amw-mobile-logo-amw) {
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
 }
 
-:global(.amw-mobile-menu-header .amw-logo-hardscape) {
-  font-size: 18px !important;
-  color: rgba(255,255,255,0.85) !important;
-}
-
-:global(.amw-mobile-menu-header .amw-logo-solutions) {
-  display: none !important;
+:global(.amw-mobile-logo-hardscape) {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
 }
 
 :global(.amw-mobile-menu-close) {
@@ -340,7 +339,6 @@
   text-transform: uppercase;
   font-size: 14px;
   margin-top: 8px;
-  border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 /* Chevron */
