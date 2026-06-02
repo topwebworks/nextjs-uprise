@@ -169,7 +169,10 @@
     height: 32px;
     border-radius: 6px;
   }
-  :global(.small-height .nav-logo-wrap .logo.amw-logo) { padding: 16px 0 0 !important; }
+  :global(.small-height .nav-logo-wrap .logo.amw-logo) {
+    padding: 16px 0 0 !important;
+    gap: 6px !important;
+  }
 }
 
 /* Nav link readability over video */
