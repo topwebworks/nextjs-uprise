@@ -4,11 +4,18 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
 import "@/components/common/NextImageLightbox.module.css";
+import { useSwipeNavigation } from "@/utils/useSwipeNavigation";
 
 export default function NextImageLightbox({ images, activeIndex, onChange, onClose }) {
   const [portalRoot, setPortalRoot] = useState(null);
   const image = Number.isInteger(activeIndex) ? images[activeIndex] : null;
   const hasMultiple = images.length > 1;
+  const swipeHandlers = useSwipeNavigation({
+    canNext: hasMultiple,
+    canPrev: hasMultiple,
+    onNext: () => onChange((activeIndex + 1) % images.length),
+    onPrev: () => onChange((activeIndex - 1 + images.length) % images.length),
+  });
 
   useEffect(() => {
     setPortalRoot(document.body);
@@ -62,7 +69,11 @@ export default function NextImageLightbox({ images, activeIndex, onChange, onClo
           </button>
         )}
 
-        <figure className="amw-lightbox-figure" onClick={(event) => event.stopPropagation()}>
+        <figure
+          className="amw-lightbox-figure"
+          onClick={(event) => event.stopPropagation()}
+          {...swipeHandlers}
+        >
           <Image
             src={image.src}
             alt={image.alt}

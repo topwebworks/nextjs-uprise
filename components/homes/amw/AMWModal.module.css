@@ -30,6 +30,7 @@
   grid-template-columns: 48% 52%;
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
   position: relative;
+  touch-action: pan-y;
 }
 
 @media (max-width: 640px) {

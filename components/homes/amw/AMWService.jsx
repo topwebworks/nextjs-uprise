@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import "@/components/homes/amw/AMWModal.module.css";
 import "@/components/homes/amw/AMWServiceTab.module.css";
 import "@/components/homes/amw/AMWService.module.css";
+import { useSwipeNavigation } from "@/utils/useSwipeNavigation";
 
 const services = [
   {
@@ -195,6 +196,12 @@ export default function AMWService() {
   }
 
   const activeCard = modalSvc ? modalSvc.cards[cardIdx] : null;
+  const modalSwipeHandlers = useSwipeNavigation({
+    canNext: Boolean(modalSvc && cardIdx < modalSvc.cards.length - 1),
+    canPrev: cardIdx > 0,
+    onNext: next,
+    onPrev: prev,
+  });
 
   return (
     <div className="container position-relative">
@@ -288,7 +295,7 @@ export default function AMWService() {
       {/* Modal */}
       {modalSvc && activeCard && (
         <div className="amw-modal-backdrop" onClick={closeModal}>
-          <div className="amw-modal" onClick={(e) => e.stopPropagation()}>
+          <div className="amw-modal" onClick={(e) => e.stopPropagation()} {...modalSwipeHandlers}>
 
             {/* Image */}
             <div className="amw-modal-img">
