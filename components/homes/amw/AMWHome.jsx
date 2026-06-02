@@ -2,6 +2,7 @@
 import { useState } from "react";
 import AnimatedText from "@/components/common/AnimatedText";
 import ImageBackground from "@/components/common/ImageBackground";
+import "@/components/homes/amw/AMWHome.module.css";
 import NextImageLightbox from "@/components/common/NextImageLightbox";
 import Link from "next/link";
 import Image from "next/image";
@@ -17,17 +18,6 @@ function AMWHowGrid() {
 
   return (
     <>
-      <style>{`
-        .amw-how-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 305px 305px; gap: 10px; }
-        @media (max-width: 575px) {
-          .amw-how-grid { grid-template-columns: repeat(3, 1fr); grid-template-rows: 160px; gap: 8px; }
-          .amw-how-img-wrap { grid-row: auto !important; }
-        }
-        .amw-how-img-wrap { position: relative; border-radius: 6px; overflow: hidden; cursor: zoom-in; min-height: 0; border: 0; padding: 0; background: transparent; }
-        .amw-how-img-wrap img { filter: contrast(1.12) saturate(1.25) brightness(1.06); transition: transform 0.4s ease, filter 0.4s ease; }
-        .amw-how-img-wrap:hover img { transform: scale(1.04); filter: contrast(1.15) saturate(1.35) brightness(1.1); }
-      `}</style>
-
       <div className="amw-how-grid">
         {howImages.map((img, i) => (
           <button
@@ -64,24 +54,6 @@ import AMWContact from "./AMWContact";
 export default function AMWHome() {
   return (
     <>
-      <style>{`
-        @media (max-width: 575px) {
-          .amw-built-to-last-section .btn {
-            display: block !important;
-            width: 100% !important;
-            text-align: center !important;
-          }
-        }
-        .amw-testimonials-section {
-          padding-top: 76px !important;
-        }
-        @media (max-width: 575px) {
-          .amw-testimonials-section {
-            padding-top: 60px !important;
-          }
-        }
-      `}</style>
-
       {/* Services */}
       <section className="page-section scrollSpysection" id="services">
         <AMWService />
