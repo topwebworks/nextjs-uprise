@@ -180,8 +180,8 @@ export default function AMWGallery() {
 
           <div
             key={key}
-            className={`row g-3${!animating ? " amw-shuffle" : ""}`}
-            style={{ transition: "opacity 0.18s ease", opacity: animating ? 0 : 1 }}
+            className={`row g-3 amw-gallery-grid${!animating ? " amw-shuffle" : ""}`}
+            style={{ opacity: animating ? 0 : 1 }}
           >
             {visible.map((p, i) => (
               <div key={i} className="col-6 col-md-4">

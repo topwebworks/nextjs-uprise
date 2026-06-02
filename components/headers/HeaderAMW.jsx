@@ -60,7 +60,7 @@ export default function HeaderAMW() {
               className={`mn-has-sub${pathname.startsWith("/services") ? " active" : ""}`}
               onClick={handleServicesClick}
             >
-              Services <i className="mi-chevron-down" style={{ fontSize: 12, marginLeft: 3, display: "inline-block", transition: "transform 0.2s ease", transform: servicesOpen ? "rotate(180deg)" : "rotate(0deg)" }} />
+              Services <i className="mi-chevron-down nav-chevron" style={{ transform: servicesOpen ? "rotate(180deg)" : "rotate(0deg)" }} />
             </Link>
             <ul className="mn-sub">
               {serviceLinks.map((link, i) => (

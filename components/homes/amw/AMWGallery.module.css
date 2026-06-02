@@ -68,6 +68,10 @@
   :global(.amw-filter-mobile) { max-width: 100%; }
 }
 
+:global(.amw-gallery-grid) {
+  transition: opacity 0.18s ease;
+}
+
 :global(.amw-gallery-img) {
   object-fit: cover;
   object-position: center;

@@ -202,3 +202,10 @@
 :global(.nav-social-link) {
   font-size: 22px;
 }
+
+:global(.nav-chevron) {
+  font-size: 12px;
+  margin-left: 3px;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
