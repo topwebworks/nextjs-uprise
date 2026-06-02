@@ -2,8 +2,20 @@ import React from "react";
 
 export default function AnimatedText({
   text = "Grow your business with a new website.",
+  noOrphan = true,
 }) {
-  const words = text.trim().split(/\s+/);
+  // Join the last two words with a non-breaking space to prevent orphans.
+  // Split on real whitespace only —   stays intact as part of the word.
+  let processed = text.trim();
+  if (noOrphan) {
+    const lastSpace = processed.lastIndexOf(" ");
+    if (lastSpace !== -1) {
+      processed = processed.slice(0, lastSpace) + " " + processed.slice(lastSpace + 1);
+    }
+  }
+
+  // Split on regular spaces only —   keeps last two words as one token
+  const words = processed.split(" ");
   const charTotal = words.reduce((total, word) => total + Array.from(word).length, 0);
   let charIndex = 0;
 
@@ -24,7 +36,6 @@ export default function AnimatedText({
             <span className="word" data-word={word} style={{ "--word-index": wi }}>
               {Array.from(word).map((ch, ci) => {
                 const currentCharIndex = charIndex++;
-
                 return (
                   <span
                     key={`${ch}-${ci}`}
