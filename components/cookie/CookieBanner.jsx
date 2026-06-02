@@ -31,33 +31,54 @@ export default function CookieBanner() {
         role="region"
         aria-label="Cookie consent"
       >
-        <div className="container d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-2 py-2">
-          <p className="mb-0 small" style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.8rem" }}>
+        <div className="container d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-3 py-3">
+          <p className="mb-0" style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.82rem", lineHeight: 1.5 }}>
             We use cookies for analytics and site functionality.{" "}
             <button
-              className="btn btn-link btn-sm p-0 text-decoration-underline"
-              style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.8rem" }}
               onClick={() => setSettingsOpen(true)}
+              style={{ background: "none", border: "none", padding: 0, color: "rgba(255,255,255,0.7)", fontSize: "0.82rem", textDecoration: "underline", cursor: "pointer" }}
             >
               Settings
             </button>
             {" · "}
-            <a href="/cookie-policy" style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.8rem" }}>
+            <a href="/cookie-policy" style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.82rem", textDecoration: "underline" }}>
               Policy
             </a>
           </p>
-          <div className="d-flex gap-2" style={{ flexShrink: 0 }}>
+          <div style={{ display: "flex", gap: 10, flexShrink: 0 }}>
             <button
-              className="btn btn-sm btn-outline-light py-1 px-3"
-              style={{ fontSize: "0.78rem" }}
               onClick={essentialOnly}
+              style={{
+                background: "transparent",
+                border: "1px solid rgba(255,255,255,0.35)",
+                color: "rgba(255,255,255,0.85)",
+                fontSize: "0.78rem",
+                fontWeight: 600,
+                letterSpacing: "0.06em",
+                textTransform: "uppercase",
+                padding: "8px 18px",
+                cursor: "pointer",
+                borderRadius: 2,
+                transition: "border-color 0.2s, color 0.2s",
+              }}
             >
               Essential only
             </button>
             <button
-              className="btn btn-sm btn-light py-1 px-3"
-              style={{ fontSize: "0.78rem", color: "#111" }}
               onClick={acceptAll}
+              style={{
+                background: "#fff",
+                border: "1px solid #fff",
+                color: "#111",
+                fontSize: "0.78rem",
+                fontWeight: 600,
+                letterSpacing: "0.06em",
+                textTransform: "uppercase",
+                padding: "8px 18px",
+                cursor: "pointer",
+                borderRadius: 2,
+                transition: "background 0.2s, color 0.2s",
+              }}
             >
               Accept all
             </button>
