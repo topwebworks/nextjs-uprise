@@ -1,6 +1,7 @@
 "use client";
 import ContactForm from "@/components/ghl/ContactForm";
 import site from "@/data/site";
+import AMWServiceAreaLinks from "@/components/homes/amw/AMWServiceAreaLinks";
 import "@/components/homes/amw/AMWContact.module.css";
 
 export default function AMWContactSection({
@@ -68,9 +69,7 @@ export default function AMWContactSection({
                 </div>
                 <h4 className="alt-features-title">Service area</h4>
                 <div className="alt-features-descr">
-                  San Tan Valley &middot; Mesa &middot; Queen Creek &middot;
-                  Gilbert &middot; Chandler &middot; Phoenix &amp; surrounding
-                  East Valley
+                  <AMWServiceAreaLinks />
                 </div>
               </div>
             </div>
