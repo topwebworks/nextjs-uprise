@@ -354,31 +354,30 @@ a {
 }
 
 /* Fixed scroll-to-top button */
-.link-to-top {
-  position: fixed !important;
+.amw-scroll-top {
+  position: fixed;
   bottom: 28px;
   right: 24px;
-  z-index: 999;
+  z-index: 9999;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease !important;
-  display: flex !important;
+  transition: opacity 0.3s ease;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #1c1e21 !important;
-  color: #fff !important;
-  border: none;
+  background: #1c1e21;
+  color: #fff;
   text-decoration: none;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
 }
-.link-to-top:hover {
-  background: #333 !important;
-  color: #fff !important;
+.amw-scroll-top:hover {
+  background: #333;
+  color: #fff;
 }
-.link-to-top.visible {
+.amw-scroll-top.visible {
   opacity: 1;
   pointer-events: auto;
 }

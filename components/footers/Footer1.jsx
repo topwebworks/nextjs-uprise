@@ -114,10 +114,10 @@ export default function Footer1() {
           </span>
         </div>
 
-        {/* Fixed scroll-to-top — uses existing .link-to-top styles in custom.css */}
+        {/* Fixed scroll-to-top */}
         <a
           href="#top"
-          className="link-to-top"
+          className="amw-scroll-top"
           aria-label="Back to top"
           onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
         >
