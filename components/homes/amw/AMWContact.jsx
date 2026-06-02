@@ -132,9 +132,9 @@ export default function AMWContact() {
 
           {/* Review cards */}
           {[
-            { quote: "Brad and his crew did a great job on a patio extension and walkway. They were always on time, and communicated well throughout the whole project.", author: "Austin Bartley" },
+            { quote: "We have used AMW for two large hardscape projects now, and we couldn't be happier with the results. They show up on time, maintain great communication, and the quality of work is outstanding.", author: "Larisa Rodriguez" },
             { quote: "They answer the phone which is a HUGE plus — showed up on time and stayed until the job was completed 100%. We will use them again.", author: "Frost" },
-            { quote: "Honest, helpful, and happy I chose Brad and his crew to help me with my project of installing turf. Would recommend!", author: "BJ Carmack" },
+            { quote: "Quality, good prices, neat and clean work.", author: "Daniel Gervasi" },
           ].map((r, i) => (
             <div key={i} className="amw-form-review">
               <div className="amw-form-review-stars">

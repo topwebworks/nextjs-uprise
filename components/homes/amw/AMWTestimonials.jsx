@@ -2,35 +2,35 @@ import "@/components/homes/amw/AMWTestimonials.module.css";
 
 const testimonials = [
   {
+    quote: "We have used AMW for two large hardscape projects now, and we couldn't be happier with the results. Finding a contractor who is both reliable and highly skilled can be tough, but AMW delivers on every front. They show up on time, maintain great communication, and the quality of work is outstanding.",
+    author: "Larisa Rodriguez",
+  },
+  {
     quote: "Brad and his crew did a great job on a patio extension and walkway. They were always on time, and communicated well throughout the whole project.",
     author: "Austin Bartley",
-  },
-  {
-    quote: "Honest, helpful, and happy I chose Brad and his crew to help me with my project of installing turf. Would recommend!",
-    author: "BJ Carmack",
-  },
-  {
-    quote: "Brad and Roberto are awesome. Showed up and went straight to work every day. Brad explains everything and is easy to work with. Would definitely work with them again.",
-    author: "Ride Red",
-  },
-  {
-    quote: "AMW Hardscape Solutions is always great to work with! They're super professional, easy to deal with, and always know exactly what they need.",
-    author: "AZ Turf Suppliers",
   },
   {
     quote: "They answer the phone which is a HUGE plus — showed up on time and stayed until the job was completed 100%. We will use them again.",
     author: "Frost",
   },
   {
-    quote: "As an investor we have to stay tight on budget. This company had different solutions to help us get to the finish line. Thanks again to Brad.",
+    quote: "Honest, helpful, and happy I chose Brad and his crew to help me with my project of installing turf. Would recommend!",
+    author: "BJ Carmack",
+  },
+  {
+    quote: "Quality, good prices, neat and clean work.",
+    author: "Daniel Gervasi",
+  },
+  {
+    quote: "AMW Hardscape Solutions is always great to work with! They're super professional, easy to deal with, and always know exactly what they need. Solid team doing quality work.",
+    author: "AZ Turf Suppliers",
+  },
+  {
+    quote: "As an investor we have to stay tight on budget. This company had different solutions to help us get to the finish line. Thanks again to Brad for doing an amazing job.",
     author: "Work Hard",
   },
   {
-    quote: "These guys are rock stars! Exactly what we wanted — could not be more happy with the results of the pavers and rock work.",
-    author: "Real Estate 480",
-  },
-  {
-    quote: "Brad and Brian were awesome to work with. We had some travertine pavers put in our backyard to frame a little section of grass. Great results!",
+    quote: "Brad and Brian were awesome to work with. We had some travertine pavers put in our backyard to frame a little section of grass. They took the time to make sure it was level and straight.",
     author: "David Prian",
   },
   {
