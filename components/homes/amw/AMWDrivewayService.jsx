@@ -3,6 +3,7 @@ import AnimatedText from "@/components/common/AnimatedText";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import "@/components/homes/amw/AMWModal.module.css";
 
 const services = [
   {
@@ -213,33 +214,7 @@ export default function AMWDrivewayService() {
         }
         .services-text { position: relative; z-index: 2; margin-top: -180px; }
         .services-text-container { background: #f5f5f5; padding: 28px 32px 32px; margin: 0 0 0 40px; }
-        .amw-modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.65); z-index: 9998; display: flex; align-items: center; justify-content: center; padding: 20px; }
-        .amw-modal { background: #fff; border-radius: 10px; max-width: 860px; width: 100%; max-height: 92vh; overflow: hidden; z-index: 9999; display: grid; grid-template-columns: 48% 52%; box-shadow: 0 24px 80px rgba(0,0,0,0.4); position: relative; }
-        @media (max-width: 640px) { .amw-modal { grid-template-columns: 1fr; max-height: 92vh; overflow-y: auto; } }
-        .amw-modal-img { position: relative; min-height: 340px; border-radius: 10px 0 0 10px; overflow: hidden; }
-        @media (max-width: 640px) { .amw-modal-img { min-height: 240px; border-radius: 10px 10px 0 0; } }
-        .amw-modal-body { padding: 44px 40px 36px; display: flex; flex-direction: column; justify-content: center; gap: 16px; overflow-y: auto; }
-        @media (max-width: 640px) { .amw-modal-body { padding: 30px 24px; } }
-        .amw-modal-close { position: absolute; top: 14px; right: 18px; background: rgba(255,255,255,0.92); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-size: 20px; line-height: 1; cursor: pointer; color: #444; z-index: 10000; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
-        .amw-modal-close:hover { color: #111; background: #fff; }
-        .amw-modal-bullets { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 9px; border-top: 1px solid #eee; padding-top: 16px; }
-        .amw-modal-bullets li { padding-left: 20px; position: relative; color: #444; font-size: 13.5px; line-height: 1.45; }
-        .amw-modal-bullets li::before { content: '✓'; position: absolute; left: 0; color: #111; font-size: 11px; top: 2px; font-weight: 700; }
-        .amw-modal-nav { display: flex; align-items: center; gap: 10px; padding: 8px 0 4px; border-top: 1px solid #eee; }
-        .amw-modal-nav-btn { background: #111; border: none; border-radius: 50%; width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 22px; color: #fff; transition: background 0.15s; flex-shrink: 0; line-height: 1; }
-        .amw-modal-nav-btn:hover:not(:disabled) { background: #333; }
-        .amw-modal-nav-btn:disabled { opacity: 0.2; cursor: default; }
-        .amw-modal-nav-dots { display: flex; gap: 7px; flex: 1; justify-content: center; }
-        .amw-modal-dot { width: 9px; height: 9px; border-radius: 50%; background: #ccc; transition: background 0.15s, transform 0.15s; cursor: pointer; border: none; padding: 0; }
-        .amw-modal-dot:hover { background: #888; }
-        .amw-modal-dot.active { background: #111; transform: scale(1.3); }
-        @keyframes amw-shake { 0%, 90%, 100% { transform: translateX(0); } 92% { transform: translateX(-5px); } 94% { transform: translateX(5px); } 96% { transform: translateX(-4px); } 98% { transform: translateX(3px); } }
-        .amw-learn-more-btn { animation: amw-shake 6s ease-in-out infinite; animation-delay: 2s; }
-        .amw-learn-more-btn:hover { animation: none; }
-        .amw-modal-ctas { display: flex; gap: 10px; }
-        .amw-modal-cta-primary { flex: 1 1 auto; text-align: center; }
-        .amw-modal-cta-secondary { flex: 0 0 auto; white-space: nowrap; }
-        @media (max-width: 480px) { .amw-modal-ctas { flex-direction: column; } .amw-modal-cta-primary, .amw-modal-cta-secondary { flex: 1 1 auto; text-align: center; } }
+        /* Modal styles → AMWModal.module.css */
       `}</style>
 
       <div className="row">
