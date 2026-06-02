@@ -3,7 +3,7 @@ import "@/components/homes/amw/AMWProcess.module.css";
 const steps = [
   {
     title: "Free Estimate",
-    description: "We come to you, walk the property, and give you a written quote — no obligation, no pressure. Most estimates done within 48 hours.",
+    description: "We come to you, walk the property, and give you a written quote — no obligation, no pressure.",
   },
   {
     title: "Design & Materials",

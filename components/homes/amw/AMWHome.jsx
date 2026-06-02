@@ -145,7 +145,7 @@ export default function AMWHome() {
             <div className="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
               <h2 className="section-title mb-20">Get a Free Estimate</h2>
               <p className="section-descr mb-50 mb-sm-30">
-                Ready to upgrade your outdoor space? Call us or fill out the form below — we&rsquo;ll get back to you within one business day.
+                Ready to upgrade your outdoor space? Call us or fill out the form below — we&rsquo;ll be in touch soon.
               </p>
               <div className="d-flex flex-wrap gap-3 justify-content-center">
                 <a href="tel:+14807216561" className="btn btn-mod btn-w btn-large btn-round btn-hover-anim">

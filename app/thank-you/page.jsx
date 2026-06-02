@@ -59,7 +59,7 @@ export default function ThankYou() {
                           We got it — thank you.
                         </h1>
                         <p className="section-descr text-gray mb-40 wow fadeInUp" data-wow-delay="0.2s">
-                          Someone from AMW will reach out within one business day to schedule your estimate.
+                          Someone from AMW will reach out soon to schedule your estimate.
                         </p>
                         <div className="d-flex flex-wrap gap-3 justify-content-center wow fadeInUp" data-wow-delay="0.3s">
                           <Link href="/" className="btn btn-mod btn-large btn-round btn-hover-anim">
