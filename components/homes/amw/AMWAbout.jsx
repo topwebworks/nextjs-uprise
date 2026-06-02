@@ -27,14 +27,13 @@ export default function AMWAbout() {
             alt=""
             fill
             sizes="(max-width: 991px) 100vw, 50vw"
-            style={{ objectFit: "cover", objectPosition: "center 70%" }}
           />
         </div>
         <div className="amw-about-content">
           <h2 className="section-title mb-20 wow fadeInUp" data-wow-delay="0.2s">
             Who We Are
           </h2>
-          <p className="text-gray mb-28 wow fadeInUp" data-wow-delay="0.3s" style={{ fontSize: 16, lineHeight: 1.75 }}>
+          <p className="text-gray mb-28 wow fadeInUp amw-about-intro" data-wow-delay="0.3s">
             Our mission is simple - deliver high-quality work, honest pricing, and a stress-free experience for every customer. We serve San Tan Valley, Queen Creek, Gilbert, Mesa, Chandler, Apache Junction, Maricopa, and the surrounding East Valley. Most of our business comes from referrals. That says everything.
           </p>
           <ul className="amw-about-claims wow fadeInUp" data-wow-delay="0.4s">

@@ -1,0 +1,27 @@
+/* AMWBenefits — blockquote, benefit card, and icon styles */
+
+:global(.amw-benefits-quote) {
+  border-left: 3px solid #111;
+  padding-left: 18px;
+}
+
+:global(.amw-benefits-quote p) {
+  font-size: 17px;
+  line-height: 1.6;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+:global(.amw-benefits-quote footer) {
+  font-size: 13px;
+  color: #888;
+}
+
+:global(.amw-benefit-card) {
+  height: 100%;
+}
+
+:global(.amw-benefit-icon) {
+  font-size: 28px;
+}

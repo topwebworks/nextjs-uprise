@@ -50,3 +50,25 @@
     padding-top: 60px !important;
   }
 }
+
+:global(.amw-built-to-last-band) {
+  padding: 60px 0;
+}
+
+:global(.amw-dark-quote) {
+  border-left: 2px solid rgba(255, 255, 255, 0.4);
+  padding-left: 18px;
+}
+
+:global(.amw-dark-quote p) {
+  font-size: 16px;
+  line-height: 1.6;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 8px;
+}
+
+:global(.amw-dark-quote footer) {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}

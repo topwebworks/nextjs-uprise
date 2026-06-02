@@ -109,3 +109,12 @@
   :global(.amw-pill) { font-size: 11px; padding: 4px 10px; }
   :global(.amw-hero-content .btn) { width: 100%; text-align: center; }
 }
+
+:global(.amw-scroll-down) {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+
+:global(.amw-status-badge) {
+  color: rgba(255, 255, 255, 0.85);
+}

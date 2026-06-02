@@ -1,3 +1,5 @@
+import "@/components/homes/amw/AMWProcess.module.css";
+
 const steps = [
   {
     title: "Free Estimate",
@@ -21,13 +23,11 @@ export default function AMWProcess() {
   return (
     <div className="mb-40">
       {steps.map((step, i) => (
-        <div key={i} style={{ display: "flex", gap: 20, marginBottom: 24 }}>
-          <div style={{ flexShrink: 0, width: 32, height: 32, borderRadius: "50%", background: "#111", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 700, marginTop: 2 }}>
-            {i + 1}
-          </div>
+        <div key={i} className="amw-process-step">
+          <div className="amw-process-number">{i + 1}</div>
           <div>
-            <div style={{ fontWeight: 700, fontSize: 16, marginBottom: 4 }}>{step.title}</div>
-            <div style={{ fontSize: 14, color: "#666", lineHeight: 1.65 }}>{step.description}</div>
+            <div className="amw-process-title">{step.title}</div>
+            <div className="amw-process-desc">{step.description}</div>
           </div>
         </div>
       ))}

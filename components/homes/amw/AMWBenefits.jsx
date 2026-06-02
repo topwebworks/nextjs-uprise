@@ -1,3 +1,5 @@
+import "@/components/homes/amw/AMWBenefits.module.css";
+
 const benefits = [
   {
     icon: "mi-document-check",
@@ -32,13 +34,9 @@ export default function AMWBenefits() {
           <h2 className="section-title mb-30">
             The team your<br />neighbors trust.
           </h2>
-          <blockquote className="mb-0" style={{ borderLeft: "3px solid #111", paddingLeft: 18 }}>
-            <p style={{ fontSize: 17, lineHeight: 1.6, fontStyle: "italic", color: "#333", marginBottom: 10 }}>
-              &ldquo;Quality, good prices, neat and clean work.&rdquo;
-            </p>
-            <footer style={{ fontSize: 13, color: "#888" }}>
-              Daniel Gervasi &mdash; <span>Verified Google Review</span>
-            </footer>
+          <blockquote className="mb-0 amw-benefits-quote">
+            <p>&ldquo;Quality, good prices, neat and clean work.&rdquo;</p>
+            <footer>Daniel Gervasi &mdash; <span>Verified Google Review</span></footer>
           </blockquote>
         </div>
 
@@ -47,9 +45,9 @@ export default function AMWBenefits() {
           <div className="row g-3 wow fadeInUp" data-wow-delay="0.1s">
             {benefits.map((b, i) => (
               <div key={i} className="col-sm-6">
-                <div className="alt-features-item box-shadow mt-0" style={{ height: "100%" }}>
+                <div className="alt-features-item box-shadow mt-0 amw-benefit-card">
                   <div className="alt-features-icon mb-10">
-                    <i className={`${b.icon}`} style={{ fontSize: 28 }} aria-hidden="true" />
+                    <i className={`${b.icon} amw-benefit-icon`} aria-hidden="true" />
                   </div>
                   <h4 className="alt-features-title">{b.title}</h4>
                   <div className="alt-features-descr">{b.description}</div>

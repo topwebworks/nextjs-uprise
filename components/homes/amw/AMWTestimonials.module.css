@@ -79,3 +79,24 @@
   flex-shrink: 0;
   font-family: 'Google Sans', Arial, sans-serif;
 }
+
+:global(.amw-stars-sm) {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 14px;
+}
+
+:global(.amw-star-sm) {
+  color: #f4b400;
+  font-size: 15px;
+}
+
+:global(.amw-stars-lg) {
+  display: flex;
+  gap: 3px;
+}
+
+:global(.amw-star-lg) {
+  color: #f4b400;
+  font-size: 22px;
+}

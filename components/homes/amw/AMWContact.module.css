@@ -22,3 +22,7 @@
     min-height: 700px;
   }
 }
+
+:global(.amw-contact-anchor) {
+  scroll-margin-top: 80px;
+}

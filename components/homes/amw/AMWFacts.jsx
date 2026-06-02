@@ -33,9 +33,9 @@ export default function AMWFacts() {
               {item.icon ? (
                 <i className={`${item.icon} amw-trust-icon`} aria-hidden="true" />
               ) : (
-                <div className="amw-trust-icon" style={{ fontSize: 16, letterSpacing: 1 }} aria-label="5 stars">
+                <div className="amw-trust-icon amw-trust-stars" aria-label="5 stars">
                   {[...Array(5)].map((_, s) => (
-                    <i key={s} className="icon-star-rate" style={{ color: "#fff" }} aria-hidden="true" />
+                    <i key={s} className="icon-star-rate amw-trust-star" aria-hidden="true" />
                   ))}
                 </div>
               )}

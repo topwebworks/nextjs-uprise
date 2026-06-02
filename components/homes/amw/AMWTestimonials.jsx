@@ -41,9 +41,9 @@ const testimonials = [
 
 function Stars() {
   return (
-    <div style={{ display: "flex", gap: 2, marginBottom: 14 }}>
+    <div className="amw-stars-sm">
       {[...Array(5)].map((_, i) => (
-        <i key={i} className="icon-star-rate" style={{ color: "#F4B400", fontSize: 15 }} aria-hidden="true" />
+        <i key={i} className="icon-star-rate amw-star-sm" aria-hidden="true" />
       ))}
     </div>
   );
@@ -58,9 +58,9 @@ export default function AMWTestimonials() {
             <h2 className="section-title">What Our Clients Say</h2>
           </div>
           <div className="col-md-4 d-flex align-items-end justify-content-md-end mt-20 mt-md-0 wow fadeInUp" data-wow-delay="0.1s">
-            <div style={{ display: "flex", gap: 3 }}>
+            <div className="amw-stars-lg">
               {[...Array(5)].map((_, i) => (
-                <i key={i} className="icon-star-rate" style={{ color: "#F4B400", fontSize: 22 }} aria-hidden="true" />
+                <i key={i} className="icon-star-rate amw-star-lg" aria-hidden="true" />
               ))}
             </div>
           </div>

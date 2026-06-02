@@ -62,3 +62,13 @@
   margin-top: 1px;
   flex-shrink: 0;
 }
+
+:global(.amw-about-img img) {
+  object-fit: cover;
+  object-position: center 70%;
+}
+
+:global(.amw-about-intro) {
+  font-size: 16px;
+  line-height: 1.75;
+}

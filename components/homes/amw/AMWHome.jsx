@@ -61,8 +61,7 @@ export default function AMWHome() {
 
       {/* Stats parallax band */}
       <section
-        className="bg-dark bg-dark-alpha-60 light-content amw-fixed-bg-host amw-built-to-last-section"
-        style={{ padding: "60px 0" }}
+        className="bg-dark bg-dark-alpha-60 light-content amw-fixed-bg-host amw-built-to-last-section amw-built-to-last-band"
       >
         <ImageBackground
           src="/assets/tww-assets/amw-images/475073428_122137974338562324_5243938571606077407_n.jpg"
@@ -85,13 +84,9 @@ export default function AMWHome() {
               </div>
             </div>
             <div className="col-lg-5 d-flex align-items-start justify-content-lg-end mb-md-40 mb-xs-30">
-              <blockquote className="wow fadeInUp" data-wow-delay="0.2s" style={{ borderLeft: "2px solid rgba(255,255,255,0.4)", paddingLeft: 18 }}>
-                <p style={{ fontSize: 16, lineHeight: 1.6, fontStyle: "italic", color: "rgba(255,255,255,0.85)", marginBottom: 8 }}>
-                  &ldquo;Quality, good prices, neat and clean work.&rdquo;
-                </p>
-                <footer style={{ fontSize: 13, color: "rgba(255,255,255,0.5)" }}>
-                  Daniel Gervasi &mdash; Verified Google Review
-                </footer>
+              <blockquote className="wow fadeInUp amw-dark-quote" data-wow-delay="0.2s">
+                <p>&ldquo;Quality, good prices, neat and clean work.&rdquo;</p>
+                <footer>Daniel Gervasi &mdash; Verified Google Review</footer>
               </blockquote>
             </div>
             <AMWFacts />

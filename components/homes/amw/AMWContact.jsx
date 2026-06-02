@@ -66,9 +66,8 @@ export default function AMWContact() {
 
       <div
         id="contact-form"
-        className="row wow fadeInUp"
+        className="row wow fadeInUp amw-contact-anchor"
         data-wow-delay="0.5s"
-        style={{ scrollMarginTop: 80 }}
       >
         <div className="col-md-6 mb-sm-50">
           <ContactForm

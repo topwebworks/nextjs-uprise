@@ -114,13 +114,13 @@ export default function AMWHero() {
 
           <div className="local-scroll scroll-down-wrap-4 wow fadeInUp" data-wow-offset={0}>
             <div className="full-wrapper text-end">
-              <a href="#services" className="scroll-down-4" style={{ borderColor: "rgba(255,255,255,0.5)", color: "#fff" }}>
+              <a href="#services" className="scroll-down-4 amw-scroll-down">
                 <i className="mi-arrow-down size-24" />
               </a>
             </div>
           </div>
 
-          <div className="hs-status wow fadeInUp" data-wow-offset={0} style={{ color: "rgba(255,255,255,0.85)" }}>
+          <div className="hs-status wow fadeInUp amw-status-badge" data-wow-offset={0}>
             AZ Licensed &amp; Insured
           </div>
         </div>
