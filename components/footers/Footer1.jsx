@@ -110,10 +110,17 @@ export default function Footer1() {
           <span className="amw-footer-copy">
             © {site.legalName} {new Date().getFullYear()}. All rights reserved.
           </span>
-          <a href="#top" className="amw-footer-top" aria-label="Back to top" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
-            <i className="mi-arrow-up" aria-hidden="true" /> Top
-          </a>
         </div>
+
+        {/* Fixed scroll-to-top — uses existing .link-to-top styles in custom.css */}
+        <a
+          href="#top"
+          className="link-to-top"
+          aria-label="Back to top"
+          onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+        >
+          <i className="mi-arrow-up size-24" aria-hidden="true" />
+        </a>
 
       </div>
     </footer>
