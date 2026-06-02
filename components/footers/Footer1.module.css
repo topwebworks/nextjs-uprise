@@ -8,10 +8,18 @@
 /* Main grid */
 :global(.amw-footer-main) {
   display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 60px;
-  padding-bottom: 60px;
+  grid-template-columns: 260px 1fr;
+  gap: 80px;
+  padding-bottom: 64px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  align-items: start;
+}
+
+@media (max-width: 1199px) {
+  :global(.amw-footer-main) {
+    grid-template-columns: 220px 1fr;
+    gap: 60px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -150,13 +158,22 @@
 :global(.amw-footer-nav) {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 32px 48px;
+  justify-self: end;
+  width: 100%;
+}
+
+@media (max-width: 1199px) {
+  :global(.amw-footer-nav) {
+    gap: 32px 32px;
+  }
 }
 
 @media (max-width: 575px) {
   :global(.amw-footer-nav) {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 24px;
+    justify-self: start;
   }
 }
 
