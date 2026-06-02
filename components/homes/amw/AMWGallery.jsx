@@ -152,7 +152,7 @@ export default function AMWGallery() {
         </div>
 
         {/* Filters */}
-        <div style={{ marginBottom: 40 }}>
+        <div className="mb-40">
           <div className="wow fadeInUp" data-wow-delay="0.2s">
           <div className="works-filter clearlist amw-filter-desktop">
             {filters.map((f) => (
@@ -197,21 +197,11 @@ export default function AMWGallery() {
                         sizes="(max-width: 768px) 50vw, 33vw"
                         src={p.src}
                         alt={p.alt}
-                        style={{ objectFit: "cover", objectPosition: "center", transition: "transform 0.4s ease" }}
+                        className="amw-gallery-img"
                       />
-                      <div
-                        className="position-absolute bottom-0 start-0 end-0 p-3"
-                        style={{
-                          background: "linear-gradient(transparent, rgba(0,0,0,0.6))",
-                          color: "#fff",
-                          fontSize: 13,
-                          fontWeight: 600,
-                          letterSpacing: "0.04em",
-                          textTransform: "uppercase",
-                        }}
-                      >
+                      <div className="position-absolute bottom-0 start-0 end-0 p-3 amw-gallery-caption">
                         {p.title}
-                        <span style={{ display: "block", fontSize: 10, fontWeight: 400, letterSpacing: "0.06em", opacity: 0.75, marginTop: 2 }}>{p.location}</span>
+                        <span className="amw-gallery-caption-location">{p.location}</span>
                       </div>
                 </button>
               </div>

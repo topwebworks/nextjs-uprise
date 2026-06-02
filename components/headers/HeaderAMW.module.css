@@ -198,3 +198,7 @@
     overflow-x: hidden !important;
   }
 }
+
+:global(.nav-social-link) {
+  font-size: 22px;
+}

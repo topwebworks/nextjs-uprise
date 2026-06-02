@@ -67,3 +67,27 @@
 @media (max-width: 575px) {
   :global(.amw-filter-mobile) { max-width: 100%; }
 }
+
+:global(.amw-gallery-img) {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+:global(.amw-gallery-caption) {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+:global(.amw-gallery-caption-location) {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  opacity: 0.75;
+  margin-top: 2px;
+}

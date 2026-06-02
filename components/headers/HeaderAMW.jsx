@@ -90,12 +90,12 @@ export default function HeaderAMW() {
         </ul>
         <ul className="items-end clearlist">
           <li>
-            <a href={site.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" style={{ fontSize: 22 }}>
+            <a href={site.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="nav-social-link">
               <i className="fab fa-facebook" aria-hidden="true" />
             </a>
           </li>
           <li>
-            <a href={site.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{ fontSize: 22 }}>
+            <a href={site.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="nav-social-link">
               <i className="fab fa-instagram" aria-hidden="true" />
             </a>
           </li>
