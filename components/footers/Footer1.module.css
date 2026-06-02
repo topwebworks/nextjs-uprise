@@ -59,6 +59,11 @@
   line-height: 1;
 }
 
+:global(.amw-footer-logo-primary) {
+  white-space: nowrap;
+  line-height: 1;
+}
+
 :global(.amw-footer-logo-amw) {
   font-size: 20px;
   font-weight: 900;

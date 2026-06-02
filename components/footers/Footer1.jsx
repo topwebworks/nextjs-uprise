@@ -25,8 +25,10 @@ export default function Footer1() {
                 />
               </span>
               <span className="amw-footer-logo-text">
-                <span className="amw-footer-logo-amw">AMW</span>
-                <span className="amw-footer-logo-hardscape"> Hardscape</span>
+                <span className="amw-footer-logo-primary">
+                  <span className="amw-footer-logo-amw">AMW</span>
+                  <span className="amw-footer-logo-hardscape"> Hardscape</span>
+                </span>
                 <span className="amw-footer-logo-solutions">S O L U T I O N S</span>
               </span>
             </Link>
