@@ -55,6 +55,11 @@
   padding: 60px 0;
 }
 
+:global(.amw-how-img) {
+  object-fit: cover;
+  object-position: center;
+}
+
 :global(.amw-dark-quote) {
   border-left: 2px solid rgba(255, 255, 255, 0.4);
   padding-left: 18px;

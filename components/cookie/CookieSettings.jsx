@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import "@/components/cookie/Cookie.module.css";
 
 export default function CookieSettings({ onClose, onSave }) {
   const [analytics, setAnalytics] = useState(false);
@@ -10,8 +11,7 @@ export default function CookieSettings({ onClose, onSave }) {
 
   return (
     <div
-      className="modal d-block"
-      style={{ backgroundColor: "rgba(0,0,0,0.5)", zIndex: 10000 }}
+      className="modal d-block cookie-settings-modal"
       role="dialog"
       aria-modal="true"
       aria-label="Cookie settings"
@@ -36,7 +36,7 @@ export default function CookieSettings({ onClose, onSave }) {
                   Required for the site to function — chat, forms, session. Cannot be disabled.
                 </p>
               </div>
-              <span className="badge bg-secondary ms-3" style={{ flexShrink: 0 }}>Always on</span>
+              <span className="badge bg-secondary ms-3 cookie-no-shrink">Always on</span>
             </div>
 
             {/* Analytics — user toggle */}
@@ -48,7 +48,7 @@ export default function CookieSettings({ onClose, onSave }) {
                   No personal data is sold.
                 </p>
               </div>
-              <div className="form-check form-switch ms-3" style={{ flexShrink: 0 }}>
+              <div className="form-check form-switch ms-3 cookie-no-shrink">
                 <input
                   className="form-check-input"
                   type="checkbox"

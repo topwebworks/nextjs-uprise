@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import "@/components/homes/amw/AMWFeatureCarousel.module.css";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -54,8 +55,7 @@ export default function AMWFeatureCarousel() {
               <SwiperSlide className="owl-item">
                 <Link
                   href="/#service-pavers"
-                  className="features-item d-block"
-                  style={{ color: "inherit", textDecoration: "none" }}
+                  className="features-item d-block amw-feature-link"
                   aria-label="View Paver Installation service"
                 >
                   <div className="features-icon">
@@ -78,8 +78,7 @@ export default function AMWFeatureCarousel() {
               <SwiperSlide className="owl-item">
                 <Link
                   href="/#service-concrete"
-                  className="features-item d-block"
-                  style={{ color: "inherit", textDecoration: "none" }}
+                  className="features-item d-block amw-feature-link"
                   aria-label="View Concrete Work service"
                 >
                   <div className="features-icon">
@@ -102,8 +101,7 @@ export default function AMWFeatureCarousel() {
               <SwiperSlide className="owl-item">
                 <Link
                   href="/#service-turf"
-                  className="features-item d-block"
-                  style={{ color: "inherit", textDecoration: "none" }}
+                  className="features-item d-block amw-feature-link"
                   aria-label="View Artificial Turf service"
                 >
                   <div className="features-icon">
@@ -130,8 +128,7 @@ export default function AMWFeatureCarousel() {
               <SwiperSlide className="owl-item">
                 <Link
                   href="/#service-rock"
-                  className="features-item d-block"
-                  style={{ color: "inherit", textDecoration: "none" }}
+                  className="features-item d-block amw-feature-link"
                   aria-label="View Decorative Rock service"
                 >
                   <div className="features-icon">
@@ -153,8 +150,7 @@ export default function AMWFeatureCarousel() {
               <SwiperSlide className="owl-item">
                 <Link
                   href="/#service-demolition"
-                  className="features-item d-block"
-                  style={{ color: "inherit", textDecoration: "none" }}
+                  className="features-item d-block amw-feature-link"
                   aria-label="View Demolition and Removal service"
                 >
                   <div className="features-icon">
@@ -176,8 +172,7 @@ export default function AMWFeatureCarousel() {
               <SwiperSlide className="owl-item">
                 <Link
                   href="/#service-driveway"
-                  className="features-item d-block"
-                  style={{ color: "inherit", textDecoration: "none" }}
+                  className="features-item d-block amw-feature-link"
                   aria-label="View Driveway Additions service"
                 >
                   <div className="features-icon">

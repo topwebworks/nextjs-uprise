@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { hasConsented, setConsent } from "@/utils/consent";
 import CookieSettings from "./CookieSettings";
+import "@/components/cookie/Cookie.module.css";
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
@@ -26,60 +27,26 @@ export default function CookieBanner() {
   return (
     <>
       <div
-        className="position-fixed bottom-0 start-0 end-0 text-white"
-        style={{ zIndex: 9999, background: "rgba(15,15,15,0.92)", backdropFilter: "blur(6px)", borderTop: "1px solid rgba(255,255,255,0.08)" }}
+        className="position-fixed bottom-0 start-0 end-0 text-white cookie-banner"
         role="region"
         aria-label="Cookie consent"
       >
-        <div className="container d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-3" style={{ padding: "16px 0" }}>
-          <p className="mb-0" style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.82rem", lineHeight: 1.5 }}>
+        <div className="container d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-3 cookie-banner-inner">
+          <p className="mb-0 cookie-banner-text">
             We use cookies for analytics and site functionality.{" "}
-            <button
-              onClick={() => setSettingsOpen(true)}
-              style={{ background: "none", border: "none", padding: 0, color: "rgba(255,255,255,0.7)", fontSize: "0.82rem", textDecoration: "underline", cursor: "pointer" }}
-            >
+            <button onClick={() => setSettingsOpen(true)} className="cookie-banner-link">
               Settings
             </button>
             {" · "}
-            <a href="/cookie-policy" style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.82rem", textDecoration: "underline" }}>
+            <a href="/cookie-policy" className="cookie-banner-link">
               Policy
             </a>
           </p>
-          <div style={{ display: "flex", gap: 10, flexShrink: 0 }}>
-            <button
-              onClick={essentialOnly}
-              style={{
-                background: "transparent",
-                border: "1px solid rgba(255,255,255,0.35)",
-                color: "rgba(255,255,255,0.85)",
-                fontSize: "0.78rem",
-                fontWeight: 600,
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                padding: "8px 18px",
-                cursor: "pointer",
-                borderRadius: 2,
-                transition: "border-color 0.2s, color 0.2s",
-              }}
-            >
+          <div className="cookie-banner-actions">
+            <button onClick={essentialOnly} className="cookie-btn-secondary">
               Essential only
             </button>
-            <button
-              onClick={acceptAll}
-              style={{
-                background: "#fff",
-                border: "1px solid #fff",
-                color: "#111",
-                fontSize: "0.78rem",
-                fontWeight: 600,
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                padding: "8px 18px",
-                cursor: "pointer",
-                borderRadius: 2,
-                transition: "background 0.2s, color 0.2s",
-              }}
-            >
+            <button onClick={acceptAll} className="cookie-btn-primary">
               Accept all
             </button>
           </div>

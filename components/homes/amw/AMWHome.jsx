@@ -28,7 +28,7 @@ function AMWHowGrid() {
             onClick={() => setLightboxIndex(i)}
             aria-label={`View ${img.alt}`}
           >
-            <Image fill src={img.src} alt={img.alt} style={{ objectFit: "cover", objectPosition: "center" }} sizes="(max-width: 992px) 100vw, 40vw" />
+            <Image fill src={img.src} alt={img.alt} className="amw-how-img" sizes="(max-width: 992px) 100vw, 40vw" />
           </button>
         ))}
       </div>

@@ -1,0 +1,6 @@
+/* AMWFeatureCarousel — feature slide link reset */
+
+:global(.amw-feature-link) {
+  color: inherit;
+  text-decoration: none;
+}
