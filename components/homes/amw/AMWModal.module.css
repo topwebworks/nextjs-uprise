@@ -219,3 +219,23 @@
 :global(.amw-learn-more-btn:hover) {
   animation: none;
 }
+
+:global(.amw-modal-img img) {
+  object-fit: cover;
+  filter: contrast(1.12) saturate(1.25) brightness(1.06);
+}
+
+:global(.amw-modal-heading) {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 0;
+  line-height: 1.2;
+  padding-right: 20px;
+}
+
+:global(.amw-modal-body-text) {
+  color: #555;
+  line-height: 1.75;
+  margin-bottom: 0;
+  font-size: 14px;
+}

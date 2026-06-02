@@ -1,5 +1,15 @@
 /* Shared service tab styles used by all AMW service components */
 
+:global(.services-content) {
+  width: 100%;
+}
+
+:global(.amw-svc-tab-img) {
+  object-fit: cover;
+  object-position: center;
+  filter: contrast(1.12) saturate(1.25) brightness(1.06);
+}
+
 :global(.services-tabs) .nav-link,
 :global(.services-tabs) a {
   font-size: 24px !important;

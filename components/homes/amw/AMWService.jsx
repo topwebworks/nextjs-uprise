@@ -248,7 +248,7 @@ export default function AMWService() {
         </div>
 
         <div className="col-lg-6 amw-svc-img-col d-flex wow fadeInLeft" data-wow-delay="0.55s" data-wow-offset={275}>
-          <div className="tab-content services-content" style={{ width: "100%" }}>
+          <div className="tab-content services-content">
             {services.map((svc, i) => (
               <div
                 key={svc.id}
@@ -261,7 +261,7 @@ export default function AMWService() {
                     fill
                     src={svc.cards[0].image}
                     alt={svc.title.replace(/&amp;/g, "&")}
-                    style={{ objectFit: "cover", objectPosition: "center", filter: "contrast(1.12) saturate(1.25) brightness(1.06)" }}
+                    className="amw-svc-tab-img"
                     sizes="(max-width: 992px) 100vw, 50vw"
                     priority={i === 0}
                     loading={i === 0 ? "eager" : "lazy"}
@@ -296,7 +296,6 @@ export default function AMWService() {
                 fill
                 src={activeCard.image}
                 alt={activeCard.heading}
-                style={{ objectFit: "cover", filter: "contrast(1.12) saturate(1.25) brightness(1.06)" }}
                 sizes="430px"
               />
             </div>
@@ -305,13 +304,8 @@ export default function AMWService() {
             <div className="amw-modal-body">
               <button className="amw-modal-close" onClick={closeModal} aria-label="Close">×</button>
 
-              <h3 style={{ fontSize: 22, fontWeight: 800, marginBottom: 0, lineHeight: 1.2, paddingRight: 20 }}>
-                {activeCard.heading}
-              </h3>
-
-              <p style={{ color: "#555", lineHeight: 1.75, marginBottom: 0, fontSize: 14 }}>
-                {activeCard.body}
-              </p>
+              <h3 className="amw-modal-heading">{activeCard.heading}</h3>
+              <p className="amw-modal-body-text">{activeCard.body}</p>
 
               {activeCard.bullets && (
                 <ul className="amw-modal-bullets">
