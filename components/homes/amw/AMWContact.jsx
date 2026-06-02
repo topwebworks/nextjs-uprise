@@ -108,28 +108,6 @@ export default function AMWContact() {
 
         <div className="col-md-6 d-flex flex-column gap-3">
 
-          {/* Trust bar */}
-          <div className="amw-form-trust-bar">
-            <div className="amw-form-trust-item">
-              <i className="mi-document-check amw-form-trust-icon" aria-hidden="true" />
-              <div>
-                <div className="amw-form-trust-label">AZ Licensed &amp; Insured</div>
-                <div className="amw-form-trust-sub">ROC #359843 · ROC #346552</div>
-              </div>
-            </div>
-            <div className="amw-form-trust-item">
-              <div className="amw-form-trust-stars" aria-label="5 stars">
-                {[...Array(5)].map((_, i) => (
-                  <i key={i} className="icon-star-rate amw-form-star" aria-hidden="true" />
-                ))}
-              </div>
-              <div>
-                <div className="amw-form-trust-label">5-Star Google Reviews</div>
-                <div className="amw-form-trust-sub">Rated 5 stars on Google Business</div>
-              </div>
-            </div>
-          </div>
-
           {/* Review cards */}
           {[
             { quote: "We have used AMW for two large hardscape projects now, and we couldn't be happier with the results. They show up on time, maintain great communication, and the quality of work is outstanding.", author: "Larisa Rodriguez" },
