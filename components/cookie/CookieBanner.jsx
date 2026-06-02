@@ -31,7 +31,7 @@ export default function CookieBanner() {
         role="region"
         aria-label="Cookie consent"
       >
-        <div className="container d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-3 py-3">
+        <div className="container d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-3" style={{ padding: "16px 0" }}>
           <p className="mb-0" style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.82rem", lineHeight: 1.5 }}>
             We use cookies for analytics and site functionality.{" "}
             <button
