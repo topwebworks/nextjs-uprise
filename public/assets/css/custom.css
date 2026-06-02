@@ -361,7 +361,7 @@ a {
   z-index: 9999;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), background 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -376,6 +376,7 @@ a {
 .amw-scroll-top:hover {
   background: #333;
   color: #fff;
+  transform: scale(1.2);
 }
 .amw-scroll-top.visible {
   opacity: 1;
