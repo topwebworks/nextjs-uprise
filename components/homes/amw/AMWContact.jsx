@@ -108,24 +108,6 @@ export default function AMWContact() {
 
         <div className="col-md-6 d-flex flex-column gap-3">
 
-          {/* Lead review */}
-          {[
-            { quote: "We have used AMW for two large hardscape projects now, and we couldn't be happier with the results. They show up on time, maintain great communication, and the quality of work is outstanding.", author: "Larisa Rodriguez" },
-          ].map((r, i) => (
-            <div key={i} className="amw-form-review">
-              <div className="amw-form-review-stars">
-                {[...Array(5)].map((_, s) => (
-                  <i key={s} className="icon-star-rate amw-form-star" aria-hidden="true" />
-                ))}
-              </div>
-              <p className="amw-form-review-quote">&ldquo;{r.quote}&rdquo;</p>
-              <div className="amw-form-review-footer">
-                <span className="amw-form-review-author">{r.author}</span>
-                <span className="amw-form-review-g">G</span>
-              </div>
-            </div>
-          ))}
-
           {/* Next steps */}
           <div className="amw-next-steps">
             <div className="amw-next-steps-title">What happens next</div>
@@ -143,8 +125,8 @@ export default function AMWContact() {
 
           {/* Supporting reviews */}
           {[
+            { quote: "We have used AMW for two large hardscape projects now, and we couldn't be happier with the results. They show up on time, maintain great communication, and the quality of work is outstanding.", author: "Larisa Rodriguez" },
             { quote: "They answer the phone which is a HUGE plus — showed up on time and stayed until the job was completed 100%. We will use them again.", author: "Frost" },
-            { quote: "Quality, good prices, neat and clean work.", author: "Daniel Gervasi" },
           ].map((r, i) => (
             <div key={i} className="amw-form-review">
               <div className="amw-form-review-stars">
