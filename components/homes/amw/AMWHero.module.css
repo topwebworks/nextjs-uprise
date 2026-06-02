@@ -93,6 +93,7 @@
   text-transform: uppercase;
   padding: 4px 12px;
   border-radius: 4px;
+  white-space: nowrap;
   text-decoration: none;
   transition: background 0.2s, color 0.2s;
 }
