@@ -9,6 +9,7 @@
 // The `form` prop must match a key in data/ghl.js > forms.
 // Each key maps to a GHL form UUID.
 import ghl from "@/data/ghl";
+import "@/components/ghl/ContactForm.module.css";
 
 export default function ContactForm({
   form = "contact",
@@ -22,48 +23,6 @@ export default function ContactForm({
   if (!formId || formId.includes("PLACEHOLDER")) {
     return (
       <div className={`ghl-form-placeholder p-4 border text-center ${className}`}>
-        <style>{`
-          .ghl-form-placeholder {
-            min-height: 360px;
-            border-color: #e5e5e5 !important;
-            border-radius: 8px;
-            background: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          .ghl-form-placeholder-inner {
-            max-width: 520px;
-            margin: 0 auto;
-          }
-          .ghl-form-placeholder .h5 {
-            max-width: 360px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.3;
-          }
-          .ghl-form-placeholder .text-gray {
-            line-height: 1.7;
-          }
-          .ghl-form-fields {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 8px;
-            list-style: none;
-            padding: 0;
-            margin: 22px 0 0;
-          }
-          .ghl-form-fields li {
-            border: 1px solid #e5e5e5;
-            border-radius: 999px;
-            color: #555;
-            font-size: 12px;
-            line-height: 1.2;
-            padding: 7px 11px;
-            background: #fafafa;
-          }
-        `}</style>
         <div className="ghl-form-placeholder-inner">
           <h4 className="h5 mb-10">{placeholderTitle}</h4>
           {placeholderText ? (
