@@ -201,7 +201,10 @@ export default function HeaderAMW() {
 
       {/* React-controlled mobile menu — rendered in portal */}
       {mobileOpen && portalRoot && createPortal(
-        <MobileMenu onClose={() => setMobileOpen(false)} />,
+        <>
+          <div className="amw-mobile-backdrop" onClick={() => setMobileOpen(false)} />
+          <MobileMenu onClose={() => setMobileOpen(false)} />
+        </>,
         portalRoot
       )}
     </>
