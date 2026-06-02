@@ -6,13 +6,20 @@ import ImageBackground from "@/components/common/ImageBackground";
 import AnimatedText from "@/components/common/AnimatedText";
 import { getAllPosts } from "@/lib/blog";
 import { buildMetadata } from "@/utils/seo";
+import styles from "./blog.module.css";
 
 export const metadata = buildMetadata({
   title: "Blog | Hardscape Tips & Project Ideas",
-  description:
-    "Helpful guides, project ideas, and expert tips from AMW Hardscape Solutions — serving San Tan Valley, Queen Creek, Gilbert & the East Valley.",
+  description: "Helpful guides, project ideas, and expert tips from AMW Hardscape Solutions — serving San Tan Valley, Queen Creek, Gilbert & the East Valley.",
   path: "/blog",
+  tags: ["hardscape", "arizona landscaping", "pavers", "artificial turf", "concrete", "san tan valley", "queen creek", "gilbert"],
 });
+
+function formatDate(dateStr) {
+  return new Date(dateStr).toLocaleDateString("en-US", {
+    month: "long", day: "numeric", year: "numeric",
+  });
+}
 
 export default function BlogIndexPage() {
   const posts = getAllPosts();
@@ -24,89 +31,116 @@ export default function BlogIndexPage() {
           <HeaderAMW />
         </nav>
         <main id="main">
+
           {/* Hero */}
-          <section className="page-section pt-0 pb-0" id="home">
-            <section className="page-section bg-dark-1 bg-dark-alpha-50 light-content amw-fixed-bg-host">
-              <ImageBackground src="/assets/tww-assets/amw-images/Patio_pavers_installed_in_backyard_202605131833.jpeg" alt="" fixed priority />
-              <div className="container position-relative pt-100 pb-80">
-                <div className="text-center">
-                  <div className="row">
-                    <div className="col-md-8 offset-md-2">
-                      <h1 className="hs-title-1 mb-20">
-                        <AnimatedText text="Blog" />
-                      </h1>
-                      <p className="section-descr mb-0 wow fadeIn" data-wow-delay="0.2s" data-wow-duration="1.2s">
-                        What we&rsquo;ve learned doing this work in the Arizona heat.
-                      </p>
+          <section className="page-section pt-0 pb-0">
+            <div className="page-section bg-dark-1 bg-dark-alpha-60 light-content amw-fixed-bg-host amw-secondary-hero">
+              <ImageBackground
+                src="/assets/tww-assets/amw-images/475073428_122137974338562324_5243938571606077407_n.jpg"
+                alt=""
+                fixed
+                priority
+              />
+              <div className="container position-relative">
+                <div className="row">
+                  <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center">
+                    <div className="section-caption mb-20 wow fadeInUp" data-wow-delay="0.1s">
+                      From the Field
                     </div>
+                    <h1 className="hs-title-1 mb-20">
+                      <AnimatedText text="Hardscape tips from the East Valley." />
+                    </h1>
+                    <p className="section-descr mb-0 wow fadeInUp" data-wow-delay="0.3s">
+                      Real guides from a crew that works in Arizona heat every day.
+                    </p>
                   </div>
                 </div>
               </div>
-            </section>
+            </div>
           </section>
 
-          {/* Post Grid */}
+          {/* Post grid */}
           <section className="page-section">
-            <div className="container relative">
+            <div className="container">
               {posts.length === 0 ? (
                 <div className="text-center py-60">
                   <p className="text-gray">No posts yet — check back soon.</p>
                 </div>
               ) : (
-                <div className="row mt-n50">
-                  {posts.map((post) => (
-                    <div key={post.slug} className="col-md-6 col-lg-4 mt-50">
-                      <div className="blog-item">
+                <div className={styles.grid}>
+                  {posts.map((post, i) => (
+                    <article
+                      key={post.slug}
+                      className={`${styles.card} wow fadeInUp`}
+                      data-wow-delay={`${(i % 3) * 0.1}s`}
+                    >
+                      {/* 16:9 thumbnail */}
+                      <Link href={`/blog/${post.slug}`} className={styles.thumb} aria-label={post.title}>
                         {post.image && (
-                          <div className="blog-item-image">
-                            <Link href={`/blog/${post.slug}`}>
-                              <Image
-                                src={post.image}
-                                alt={post.title}
-                                width={800}
-                                height={450}
-                                className="wow scaleOutIn"
-                                data-wow-duration="1.2s"
-                                style={{ width: "100%", height: "auto" }}
-                              />
-                            </Link>
+                          <Image
+                            src={post.image}
+                            alt={post.title}
+                            fill
+                            sizes="(max-width: 575px) 100vw, (max-width: 991px) 50vw, 33vw"
+                            className={styles.thumbImg}
+                          />
+                        )}
+                        <div className={styles.thumbOverlay} />
+                        {post.category && (
+                          <span className={styles.category}>{post.category}</span>
+                        )}
+                      </Link>
+
+                      {/* Card body */}
+                      <div className={styles.cardBody}>
+                        <div className={styles.meta}>
+                          {post.date && <span>{formatDate(post.date)}</span>}
+                          {post.readTime && (
+                            <>
+                              <span className={styles.metaDot} />
+                              <span>{post.readTime}</span>
+                            </>
+                          )}
+                        </div>
+
+                        <Link href={`/blog/${post.slug}`} className={styles.cardTitle}>
+                          {post.title}
+                        </Link>
+
+                        {post.description && (
+                          <p className={styles.cardDesc}>{post.description}</p>
+                        )}
+
+                        <Link href={`/blog/${post.slug}`} className={styles.cardLink}>
+                          Read article <i className="mi-arrow-right" aria-hidden="true" />
+                        </Link>
+
+                        {post.tags?.length > 0 && (
+                          <div className={styles.tags}>
+                            {post.tags.slice(0, 4).map((tag) => (
+                              <span key={tag} className={styles.tag}>{tag}</span>
+                            ))}
                           </div>
                         )}
-                        <div className="blog-item-body">
-                          <div className="blog-item-data">
-                            {post.date && (
-                              <span className="me-3">
-                                <i className="mi-clock size-16" />{" "}
-                                {new Date(post.date).toLocaleDateString("en-US", {
-                                  month: "long",
-                                  day: "numeric",
-                                  year: "numeric",
-                                })}
-                              </span>
-                            )}
-                            {post.author && (
-                              <span>
-                                <i className="mi-user size-16" /> {post.author}
-                              </span>
-                            )}
-                          </div>
-                          <h2 className="blog-item-title">
-                            <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                          </h2>
-                          {post.description && (
-                            <p className="text-gray">{post.description}</p>
-                          )}
-                          <Link href={`/blog/${post.slug}`} className="link-hover-anim underline">
-                            Read more <i className="mi-arrow-right" />
-                          </Link>
-                        </div>
                       </div>
-                    </div>
+                    </article>
                   ))}
                 </div>
               )}
             </div>
           </section>
+
+          {/* CTA band */}
+          <section className={styles.ctaBand}>
+            <div className="container">
+              <p className={styles.ctaBandTitle}>Ready to start your project?</p>
+              <p className={styles.ctaBandDesc}>San Tan Valley · Queen Creek · Gilbert · Mesa · Chandler · Apache Junction</p>
+              <Link href="/#contact-form" className="btn btn-mod btn-w btn-large btn-round btn-hover-anim">
+                <span>Get a Free Estimate</span>
+              </Link>
+            </div>
+          </section>
+
         </main>
         <Footer1 />
       </div>

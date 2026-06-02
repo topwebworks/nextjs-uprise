@@ -4,10 +4,9 @@ import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import HeaderAMW from "@/components/headers/HeaderAMW";
 import Footer1 from "@/components/footers/Footer1";
-import ImageBackground from "@/components/common/ImageBackground";
-import AnimatedText from "@/components/common/AnimatedText";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { buildMetadata } from "@/utils/seo";
+import styles from "../blog.module.css";
 
 export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
@@ -22,6 +21,16 @@ export async function generateMetadata({ params }) {
     description: post.description,
     path: `/blog/${post.slug}`,
     image: post.image,
+    tags: post.tags,
+    publishedTime: post.date ? new Date(post.date).toISOString() : undefined,
+    author: post.author,
+    type: "article",
+  });
+}
+
+function formatDate(dateStr) {
+  return new Date(dateStr).toLocaleDateString("en-US", {
+    month: "long", day: "numeric", year: "numeric",
   });
 }
 
@@ -42,91 +51,104 @@ export default async function BlogPostPage({ params }) {
           <HeaderAMW />
         </nav>
         <main id="main">
-          {/* Hero */}
-          <section className="page-section pt-0 pb-0" id="home">
-            <section className="page-section bg-dark-1 bg-dark-alpha-60 light-content amw-fixed-bg-host amw-secondary-hero">
-              <ImageBackground src="/assets/tww-assets/amw-images/IMG_4280.HEIC.jpg" alt="" fixed priority />
-              <div className="container position-relative pt-50 pb-30">
-                <div className="text-center">
-                  <div className="row">
-                    <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-                      <h1 className="hs-title-1 mb-20">
-                        <AnimatedText text={post.title} />
-                      </h1>
-                      <div className="blog-item-data mt-20 mb-0 wow fadeInUp" data-wow-delay="0.2s">
-                        {post.date && (
-                          <span className="d-inline-block me-3">
-                            <i className="mi-clock size-16" />{" "}
-                            {new Date(post.date).toLocaleDateString("en-US", {
-                              month: "long",
-                              day: "numeric",
-                              year: "numeric",
-                            })}
-                          </span>
-                        )}
-                        {post.author && (
-                          <span className="d-inline-block me-3">
-                            <i className="mi-user size-16" /> {post.author}
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </section>
 
-          {/* Post Body */}
-          <section className="page-section">
-            <div className="container relative">
-              <div className="row">
-                <div className="col-lg-8 offset-lg-2">
-                  <div className="blog-item mb-80 mb-xs-40">
-                    {post.image && (
-                      <div className="blog-media mb-40 mb-xs-30">
-                        <Image
-                          src={post.image}
-                          alt={post.title}
-                          width={1200}
-                          height={675}
-                          style={{ width: "100%", height: "auto" }}
-                          priority
-                        />
-                      </div>
-                    )}
-                    <div className="blog-item-body">
-                      <div className="mdx-content">
-                        <MDXRemote source={post.content} />
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Prev / Next */}
-                  {(prev || next) && (
-                    <div className="clearfix mt-40 mb-40">
-                      {prev && (
-                        <Link href={`/blog/${prev.slug}`} className="blog-item-more left">
-                          <i className="mi-chevron-left" /> Prev post
-                        </Link>
-                      )}
-                      {next && (
-                        <Link href={`/blog/${next.slug}`} className="blog-item-more right">
-                          Next post <i className="mi-chevron-right" />
-                        </Link>
-                      )}
-                    </div>
+          {/* Full-bleed 16:9 hero with post image */}
+          {post.image && (
+            <div className={styles.detailHero}>
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                sizes="100vw"
+                className={styles.detailHeroImg}
+                priority
+              />
+              <div className={styles.detailHeroOverlay} />
+              <div className={styles.detailHeroContent}>
+                <div className="container">
+                  {post.category && (
+                    <span className={styles.detailCategory}>{post.category}</span>
                   )}
-
-                  <div className="mt-20">
-                    <Link href="/blog" className="link-hover-anim underline">
-                      <i className="mi-arrow-left" /> Back to blog
-                    </Link>
+                  <h1 className={styles.detailTitle}>{post.title}</h1>
+                  <div className={styles.detailMeta}>
+                    {post.date && <span>{formatDate(post.date)}</span>}
+                    {post.readTime && (
+                      <>
+                        <span className={styles.detailMetaDot} />
+                        <span>{post.readTime}</span>
+                      </>
+                    )}
+                    {post.author && (
+                      <>
+                        <span className={styles.detailMetaDot} />
+                        <span>{post.author}</span>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
             </div>
+          )}
+
+          {/* Article */}
+          <div className="container">
+            <article className={styles.article}>
+
+              {/* Prose content */}
+              <div className={styles.prose}>
+                <MDXRemote source={post.content} />
+              </div>
+
+              {/* Tags */}
+              {post.tags?.length > 0 && (
+                <div className={styles.articleTags}>
+                  <span className={styles.articleTagLabel}>Tags:</span>
+                  {post.tags.map((tag) => (
+                    <span key={tag} className={styles.tag}>{tag}</span>
+                  ))}
+                </div>
+              )}
+
+              {/* Prev / Next */}
+              {(prev || next) && (
+                <div className={styles.postNav}>
+                  {prev ? (
+                    <Link href={`/blog/${prev.slug}`} className={styles.postNavItem}>
+                      <span className={styles.postNavDir}>
+                        <i className="mi-arrow-left" aria-hidden="true" /> Previous
+                      </span>
+                      <span className={styles.postNavTitle}>{prev.title}</span>
+                    </Link>
+                  ) : <div />}
+                  {next && (
+                    <Link href={`/blog/${next.slug}`} className={`${styles.postNavItem} ${styles.right}`}>
+                      <span className={styles.postNavDir}>
+                        Next <i className="mi-arrow-right" aria-hidden="true" />
+                      </span>
+                      <span className={styles.postNavTitle}>{next.title}</span>
+                    </Link>
+                  )}
+                </div>
+              )}
+
+              <Link href="/blog" className={styles.backLink}>
+                <i className="mi-arrow-left" aria-hidden="true" /> All articles
+              </Link>
+
+            </article>
+          </div>
+
+          {/* CTA band */}
+          <section className={styles.ctaBand}>
+            <div className="container">
+              <p className={styles.ctaBandTitle}>Ready to start your project?</p>
+              <p className={styles.ctaBandDesc}>San Tan Valley · Queen Creek · Gilbert · Mesa · Chandler · Apache Junction</p>
+              <Link href="/#contact-form" className="btn btn-mod btn-w btn-large btn-round btn-hover-anim">
+                <span>Get a Free Estimate</span>
+              </Link>
+            </div>
           </section>
+
         </main>
         <Footer1 />
       </div>

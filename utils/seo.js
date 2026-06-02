@@ -8,25 +8,27 @@
 
 import site from "@/data/site";
 
-export function buildMetadata({ title, description, path = "", image }) {
+export function buildMetadata({ title, description, path = "", image, tags, publishedTime, modifiedTime, author, type = "website" }) {
   const url = `${site.url}${path}`;
   const ogImage = image
     ? `${site.url}${image}`
     : `${site.url}${site.ogImage}`;
 
-  return {
+  const base = {
     title: `${title} | ${site.name}`,
     description,
-    alternates: {
-      canonical: url,
-    },
+    keywords: tags?.join(", "),
+    alternates: { canonical: url },
     openGraph: {
       title: `${title} | ${site.name}`,
       description,
       url,
       siteName: site.name,
       images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
-      type: "website",
+      type,
+      ...(publishedTime && { publishedTime }),
+      ...(modifiedTime && { modifiedTime }),
+      ...(author && { authors: [author] }),
     },
     twitter: {
       card: "summary_large_image",
@@ -35,4 +37,6 @@ export function buildMetadata({ title, description, path = "", image }) {
       images: [ogImage],
     },
   };
+
+  return base;
 }
