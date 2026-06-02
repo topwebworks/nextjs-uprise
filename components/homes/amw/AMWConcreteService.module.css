@@ -1,0 +1,45 @@
+/* AMWConcreteService — component-specific tab/image column styles */
+
+:global(.csvc-tabs-mobile) {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  :global(.csvc-tabs-desktop) {
+    display: none !important;
+  }
+  :global(.csvc-tabs-mobile) {
+    display: block !important;
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 18px;
+    font-weight: 700;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    color: #111;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%23111' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    cursor: pointer;
+    margin-bottom: 24px;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 991px) {
+  :global(.csvc-tabs-mobile) {
+    max-width: 100% !important;
+  }
+  :global(.csvc-img-col) {
+    margin-top: 40px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  :global(.csvc-img-col) {
+    margin-top: 32px !important;
+  }
+}

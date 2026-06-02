@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import "@/components/homes/amw/AMWModal.module.css";
+import "@/components/homes/amw/AMWServiceTab.module.css";
+import "@/components/homes/amw/AMWDrivewayService.module.css";
 
 const services = [
   {
@@ -153,69 +155,6 @@ export default function AMWDrivewayService() {
 
   return (
     <div className="container position-relative">
-      <style>{`
-        .services-tabs .nav-link,
-        .services-tabs a {
-          font-size: 24px !important;
-          font-weight: 500 !important;
-          color: #555 !important;
-          opacity: 1 !important;
-        }
-        .services-tabs a.active,
-        .services-tabs .nav-link.active {
-          color: #111 !important;
-          font-weight: 700 !important;
-        }
-        .amw-service-img-wrap {
-          position: relative;
-          width: 100%;
-          height: 680px;
-          overflow: hidden;
-          border-radius: 4px;
-        }
-        @media (max-width: 1100px) {
-          .wvsvc-tabs-desktop { display: none !important; }
-          .wvsvc-tabs-mobile {
-            display: block !important;
-            width: 100%;
-            padding: 14px 18px;
-            font-size: 18px;
-            font-weight: 700;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            background: #fff;
-            color: #111;
-            appearance: none;
-            -webkit-appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%23111' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 16px center;
-            cursor: pointer;
-            margin-bottom: 24px;
-            max-width: 350px;
-          }
-        }
-        .wvsvc-tabs-mobile { display: none; }
-        @media (max-width: 991px) {
-          .wvsvc-tabs-mobile { max-width: 100% !important; }
-          .services-text { margin-top: 0 !important; }
-          .services-text-container { margin-left: 0 !important; }
-          .wvsvc-img-col { margin-top: 40px !important; }
-        }
-        @media (max-width: 767px) {
-          .wvsvc-img-col { margin-top: 32px !important; }
-        }
-        @media (max-width: 575px) {
-          .amw-service-img-wrap { height: 280px; }
-          .services-text { margin-top: 0 !important; }
-          .services-text-container { margin: 0 !important; padding: 16px 18px 20px !important; }
-          .services-text-container p { font-size: 14px !important; line-height: 1.65 !important; }
-          .services-text-container .services-title { font-size: 20px !important; margin-bottom: 8px !important; }
-        }
-        .services-text { position: relative; z-index: 2; margin-top: -180px; }
-        .services-text-container { background: #f5f5f5; padding: 28px 32px 32px; margin: 0 0 0 40px; }
-        /* Modal styles → AMWModal.module.css */
-      `}</style>
 
       <div className="row">
         <div className="col-lg-6 mb-lg-0 mb-30">
