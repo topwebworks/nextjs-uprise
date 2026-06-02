@@ -1,8 +1,7 @@
 "use client";
-import { faqDataMain } from "@/data/faqs";
 import React, { useEffect, useRef, useState } from "react";
 
-export default function Faq({ faqData = faqDataMain }) {
+export default function Faq({ faqData }) {
   const questionRefs = useRef([]);
   const answerRefs = useRef([]);
   const [currentIndex, setCurrentIndex] = useState(-1);
