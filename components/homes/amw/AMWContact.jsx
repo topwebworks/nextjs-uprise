@@ -2,9 +2,21 @@
 import AnimatedText from "@/components/common/AnimatedText";
 import ContactForm from "@/components/ghl/ContactForm";
 import site from "@/data/site";
+import { useState } from "react";
 import "@/components/homes/amw/AMWContact.module.css";
 
+const cities = [
+  { name: "San Tan Valley",  q: "San+Tan+Valley,+AZ" },
+  { name: "Queen Creek",     q: "Queen+Creek,+AZ" },
+  { name: "Gilbert",         q: "Gilbert,+AZ" },
+  { name: "Mesa",            q: "Mesa,+AZ" },
+  { name: "Chandler",        q: "Chandler,+AZ" },
+  { name: "Apache Junction", q: "Apache+Junction,+AZ" },
+];
+
 export default function AMWContact() {
+  const [activeCity, setActiveCity] = useState(null);
+
   return (
     <div className="container position-relative">
       <div className="row">
@@ -54,23 +66,14 @@ export default function AMWContact() {
                 </div>
                 <h4 className="alt-features-title">Service area</h4>
                 <div className="alt-features-descr amw-service-cities">
-                  {[
-                    { name: "San Tan Valley", q: "San+Tan+Valley,+AZ" },
-                    { name: "Queen Creek",    q: "Queen+Creek,+AZ" },
-                    { name: "Gilbert",        q: "Gilbert,+AZ" },
-                    { name: "Mesa",           q: "Mesa,+AZ" },
-                    { name: "Chandler",       q: "Chandler,+AZ" },
-                    { name: "Apache Junction", q: "Apache+Junction,+AZ" },
-                  ].map(({ name, q }) => (
-                    <a
+                  {cities.map(({ name, q }) => (
+                    <button
                       key={name}
-                      href={`https://www.google.com/maps/search/?api=1&query=${q}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="amw-city-link"
+                      onClick={() => setActiveCity({ name, q })}
                     >
                       {name}
-                    </a>
+                    </button>
                   ))}
                 </div>
               </div>
@@ -118,6 +121,34 @@ export default function AMWContact() {
           </div>
         </div>
       </div>
+
+      {/* City map modal */}
+      {activeCity && (
+        <div className="amw-city-modal-backdrop" onClick={() => setActiveCity(null)}>
+          <div className="amw-city-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="amw-city-modal-header">
+              <span>{activeCity.name}, AZ</span>
+              <button
+                className="amw-city-modal-close"
+                onClick={() => setActiveCity(null)}
+                aria-label="Close map"
+              >
+                ×
+              </button>
+            </div>
+            <iframe
+              src={`https://maps.google.com/maps?q=${activeCity.q}&output=embed&z=13`}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={`${activeCity.name} AZ map`}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
