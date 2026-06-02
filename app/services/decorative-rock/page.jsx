@@ -44,7 +44,7 @@ export default function DecorativeRockPage() {
                               data-wow-delay="0.6s"
                               data-wow-duration="1.2s"
                             >
-                              Decorative rock, DG, and accent boulders for Arizona front yards, backyards &amp; hardscape borders. Serving San Tan Valley, Queen Creek, Gilbert, Mesa, Chandler, Apache Junction, Maricopa &amp; the East Valley.
+                              Desert rock, DG &amp; accent boulders for Arizona yards. Site graded, barrier down, edging set so the rock stays where it belongs.
                             </p>
                           </div>
                         </div>

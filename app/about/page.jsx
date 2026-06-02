@@ -103,14 +103,14 @@ export default function AboutPage() {
                               Licensed &amp; Insured
                             </div>
                           </div>
-                          <div className="d-inline-flex mt-10 mx-3">
-                            <div className="features-list-icon">
-                              <i className="mi-check" />
+                          {site.roc.map((roc, i) => (
+                            <div key={i} className="d-inline-flex mt-10 mx-3" style={{ whiteSpace: "nowrap" }}>
+                              <div className="features-list-icon">
+                                <i className="mi-check" />
+                              </div>
+                              <div className="features-list-text">{roc}</div>
                             </div>
-                            <div className="features-list-text">
-                              {site.roc.join(" / ")}
-                            </div>
-                          </div>
+                          ))}
                         </div>
                         {/* End Feature List */}
                       </div>
@@ -123,8 +123,8 @@ export default function AboutPage() {
             </section>
             <section className="page-section">
               <div className="container">
-                <div className="row">
-                  <div className="col-sm-5 mb-xs-50">
+                <div className="row amw-about-content-split">
+                  <div className="col-sm-5 mb-xs-10 amw-about-content-media">
                     <div className="call-action-4-images">
                       <div className="call-action-4-image-1" style={{ overflow: "hidden" }}>
                         <Image
@@ -158,8 +158,8 @@ export default function AboutPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="col-sm-7 col-xl-6 offset-xl-1 mt-n10">
-                    <div className="wow linesAnimIn" data-splitting="lines">
+                  <div className="col-sm-7 col-xl-6 offset-xl-1 mt-n10 mt-xs-40 amw-about-content-copy">
+                    <div className="wow fadeInUp">
                       <p className="lead mt-0 mb-40">
                         AMW Hardscape Solutions is a licensed hardscape
                         contractor serving San Tan Valley, Mesa, Queen Creek,

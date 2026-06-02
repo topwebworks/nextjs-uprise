@@ -40,7 +40,7 @@ export default function ConcreteSlabPage() {
                         <div className="row">
                           <div className="col-lg-12">
                             <p className="section-descr mb-0 wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1.2s">
-                              Driveways, patios, RV pads, driveway extensions, repairs &amp; full replacement — all under one crew. Serving San Tan Valley, Queen Creek, Gilbert, Mesa, Chandler, Apache Junction &amp; Maricopa AZ.
+                              Driveways, patios, RV pads &amp; extensions. Subgrade prepped, forms set right, poured and finished clean.
                             </p>
                           </div>
                         </div>

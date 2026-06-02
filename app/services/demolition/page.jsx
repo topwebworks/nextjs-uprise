@@ -34,7 +34,7 @@ export default function DemoRemovalPage() {
                       <div className="col-md-8 offset-md-2">
                         <h1 className="hs-title-1 mb-30">
                           <span className="wow charsAnimIn" data-splitting="chars">
-                            Demolition & removal. Clean site, ready for what&rsquo;s next.
+                            Demolition &amp; removal. Clean site, ready to build.
                           </span>
                         </h1>
                         <div className="row">
@@ -44,7 +44,7 @@ export default function DemoRemovalPage() {
                               data-wow-delay="0.6s"
                               data-wow-duration="1.2s"
                             >
-                              Concrete, pavers, turf, and rock removal with full haul and disposal. Serving San Tan Valley, Queen Creek, Gilbert, Mesa, Chandler, Apache Junction &amp; the East Valley. Site assessed, sub-grade left ready for the next install.
+                              Concrete, pavers, turf, and rock. Full removal, full haul, sub-grade assessed and left ready for whatever goes in next.
                             </p>
                           </div>
                         </div>

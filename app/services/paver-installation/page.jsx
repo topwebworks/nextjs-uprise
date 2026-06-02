@@ -49,7 +49,7 @@ export default function PaverInstallationPage() {
                               data-wow-delay="0.6s"
                               data-wow-duration="1.2s"
                             >
-                              Driveways, patios, pool decks &amp; walkways built to last in the Arizona heat. Travertine, concrete pavers, flagstone, porcelain, and more. Serving San Tan Valley, Queen Creek, Gilbert, Mesa, Chandler, Apache Junction &amp; the East Valley.
+                              Driveways, patios, pool decks &amp; walkways. Installed right, from base to finish, built to hold in the Arizona heat.
                             </p>
                           </div>
                         </div>

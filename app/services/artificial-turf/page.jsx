@@ -49,7 +49,7 @@ export default function ArtificialTurfPage() {
                               data-wow-delay="0.6s"
                               data-wow-duration="1.2s"
                             >
-                              Backyards, front yards, pet runs &amp; play areas — artificial turf or natural sod. Serving San Tan Valley, Queen Creek, Gilbert, Mesa, Chandler, Apache Junction &amp; the East Valley. Sub-base prep, drainage, and the right spec for your yard.
+                              Artificial turf or natural sod for any yard. Sub-base compacted, drainage graded, and the right product spec for how you use it.
                             </p>
                           </div>
                         </div>

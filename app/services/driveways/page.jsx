@@ -44,7 +44,7 @@ export default function DrivewayAdditionsPage() {
                               data-wow-delay="0.6s"
                               data-wow-duration="1.2s"
                             >
-                              Widening, parking pads, RV pads &amp; turnarounds for East Valley properties. Serving San Tan Valley, Queen Creek, Gilbert, Mesa, Chandler, Apache Junction &amp; Maricopa AZ. Proper tie-in, drainage, and base spec — built to last.
+                              Widening, parking pads, RV pads &amp; turnarounds. Properly tied in, drained right, and built to hold up long-term.
                             </p>
                           </div>
                         </div>

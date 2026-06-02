@@ -16,6 +16,13 @@
   .grid { grid-template-columns: 1fr; gap: 28px; margin-top: 40px; }
 }
 
+@media (max-width: 480px) {
+  .grid {
+    gap: 22px;
+    margin-top: 26px;
+  }
+}
+
 /* Card */
 .card {
   display: flex;
@@ -79,6 +86,12 @@
   flex: 1;
 }
 
+@media (max-width: 480px) {
+  .cardBody {
+    padding: 18px 16px 22px;
+  }
+}
+
 .meta {
   display: flex;
   align-items: center;
@@ -89,6 +102,14 @@
   text-transform: uppercase;
   color: #aaa;
   margin-bottom: 12px;
+}
+
+@media (max-width: 480px) {
+  .meta {
+    gap: 9px;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+  }
 }
 
 .metaDot {
@@ -107,6 +128,12 @@
   margin: 0 0 12px;
   text-decoration: none;
   display: block;
+}
+
+@media (max-width: 480px) {
+  .cardTitle {
+    font-size: 17px;
+  }
 }
 
 .cardTitle:hover {
@@ -171,6 +198,13 @@
   background: #111;
 }
 
+@media (max-width: 480px) {
+  .detailHero {
+    aspect-ratio: auto;
+    min-height: 360px;
+  }
+}
+
 .detailHeroImg {
   object-fit: cover;
   object-position: center;
@@ -196,6 +230,14 @@
   .detailHeroContent { padding: 24px 20px; }
 }
 
+@media (max-width: 480px) {
+  .detailHeroContent {
+    top: 0;
+    bottom: auto;
+    padding: 98px 20px 24px;
+  }
+}
+
 .detailCategory {
   display: inline-block;
   background: #fff;
@@ -219,6 +261,14 @@
   max-width: 800px;
 }
 
+@media (max-width: 480px) {
+  .detailTitle {
+    font-size: 28px;
+    line-height: 1.08;
+    margin-bottom: 14px;
+  }
+}
+
 .detailMeta {
   display: flex;
   flex-wrap: wrap;
@@ -229,6 +279,15 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.75);
+}
+
+@media (max-width: 480px) {
+  .detailMeta {
+    gap: 8px;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+  }
 }
 
 .detailMetaDot {
@@ -247,6 +306,12 @@
 
 @media (max-width: 767px) {
   .article { padding: 40px 0 60px; }
+}
+
+@media (max-width: 480px) {
+  .article {
+    padding: 34px 0 54px;
+  }
 }
 
 /* MDX prose styles */
@@ -318,6 +383,23 @@
   .prose { font-size: 15px; line-height: 1.75; }
   .prose h2 { font-size: 21px; margin: 40px 0 14px; }
   .prose h3 { font-size: 17px; }
+}
+
+@media (max-width: 480px) {
+  .prose {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .prose h2 {
+    font-size: 21px;
+    line-height: 1.22;
+    margin: 34px 0 12px;
+  }
+
+  .prose p {
+    margin-bottom: 18px;
+  }
 }
 
 /* Post tags */
@@ -424,4 +506,15 @@
   font-size: 16px;
   color: rgba(255,255,255,0.7);
   margin: 0 0 28px;
+}
+
+@media (max-width: 480px) {
+  .ctaBand {
+    padding: 44px 0;
+  }
+
+  .ctaBandDesc {
+    font-size: 14px;
+    line-height: 1.6;
+  }
 }
