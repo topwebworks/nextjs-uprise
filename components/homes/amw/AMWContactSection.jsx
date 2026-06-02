@@ -1,6 +1,7 @@
 "use client";
 import ContactForm from "@/components/ghl/ContactForm";
 import site from "@/data/site";
+import "@/components/homes/amw/AMWContact.module.css";
 
 export default function AMWContactSection({
   introTitle = "Don't hesitate to reach out to us.",
@@ -174,21 +175,42 @@ export default function AMWContactSection({
             </>
           )}
         </div>
-        <div className="col-md-6 d-flex align-items-stretch">
-          {/* Google Map */}
-          <div className="map-boxed">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d193000!2d-111.65!3d33.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1716000000000"
-              width={600}
-              height={450}
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="AMW Hardscape Solutions service area - San Tan Valley, Mesa, Queen Creek, Gilbert AZ"
-            />
+        <div className="col-md-6 d-flex flex-column gap-3">
+
+          {/* Next steps */}
+          <div className="amw-next-steps">
+            <div className="amw-next-steps-title">What happens next</div>
+            {[
+              { n: "1", text: "We review your message and follow up directly" },
+              { n: "2", text: "We answer your questions and talk through your options" },
+              { n: "3", text: "If you're ready, we schedule a free on-site estimate" },
+            ].map(({ n, text }) => (
+              <div key={n} className="amw-next-step">
+                <div className="amw-next-step-num">{n}</div>
+                <div className="amw-next-step-text">{text}</div>
+              </div>
+            ))}
           </div>
-          {/* End Google Map */}
+
+          {/* Reviews */}
+          {[
+            { quote: "We have used AMW for two large hardscape projects now, and we couldn't be happier with the results. They show up on time, maintain great communication, and the quality of work is outstanding.", author: "Larisa Rodriguez" },
+            { quote: "They answer the phone which is a HUGE plus — showed up on time and stayed until the job was completed 100%. We will use them again.", author: "Frost" },
+          ].map((r, i) => (
+            <div key={i} className="amw-form-review">
+              <div className="amw-form-review-stars">
+                {[...Array(5)].map((_, s) => (
+                  <i key={s} className="icon-star-rate amw-form-star" aria-hidden="true" />
+                ))}
+              </div>
+              <p className="amw-form-review-quote">&ldquo;{r.quote}&rdquo;</p>
+              <div className="amw-form-review-footer">
+                <span className="amw-form-review-author">{r.author}</span>
+                <span className="amw-form-review-g">G</span>
+              </div>
+            </div>
+          ))}
+
         </div>
       </div>
     </div>
