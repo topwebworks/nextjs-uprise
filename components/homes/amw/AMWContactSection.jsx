@@ -4,19 +4,19 @@ import site from "@/data/site";
 
 export default function AMWContactSection({
   introTitle = "Don't hesitate to reach out to us.",
-  introText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur finibus urna, quis facilisis tortor. Sed imperdiet sed massa sed consequat. Vestibulum vehicula commodo nibh sit amet sodales. Nunc a neque rutrum mi convallis rhoncus sodales at augue. Donec egestas ultrices ullamcorper.",
+  introText = "",
   formDisclaimer,
   embedForm = false,
   formKey = "contact",
-  formPlaceholderTitle = "Contact form embed placeholder.",
+  formPlaceholderTitle = "Get in Touch",
   formPlaceholderText,
   formPlaceholderFields = [],
 } = {}) {
   const defaultFormDisclaimer = (
     <>
       All the fields are required. By sending the form you agree to the{" "}
-      <a href="#">Terms &amp; Conditions</a> and{" "}
-      <a href="#">Privacy Policy</a>.
+      <a href="/terms-of-service">Terms &amp; Conditions</a> and{" "}
+      <a href="/privacy-policy">Privacy Policy</a>.
     </>
   );
 
