@@ -74,7 +74,7 @@ export default function AMWContact() {
             form="estimate"
             className="amw-estimate-embed"
             placeholderTitle="Request a Free Estimate"
-            placeholderText="Tell us about your project — pavers, concrete, turf, rock, demolition, or driveway additions. We'll get back to you within 24 hours."
+            placeholderText="Tell us about your project — pavers, concrete, turf, rock, demolition, or driveway additions. We'll be in touch soon."
             placeholderFields={[
               "Name",
               "Phone",

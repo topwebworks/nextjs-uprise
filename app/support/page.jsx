@@ -111,7 +111,7 @@ export default function MainAboutPage1() {
                   embedForm
                   formKey="contact"
                   formPlaceholderTitle="Get in Touch"
-                  formPlaceholderText="Questions about a project, an existing job, or just want to talk through your options? Send us a message and we'll follow up within 24 hours."
+                  formPlaceholderText="Questions about a project, an existing job, or just want to talk through your options? Send us a message and we'll be in touch."
                   formPlaceholderFields={[
                     "Name",
                     "Phone",
