@@ -35,22 +35,22 @@ export default function AMWHero() {
               <div className="col-md-10 offset-md-1 mb-20 mb-sm-0 text-center">
 
                 <h2 className="hs-title-11 mb-20 mb-xs-10 wow fadeInUp" data-wow-duration="1.2s">
-                  <span>San Tan Valley</span>
+                  <span className="city">San Tan Valley</span>
                   <span className="d-sm-none" aria-hidden="true">, </span>
                   <span className="d-none d-sm-inline" aria-hidden="true"> &middot; </span>
-                  <span>Queen Creek</span>
+                  <span className="city">Queen Creek</span>
                   <span className="d-sm-none" aria-hidden="true">, </span>
                   <span className="d-none d-sm-inline" aria-hidden="true"> &middot; </span>
-                  <span>Gilbert</span>
+                  <span className="city">Gilbert</span>
                   <span className="d-sm-none" aria-hidden="true">, </span>
                   <span className="d-none d-sm-inline" aria-hidden="true"> &middot; </span>
-                  <span>Mesa</span>
+                  <span className="city">Mesa</span>
                   <span className="d-sm-none" aria-hidden="true">, </span>
                   <span className="d-none d-sm-inline" aria-hidden="true"> &middot; </span>
-                  <span>Chandler</span>
+                  <span className="city">Chandler</span>
                   <span className="d-sm-none" aria-hidden="true">, </span>
                   <span className="d-none d-sm-inline" aria-hidden="true"> &middot; </span>
-                  <span>Apache Junction</span>
+                  <span className="city">Apache Junction</span>
                 </h2>
 
                 <h1 className="hs-title-12 mb-30 mb-sm-20">

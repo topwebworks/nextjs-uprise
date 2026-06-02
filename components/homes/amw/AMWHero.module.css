@@ -55,7 +55,7 @@
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.65);
 }
 
-:global(.amw-hero-content .hs-title-11 span) {
+:global(.amw-hero-content .hs-title-11 .city) {
   white-space: nowrap;
 }
 
