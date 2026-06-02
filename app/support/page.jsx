@@ -67,34 +67,6 @@ export default function MainAboutPage1() {
         <div className="page" id="top">
           <nav className="main-nav transparent stick-fixed wow-menubar amw-support-nav">
             <HeaderAMW />
-            <style>{`
-              .amw-support-nav.transparent:not(.small-height) .nav-logo-wrap .logo.amw-logo,
-              .amw-support-nav.transparent:not(.small-height) .inner-nav > ul > li > a,
-              .amw-support-nav.transparent:not(.small-height) .items-end a {
-                text-shadow: none !important;
-              }
-              .amw-support-nav.transparent:not(.small-height) .amw-logo-badge-wrap {
-                background-color: transparent !important;
-                box-shadow: none !important;
-                border-radius: 0 !important;
-              }
-              .amw-support-nav.transparent:not(.small-height) .amw-logo-primary {
-                filter: none !important;
-              }
-              .amw-support-nav.transparent:not(.small-height) .amw-logo-amw,
-              .amw-support-nav.transparent:not(.small-height) .amw-logo-hardscape {
-                color: #111 !important;
-              }
-              .amw-support-nav.transparent:not(.small-height) .amw-logo-solutions {
-                color: rgba(0,0,0,0.62) !important;
-                text-shadow: none !important;
-              }
-              .amw-support-nav.transparent:not(.small-height) .inner-nav > ul > li > a,
-              .amw-support-nav.transparent:not(.small-height) .items-end a,
-              .amw-support-nav.transparent:not(.small-height) .items-end .link-strong {
-                color: #222 !important;
-              }
-            `}</style>
           </nav>
           <main id="main">
             <section className="page-section pt-0 pb-0" id="home">

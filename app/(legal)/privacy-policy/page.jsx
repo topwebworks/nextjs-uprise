@@ -17,20 +17,6 @@ export default function PrivacyPolicyPage() {
         <div className="page" id="top">
           <nav className="main-nav transparent stick-fixed wow-menubar amw-legal-nav">
             <HeaderAMW />
-            <style>{`
-              .amw-legal-nav.transparent:not(.small-height) .amw-logo-badge-wrap {
-                background-color: transparent !important;
-                box-shadow: none !important;
-                border-radius: 0 !important;
-              }
-              .amw-legal-nav.transparent:not(.small-height) .amw-logo-primary { filter: none !important; }
-              .amw-legal-nav.transparent:not(.small-height) .amw-logo-amw,
-              .amw-legal-nav.transparent:not(.small-height) .amw-logo-hardscape { color: #111 !important; }
-              .amw-legal-nav.transparent:not(.small-height) .amw-logo-solutions { color: rgba(0,0,0,0.62) !important; text-shadow: none !important; }
-              .amw-legal-nav.transparent:not(.small-height) .inner-nav > ul > li > a,
-              .amw-legal-nav.transparent:not(.small-height) .items-end a,
-              .amw-legal-nav.transparent:not(.small-height) .items-end .link-strong { color: #222 !important; text-shadow: none !important; }
-            `}</style>
           </nav>
           <main id="main">
             <section className="page-section pt-0 pb-0">
