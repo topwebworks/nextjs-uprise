@@ -82,9 +82,8 @@ export default function AMWContact() {
               "Project address",
               "Service type",
               "Timeline",
-              "Project notes",
-              "Photo upload",
-              "SMS consent",
+              "Project details",
+              "Project photos",
             ]}
           />
         </div>

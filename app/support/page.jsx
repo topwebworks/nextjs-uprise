@@ -119,7 +119,6 @@ export default function MainAboutPage1() {
                     "Project address",
                     "Reason for reaching out",
                     "Message",
-                    "SMS consent",
                   ]}
                 />
               </section>
