@@ -10,68 +10,62 @@ export default function CookieSettings({ onClose, onSave }) {
   }
 
   return (
-    <div
-      className="modal d-block cookie-settings-modal"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Cookie settings"
-    >
-      <div className="modal-dialog modal-dialog-centered">
-        <div className="modal-content">
-          <div className="modal-header">
-            <h5 className="modal-title">Cookie Settings</h5>
-            <button
-              type="button"
-              className="btn-close"
-              onClick={onClose}
-              aria-label="Close"
-            />
-          </div>
-          <div className="modal-body">
-            {/* Essential — always on */}
-            <div className="d-flex justify-content-between align-items-start mb-3 pb-3 border-bottom">
-              <div>
-                <p className="fw-semibold mb-1">Essential cookies</p>
-                <p className="text-muted small mb-0">
-                  Required for the site to function — chat, forms, session. Cannot be disabled.
-                </p>
-              </div>
-              <span className="badge bg-secondary ms-3 cookie-no-shrink">Always on</span>
-            </div>
+    <div className="cookie-settings-backdrop" role="dialog" aria-modal="true" aria-label="Cookie settings" onClick={onClose}>
+      <div className="cookie-settings-panel" onClick={(e) => e.stopPropagation()}>
 
-            {/* Analytics — user toggle */}
-            <div className="d-flex justify-content-between align-items-start">
-              <div>
-                <p className="fw-semibold mb-1">Analytics cookies</p>
-                <p className="text-muted small mb-0">
-                  Google Analytics (via GTM) — helps us understand how visitors use the site.
-                  No personal data is sold.
-                </p>
-              </div>
-              <div className="form-check form-switch ms-3 cookie-no-shrink">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  role="switch"
-                  id="analytics-toggle"
-                  checked={analytics}
-                  onChange={(e) => setAnalytics(e.target.checked)}
-                />
-                <label className="form-check-label visually-hidden" htmlFor="analytics-toggle">
-                  Analytics cookies
-                </label>
+        {/* Header */}
+        <div className="cookie-settings-header">
+          <span className="cookie-settings-title">Cookie Preferences</span>
+          <button className="cookie-settings-close" onClick={onClose} aria-label="Close">×</button>
+        </div>
+
+        {/* Body */}
+        <div className="cookie-settings-body">
+
+          {/* Essential */}
+          <div className="cookie-setting-row">
+            <div className="cookie-setting-info">
+              <div className="cookie-setting-name">Essential cookies</div>
+              <div className="cookie-setting-desc">
+                Required for the site to work — contact forms, session, and security. These cannot be disabled.
               </div>
             </div>
+            <div className="cookie-setting-control">
+              <span className="cookie-always-on">Always on</span>
+            </div>
           </div>
-          <div className="modal-footer">
-            <button className="btn btn-outline-secondary btn-sm" onClick={onClose}>
-              Cancel
-            </button>
-            <button className="btn btn-primary btn-sm" onClick={handleSave}>
-              Save preferences
-            </button>
+
+          <div className="cookie-settings-divider" />
+
+          {/* Analytics */}
+          <div className="cookie-setting-row">
+            <div className="cookie-setting-info">
+              <div className="cookie-setting-name">Analytics cookies</div>
+              <div className="cookie-setting-desc">
+                Google Analytics via GTM — helps us understand how visitors use the site. No personal data is sold or shared.
+              </div>
+            </div>
+            <div className="cookie-setting-control">
+              <button
+                role="switch"
+                aria-checked={analytics}
+                aria-label="Analytics cookies"
+                className={`cookie-toggle${analytics ? " on" : ""}`}
+                onClick={() => setAnalytics((p) => !p)}
+              >
+                <span className="cookie-toggle-thumb" />
+              </button>
+            </div>
           </div>
+
         </div>
+
+        {/* Footer */}
+        <div className="cookie-settings-footer">
+          <button className="cookie-settings-cancel" onClick={onClose}>Cancel</button>
+          <button className="cookie-settings-save" onClick={handleSave}>Save preferences</button>
+        </div>
+
       </div>
     </div>
   );
