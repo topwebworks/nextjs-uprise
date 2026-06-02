@@ -53,10 +53,25 @@ export default function AMWContact() {
                   <i className="mi-location size-24" aria-hidden="true" />
                 </div>
                 <h4 className="alt-features-title">Service area</h4>
-                <div className="alt-features-descr">
-                  San Tan Valley &middot; Mesa &middot; Queen Creek &middot;
-                  Gilbert &middot; Chandler &middot; Phoenix &amp; surrounding
-                  East Valley
+                <div className="alt-features-descr amw-service-cities">
+                  {[
+                    { name: "San Tan Valley", q: "San+Tan+Valley,+AZ" },
+                    { name: "Queen Creek",    q: "Queen+Creek,+AZ" },
+                    { name: "Gilbert",        q: "Gilbert,+AZ" },
+                    { name: "Mesa",           q: "Mesa,+AZ" },
+                    { name: "Chandler",       q: "Chandler,+AZ" },
+                    { name: "Apache Junction", q: "Apache+Junction,+AZ" },
+                  ].map(({ name, q }) => (
+                    <a
+                      key={name}
+                      href={`https://www.google.com/maps/search/?api=1&query=${q}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="amw-city-link"
+                    >
+                      {name}
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
