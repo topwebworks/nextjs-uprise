@@ -7,26 +7,45 @@
   z-index: 0;
 }
 
-:global(.amw-hero-video) {
+/* Image slides */
+:global(.amw-hero-slide) {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+  z-index: 1;
+  filter: saturate(1.45);
+}
+
+/* YouTube iframe wrapper — oversized to push controls off-screen */
+:global(.amw-yt-wrap) {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+:global(.amw-yt-wrap iframe),
+:global(.amw-yt-wrap #amw-yt-player) {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 1;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
+  /* Oversized enough to clip letterbox and controls on all ratios */
+  width: 100vw;
+  height: calc(100vw * 9 / 16);
+  min-height: 100vh;
+  min-width: calc(100vh * 16 / 9);
   transform: translate(-50%, -50%);
-  transform-origin: center 40%;
-  object-fit: cover;
+  border: 0;
+  pointer-events: none;
 }
 
-:global(.amw-hero-poster) {
-  z-index: 0;
-  object-fit: cover;
-  object-position: center;
-  transform: none;
-  transform-origin: center 40%;
+/* YouTube slide — transitions in like image slides */
+:global(.amw-yt-wrap) {
+  transition: opacity 0.9s ease;
 }
 
 :global(.amw-hero-overlay) {
@@ -39,7 +58,7 @@
     rgba(0, 0, 0, 0.36) 60%,
     rgba(0, 0, 0, 0.58) 100%
   );
-  z-index: 2;
+  z-index: 3;
 }
 
 :global(.amw-hero-content) {

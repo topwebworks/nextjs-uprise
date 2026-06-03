@@ -1,33 +1,136 @@
-﻿"use client";
+"use client";
 import AnimatedText from "@/components/common/AnimatedText";
-import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import "@/components/homes/amw/AMWHero.module.css";
 
+const YT_ID = "AXL8VsJl2kA";
+
+const IMAGE_DURATION = 4000;
+const VIDEO_DURATION = 9000;
+
+const slides = [
+  { type: "image", src: "/assets/tww-assets/amw-images/IMG_2916.HEIC.jpg" },
+  { type: "image", src: "/assets/tww-assets/amw-images/IMG_4281.HEIC.jpg" },
+  { type: "image", src: "/assets/tww-assets/amw-images/IMG_1543.HEIC.jpg" },
+  { type: "image", src: "/assets/tww-assets/amw-images/IMG_1773.HEIC.jpg" },
+  { type: "video" },
+];
+
 export default function AMWHero() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [ytReady, setYtReady] = useState(false);
+  const playerRef = useRef(null);
+  const timerRef = useRef(null);
+
+  function advance() {
+    setActiveIndex((i) => (i + 1) % slides.length);
+  }
+
+  // Slide timer
+  useEffect(() => {
+    const current = slides[activeIndex];
+    const duration = current.type === "video" ? VIDEO_DURATION : IMAGE_DURATION;
+    timerRef.current = setTimeout(advance, duration);
+    return () => clearTimeout(timerRef.current);
+  }, [activeIndex]);
+
+  // YouTube API
+  useEffect(() => {
+    function initPlayer() {
+      playerRef.current = new window.YT.Player("amw-yt-player", {
+        videoId: YT_ID,
+        playerVars: {
+          autoplay: 1,
+          mute: 1,
+          controls: 0,
+          disablekb: 1,
+          enablejsapi: 1,
+          fs: 0,
+          iv_load_policy: 3,
+          modestbranding: 1,
+          rel: 0,
+          showinfo: 0,
+          playsinline: 1,
+        },
+        events: {
+          onReady(e) {
+            e.target.mute();
+            e.target.setPlaybackQuality("hd1080");
+            e.target.playVideo();
+            setYtReady(true);
+          },
+          onStateChange(e) {
+            if (e.data === window.YT.PlayerState.PLAYING) {
+              e.target.setPlaybackQuality("hd1080");
+              // Poll near end to loop seamlessly
+              const duration = e.target.getDuration();
+              if (duration > 0) {
+                clearInterval(e.target._loopInterval);
+                e.target._loopInterval = setInterval(() => {
+                  if (e.target.getCurrentTime() >= duration - 0.5) {
+                    e.target.seekTo(0);
+                  }
+                }, 250);
+              }
+            }
+            if (e.data === window.YT.PlayerState.PAUSED ||
+                e.data === window.YT.PlayerState.ENDED) {
+              clearInterval(e.target._loopInterval);
+              e.target.playVideo();
+            }
+          },
+        },
+      });
+    }
+
+    if (window.YT && window.YT.Player) {
+      initPlayer();
+    } else {
+      window.onYouTubeIframeAPIReady = initPlayer;
+      if (!document.getElementById("yt-iframe-api")) {
+        const tag = document.createElement("script");
+        tag.id = "yt-iframe-api";
+        tag.src = "https://www.youtube.com/iframe_api";
+        document.head.appendChild(tag);
+      }
+    }
+
+    return () => {
+      if (playerRef.current?.destroy) playerRef.current.destroy();
+    };
+  }, []);
+
   return (
     <>
-      {/* Video background */}
+      {/* Background slider */}
       <div className="amw-hero-video-wrap">
-        <Image
-          className="amw-hero-poster"
-          src="/assets/tww-assets/amw-images/o.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-        />
-        <video
-          className="amw-hero-video"
-          src="/assets/tww-assets/amw-images/amw-drone.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-        />
+
+        {/* Image slides */}
+        {slides.map((slide, i) =>
+          slide.type === "image" ? (
+            <div
+              key={i}
+              className="amw-hero-slide"
+              style={{
+                backgroundImage: `url(${slide.src})`,
+                opacity: activeIndex === i ? 1 : 0,
+              }}
+            />
+          ) : null
+        )}
+
+        {/* YouTube slide — always mounted so it loads in background */}
+        <div
+          className="amw-yt-wrap"
+          style={{ opacity: activeIndex === slides.length - 1 && ytReady ? 1 : 0 }}
+        >
+          <div id="amw-yt-player" />
+        </div>
+
         <div className="amw-hero-overlay" />
       </div>
 
-      {/* Hero content */}
+      {/* Hero content — static, never moves */}
       <div className="amw-hero-content">
         <div className="container min-height-100vh d-flex align-items-center pt-100 pb-100 pt-sm-120 pb-sm-120">
           <div className="home-content light-content">

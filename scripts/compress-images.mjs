@@ -11,7 +11,7 @@
  *   node scripts/compress-images.mjs --write --dir public/assets/tww-assets/client-images
  *
  * Rules:
- *   - JPEG/JPG  → JPEG, quality 82, max 2400px on longest edge
+ *   - JPEG/JPG  → JPEG, quality 82, max 1920px on longest edge
  *   - PNG       → PNG, compressionLevel 9
  *   - WebP      → WebP, quality 82
  *   - AVIF      → skipped (already optimal)
@@ -24,7 +24,7 @@ import fs from "fs";
 import path from "path";
 
 const SKIP_BELOW_KB = 200;
-const MAX_PX = 2400;
+const MAX_PX = 1920;
 const JPEG_QUALITY = 82;
 const WEBP_QUALITY = 82;
 
