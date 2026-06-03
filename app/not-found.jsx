@@ -39,27 +39,22 @@ export default function NotFound() {
                       That page doesn&rsquo;t exist.
                     </p>
                     <p className="section-descr" style={{ fontSize: "0.9em", opacity: 0.75 }}>
-                      Head back home or call us at{" "}
-                      <a href={`tel:${site.phone}`} style={{ color: "inherit", textDecoration: "underline", whiteSpace: "nowrap" }}>
-                        (480)&nbsp;721&#8209;6561
-                      </a>
-                      .
+                      Head back home or give us a call.
                     </p>
                   </div>
-                  <div className="d-flex flex-wrap gap-3 justify-content-center wow fadeInUp" data-wow-delay=".3s">
+                  <div className="d-flex flex-column flex-sm-row flex-wrap gap-3 justify-content-center wow fadeInUp" data-wow-delay=".3s">
                     <Link
                       href="/"
                       className="btn btn-mod btn-w btn-round btn-large btn-hover-anim"
                     >
-                      <i className="mi-arrow-left size-24 align-center" />
                       <span>Back to Home</span>
                     </Link>
-                    <Link
-                      href="/#contact"
+                    <a
+                      href={`tel:${site.phone}`}
                       className="btn btn-mod btn-border-w btn-round btn-large btn-hover-anim"
                     >
-                      <span>Get a Free Estimate</span>
-                    </Link>
+                      <span>Call (480) 721-6561</span>
+                    </a>
                   </div>
                 </div>
               </div>
