@@ -26,12 +26,15 @@ export default function ContactForm({
         <div className="ghl-form-placeholder-inner">
           <h4 className="h5 mb-10">{placeholderTitle}</h4>
           {placeholderText ? (
-            <p className="text-gray mb-0">{placeholderText}</p>
+            <p className="text-gray mb-10">{placeholderText}</p>
           ) : (
             <p className="text-muted mb-0">
               Add the form ID in <code>data/ghl.js - forms.{form}</code>.
             </p>
           )}
+          <p className="text-muted" style={{ fontSize: "12px" }}>
+            Live contact form loads here once the lead system is connected.
+          </p>
           {placeholderFields.length > 0 && (
             <ul className="ghl-form-fields" aria-label={`${form} form fields`}>
               {placeholderFields.map((field) => (

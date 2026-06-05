@@ -1,5 +1,6 @@
+import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
-import HeaderAMW from "@/components/headers/HeaderAMW";
+import HeaderQuest from "@/components/headers/HeaderQuest";
 import ImageBackground from "@/components/common/ImageBackground";
 import AnimatedText from "@/components/common/AnimatedText";
 import Image from "next/image";
@@ -65,11 +66,12 @@ const serviceCards = [
 ];
 
 export default function ServicesPage() {
+  notFound();
   return (
     <div className="theme-main">
       <div className="page" id="top">
         <nav className="main-nav dark light-after-scroll transparent stick-fixed wow-menubar">
-          <HeaderAMW />
+          <HeaderQuest />
         </nav>
         <main id="main">
           <section

@@ -1,6 +1,7 @@
+import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
 import ImageBackground from "@/components/common/ImageBackground";
-import HeaderAMW from "@/components/headers/HeaderAMW";
+import HeaderQuest from "@/components/headers/HeaderQuest";
 import AnimatedText from "@/components/common/AnimatedText";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,12 +16,13 @@ export const metadata = buildMetadata({
   path: "/services/paver-installation",
 });
 export default function PaverInstallationPage() {
+  notFound();
   return (
     <>
       <div className="theme-main">
         <div className="page" id="top">
           <nav className="main-nav dark light-after-scroll transparent stick-fixed wow-menubar">
-            <HeaderAMW />
+            <HeaderQuest />
           </nav>
           <main id="main">
             <>

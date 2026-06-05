@@ -2,20 +2,20 @@ import "@/components/homes/amw/AMWProcess.module.css";
 
 const steps = [
   {
-    title: "Free Estimate",
-    description: "We come to you, walk the property, and give you a written quote — no obligation, no pressure.",
+    title: "Free On-Site Consultation",
+    description: "We visit your property, assess the space, and listen to what you want. No pressure — just an honest conversation about what's possible and what it takes to get there.",
   },
   {
-    title: "Design & Materials",
-    description: "We walk you through materials, drainage, access, and layout. You'll know exactly what you're getting before work begins.",
+    title: "Design & Written Scope",
+    description: "We develop the design, walk you through material selections, and provide a written scope of work with clear pricing before anything is signed. No surprises later.",
   },
   {
-    title: "Expert Installation",
-    description: "Our crew handles every phase — prep, install, and cleanup. We show up on time and don't leave until the job is done right.",
+    title: "Construction & Communication",
+    description: "Our crew handles every phase in-house — excavation, plumbing, structure, decking, tile, and finish. You'll hear from us throughout, not just at the beginning and end.",
   },
   {
-    title: "Final Walkthrough",
-    description: "We review every detail with you before we call it complete. Your sign-off is the only one that matters.",
+    title: "Final Walkthrough & Handoff",
+    description: "We walk the completed project with you detail by detail. We don't call it done until you're fully satisfied — and we make sure you know how to care for everything we built.",
   },
 ];
 

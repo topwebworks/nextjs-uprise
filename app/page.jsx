@@ -1,13 +1,14 @@
 import Footer1 from "@/components/footers/Footer1";
-import HeaderAMW from "@/components/headers/HeaderAMW";
+import HeaderQuest from "@/components/headers/HeaderQuest";
+import QuestHero from "@/components/homes/quest/QuestHero";
+import QuestPortfolio from "@/components/homes/quest/QuestPortfolio";
 import AMWHome from "@/components/homes/amw/AMWHome";
-import AMWHero from "@/components/homes/amw/AMWHero";
 import { buildMetadata } from "@/utils/seo";
 
 export const metadata = buildMetadata({
-  title: "Hardscape Contractor San Tan Valley AZ | Pavers, Concrete & Turf | AMW Hardscape Solutions",
+  title: "Custom Pools, Hardscape & Outdoor Living | Quest Pool Co. | Queen Creek AZ",
   description:
-    "Licensed hardscape contractor serving San Tan Valley, Queen Creek, Gilbert, Mesa, Chandler, Apache Junction & the East Valley. Paver installation, concrete, artificial turf, decorative rock & driveway work. ROC #359843. Free estimates — call (480) 721-6561.",
+    "Quest Pool Co. builds luxury custom pools, hardscape, and outdoor living spaces across Arizona's East Valley. Precision craftsmanship, quality materials. ROC #338848. Free estimates — call (480) 477-8832.",
   path: "/",
 });
 
@@ -16,12 +17,13 @@ export default function Home() {
     <div className="theme-main">
       <div className="page" id="top">
         <nav className="main-nav transparent stick-fixed wow-menubar light-content dark" data-light-nav="true">
-          <HeaderAMW />
+          <HeaderQuest />
         </nav>
         <main id="main">
           <div className="home-section relative scrollSpysection" id="home">
-            <AMWHero />
+            <QuestHero />
           </div>
+          <QuestPortfolio />
           <AMWHome />
         </main>
         <Footer1 />

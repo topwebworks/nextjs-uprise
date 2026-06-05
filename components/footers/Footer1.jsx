@@ -15,26 +15,20 @@ export default function Footer1() {
 
           {/* Brand column */}
           <div className="amw-footer-brand">
-            <Link href="/" className="amw-footer-logo" aria-label="AMW Hardscape Solutions — home">
-              <span className="amw-footer-logo-badge" role="img" aria-label="AMW logo">
+            <Link href="/" className="amw-footer-logo" aria-label="Quest Pool Co. — home">
+              <span className="amw-footer-logo-badge" role="img" aria-label="Quest Pool Co. logo">
                 <Image
-                  src="/assets/tww-assets/amw-images/IMG_9002_edited_edited.avif"
+                  src="/assets/tww-assets/quest-images/quest-logo.webp"
                   alt=""
                   fill
-                  sizes="56px"
+                  sizes="120px"
+                  style={{ objectFit: "contain", objectPosition: "left center" }}
                 />
-              </span>
-              <span className="amw-footer-logo-text">
-                <span className="amw-footer-logo-primary">
-                  <span className="amw-footer-logo-amw">AMW</span>
-                  <span className="amw-footer-logo-hardscape"> Hardscape</span>
-                </span>
-                <span className="amw-footer-logo-solutions">S O L U T I O N S</span>
               </span>
             </Link>
 
             <p className="amw-footer-tagline">
-              Licensed hardscape contractor serving the East Valley since day one.
+              Custom pools, hardscape & outdoor living — built with precision by an owner-operated team in Queen Creek, AZ.
             </p>
 
             <div className="amw-footer-contact">
@@ -104,7 +98,7 @@ export default function Footer1() {
 
         {/* SEO — visually hidden */}
         <div className="visually-hidden">
-          Serving: San Tan Valley, Queen Creek, Gilbert, Mesa, Chandler, Apache Junction, Maricopa, Florence, Gold Canyon, Higley, Coolidge, and surrounding East Valley communities. Hardscape contractor Arizona. Pavers, concrete, artificial turf, decorative rock, demolition, driveway additions.
+          Serving: Queen Creek, San Tan Valley, Gilbert, Mesa, Chandler, Scottsdale, and the surrounding East Valley communities. Custom pool builder Arizona. Pool construction, pool remodels, hardscape, pavers, artificial turf, landscaping, outdoor kitchens, fire features. ROC #338848.
         </div>
 
         {/* Bottom bar */}

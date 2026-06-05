@@ -4,17 +4,14 @@ import "@/components/homes/amw/AMWAbout.module.css";
 
 const claims = [
   "AZ Licensed & Insured — ROC #338848 KA-5 / ROC #338103 CR-21",
-  "Structural pool shell engineered for Arizona soil & heat expansion",
-  "Authorized Gator finish installer — one of Arizona's premier pool finish brands",
-  "Seamless beveled coping corners — the detail that separates craft from standard",
-  "Proper pitch, drainage & base prep on every hardscape install",
-  "Equipment sized correctly — pumps, heaters & filtration matched to your pool",
-  "Clean jobsites, clear communication & no surprise charges",
-  "Written scope of work provided before any project begins",
-  "Serving Queen Creek, Gilbert, Mesa, Chandler & the East Valley",
+  "Owner-operated — you work directly with the builders",
+  "Every detail reviewed by the owners before completion",
+  "Premium materials sourced for longevity in the Arizona climate",
+  "Transparent pricing — written scope before any work begins",
+  "Queen Creek based, serving the entire East Valley",
 ];
 
-export default function AMWAbout() {
+export default function QuestAbout() {
   return (
     <>
       <div className="amw-about-wrap">
@@ -23,10 +20,10 @@ export default function AMWAbout() {
           data-wow-delay="0.1s"
           data-wow-duration="1.2s"
           role="img"
-          aria-label="Quest Pool Co. custom pool build — Queen Creek, AZ"
+          aria-label="Quest Pool Co. — Queen Creek, AZ"
         >
           <Image
-            src="/assets/tww-assets/quest-images/architectual_photo_of_arizona_house_202605131833_2.jpeg"
+            src="/assets/tww-assets/quest-images/IMG_9225.jpg"
             alt=""
             fill
             sizes="(max-width: 991px) 100vw, 50vw"
@@ -35,13 +32,13 @@ export default function AMWAbout() {
         </div>
         <div className="amw-about-content">
           <h2 className="section-title mb-20 wow fadeInUp" data-wow-delay="0.2s">
-            Who We Are
+            Built by People Who Care
           </h2>
           <p className="text-gray mb-28 wow fadeInUp amw-about-intro" data-wow-delay="0.3s">
-            Quest Pool Co. is owner-operated, which means the person overseeing your build has an eye for the details most contractors never notice — the way a beveled coping corner meets, whether the waterline tile runs true, how the finish looks in different light. That standard of care doesn't come from a checklist. It comes from someone who genuinely cares about the craft.
+            Quest Pool Co. is owner-operated — which means the people who designed your project are the same people overseeing every phase of the build. No layers. No hand-offs. When you call, you reach someone who knows your job by name.
           </p>
           <p className="text-gray mb-28 wow fadeInUp amw-about-intro" data-wow-delay="0.35s">
-            Based in Queen Creek, we handle every phase in-house — design, excavation, plumbing, structural shell, decking, tile, coping, and finish. One team, one standard, accountable from permit to first swim.
+            We started Quest because we believe outdoor spaces deserve the same level of care and precision as the homes they surround. Every beveled edge, every material choice, every finish detail reflects that standard — and we don't sign off until it does.
           </p>
           <ul className="amw-about-claims wow fadeInUp" data-wow-delay="0.4s">
             {claims.map((c, i) => (

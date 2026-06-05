@@ -48,16 +48,14 @@
   flex-shrink: 0;
   display: block;
   position: relative;
-  overflow: hidden;
-  width: 56px;
-  height: 44px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.92);
+  width: 160px;
+  height: 80px;
+  background: none;
 }
 
 :global(.amw-footer-logo-badge img) {
   object-fit: contain;
-  object-position: center;
+  object-position: left center;
 }
 
 :global(.amw-footer-logo-text) {

@@ -1,7 +1,7 @@
 import "swiper/css";
 import "../public/assets/css/styles.css";
 
-import { DM_Sans } from "next/font/google";
+import { DM_Sans, Poppins } from "next/font/google";
 
 import ClientInit from "@/components/ClientInit";
 import GHLScripts from "@/components/ghl/GHLScripts";
@@ -13,6 +13,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import site from "@/data/site";
 
 const dmSans = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "700"], display: "swap", variable: "--font-dm-sans" });
+const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"], display: "swap", variable: "--font-poppins" });
 
 export const metadata = {
   title: {
@@ -30,7 +31,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`no-mobile no-touch ${dmSans.variable}`} data-scroll-behavior="smooth">
+    <html lang="en" className={`no-mobile no-touch ${dmSans.variable} ${poppins.variable}`} data-scroll-behavior="smooth">
       <head>
         <JsonLd />
       </head>

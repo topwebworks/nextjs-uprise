@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import HeaderAMW from "@/components/headers/HeaderAMW";
+import HeaderQuest from "@/components/headers/HeaderQuest";
 import Footer1 from "@/components/footers/Footer1";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { buildMetadata } from "@/utils/seo";
@@ -35,6 +35,7 @@ function formatDate(dateStr) {
 }
 
 export default async function BlogPostPage({ params }) {
+  notFound();
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) notFound();
@@ -48,7 +49,7 @@ export default async function BlogPostPage({ params }) {
     <div className="theme-main">
       <div className="page" id="top">
         <nav className="main-nav transparent stick-fixed wow-menubar light-content dark" data-light-nav="true">
-          <HeaderAMW />
+          <HeaderQuest />
         </nav>
         <main id="main">
 

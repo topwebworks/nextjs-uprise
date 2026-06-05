@@ -920,6 +920,7 @@ hr.thick {
 }
 .hs-title-11 {
   margin-top: 0 !important;
+  font-family: var(--font-poppins), sans-serif !important;
   font-size: 13px !important;
   font-weight: 500 !important;
   text-transform: uppercase !important;
@@ -928,6 +929,7 @@ hr.thick {
 }
 .hs-title-12 {
   margin-top: 0 !important;
+  font-family: var(--font-poppins), sans-serif !important;
   font-size: 86px !important;
   font-weight: 500 !important;
   line-height: 1.085 !important;

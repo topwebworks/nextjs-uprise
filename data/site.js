@@ -1,16 +1,16 @@
 const site = {
-  url: "https://www.amwhardscape.com",
+  url: "https://www.questpoolco.com",
 
-  name: "AMW Hardscape Solutions",
-  legalName: "AMW Hardscape Solutions LLC",
-  phone: "+1-480-721-6561",
-  email: "info@amwhardscape.com",
-  roc: ["ROC #359843", "ROC #346552"],
+  name: "Quest Pool Co.",
+  legalName: "Quest Pool Co.",
+  phone: "+1-480-477-8832",
+  email: "questpoolco@gmail.com",
+  roc: ["ROC #338848 KA-5", "ROC #338103 CR-21"],
 
   address: {
-    city: "San Tan Valley",
+    city: "Queen Creek",
     state: "AZ",
-    zip: "85140",
+    zip: "85142",
     country: "US",
   },
 
@@ -19,8 +19,8 @@ const site = {
   ogImage: "/assets/images/og-default.jpg",
 
   social: {
-    facebook: "https://www.facebook.com/amwhardscape",
-    instagram: "https://www.instagram.com/amwhardscapesolutions/",
+    facebook: "",
+    instagram: "https://www.instagram.com/questpoolco/",
     yelp: "",
     linkedin: "",
     twitter: "",

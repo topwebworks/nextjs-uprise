@@ -4,12 +4,12 @@ import { createPortal } from "react-dom";
 import "@/components/homes/amw/AMWContact.module.css";
 
 const cities = [
-  { name: "San Tan Valley",  q: "San+Tan+Valley,+AZ" },
   { name: "Queen Creek",     q: "Queen+Creek,+AZ" },
+  { name: "San Tan Valley",  q: "San+Tan+Valley,+AZ" },
   { name: "Gilbert",         q: "Gilbert,+AZ" },
   { name: "Mesa",            q: "Mesa,+AZ" },
   { name: "Chandler",        q: "Chandler,+AZ" },
-  { name: "Apache Junction", q: "Apache+Junction,+AZ" },
+  { name: "Scottsdale",      q: "Scottsdale,+AZ" },
 ];
 
 export default function AMWServiceAreaLinks() {

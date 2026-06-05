@@ -1,6 +1,7 @@
+import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
 import ImageBackground from "@/components/common/ImageBackground";
-import HeaderAMW from "@/components/headers/HeaderAMW";
+import HeaderQuest from "@/components/headers/HeaderQuest";
 import { buildMetadata } from "@/utils/seo";
 import site from "@/data/site";
 
@@ -11,12 +12,13 @@ export const metadata = buildMetadata({
 });
 
 export default function TermsOfServicePage() {
+  notFound();
   return (
     <>
       <div className="theme-main">
         <div className="page" id="top">
           <nav className="main-nav transparent stick-fixed wow-menubar amw-legal-nav">
-            <HeaderAMW />
+            <HeaderQuest />
           </nav>
           <main id="main">
             <section className="page-section pt-0 pb-0">

@@ -12,7 +12,7 @@ export default function AMWContact() {
         <div className="col-lg-6">
           <div className="row mb-50">
             <div className="col-lg-10">
-              <h2 className="section-caption mb-xs-10">Free Estimate</h2>
+              <h2 className="section-caption mb-xs-10">Ready to Join the Quest?</h2>
               <h3 className="section-title mb-0">
                 <AnimatedText text="Tell us about your project." />
               </h3>
@@ -37,11 +37,11 @@ export default function AMWContact() {
                     </a>
                   </div>
                   <div>
-                    <a href="mailto:info@amwhardscape.com">
-                      info@amwhardscape.com
+                    <a href={`mailto:${site.email}`}>
+                      {site.email}
                     </a>
                   </div>
-                  <div>Mon-Sat 7am-6pm</div>
+                  <div>Mon–Fri 8am–4pm</div>
                 </div>
               </div>
             </div>
@@ -73,7 +73,7 @@ export default function AMWContact() {
             form="estimate"
             className="amw-estimate-embed"
             placeholderTitle="Request a Free Estimate"
-            placeholderText="Tell us about your project — pavers, concrete, turf, rock, demolition, or driveway additions. We'll be in touch soon."
+            placeholderText="Tell us about your project — new pool, remodel, hardscape, turf, landscaping, or outdoor kitchen. We'll be in touch soon."
             placeholderFields={[
               "Name",
               "Phone",
@@ -106,8 +106,8 @@ export default function AMWContact() {
 
           {/* Reviews */}
           {[
-            { quote: "We have used AMW for two large hardscape projects now, and we couldn't be happier with the results. They show up on time, maintain great communication, and the quality of work is outstanding.", author: "Larisa Rodriguez" },
-            { quote: "They answer the phone which is a HUGE plus — showed up on time and stayed until the job was completed 100%. We will use them again.", author: "Frost" },
+            { quote: "Quest walked us through every detail before asking us to sign anything. The finished pool is stunning — the coping, the tile work, the tanning ledge — everything exactly as we discussed.", author: "Melissa T., Queen Creek" },
+            { quote: "The attention to detail is what sets them apart. The beveled coping edges, the way the pavers transition to the turf — it all looks intentional. Our neighbors keep asking who built it.", author: "Sarah L., San Tan Valley" },
           ].map((r, i) => (
             <div key={i} className="amw-form-review">
               <div className="amw-form-review-stars">

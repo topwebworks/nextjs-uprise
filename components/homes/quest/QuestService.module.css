@@ -1,0 +1,22 @@
+/* QuestService — override JNK tab font size and text overlap */
+
+:global(.quest-service-wrap) {
+  --services-text-overlap: 0px;
+}
+
+
+:global(.quest-service-wrap .services-tabs) {
+  font-size: 28px;
+}
+
+@media (max-width: 1200px) {
+  :global(.quest-service-wrap .services-tabs) { font-size: 24px; }
+}
+
+@media (max-width: 991px) {
+  :global(.quest-service-wrap .services-tabs) { font-size: 22px; }
+}
+
+@media (max-width: 767px) {
+  :global(.quest-service-wrap .services-tabs) { font-size: 20px; }
+}

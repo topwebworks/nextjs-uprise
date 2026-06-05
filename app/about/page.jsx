@@ -1,6 +1,7 @@
+import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
 import ImageBackground from "@/components/common/ImageBackground";
-import HeaderAMW from "@/components/headers/HeaderAMW";
+import HeaderQuest from "@/components/headers/HeaderQuest";
 import AnimatedText from "@/components/common/AnimatedText";
 import AMWFeatureCarousel from "@/components/homes/amw/AMWFeatureCarousel";
 import AMWSplitPadding from "@/components/homes/amw/AMWSplitPadding";
@@ -67,12 +68,13 @@ const amwWorkCards = [
 ];
 
 export default function AboutPage() {
+  notFound();
   return (
     <>
       <div className="theme-main">
         <div className="page" id="top">
           <nav className="main-nav dark light-after-scroll transparent stick-fixed wow-menubar">
-            <HeaderAMW />
+            <HeaderQuest />
           </nav>
           <main id="main">
             <section className="page-section pt-0 pb-0" id="home">

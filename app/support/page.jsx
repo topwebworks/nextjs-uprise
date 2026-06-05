@@ -1,6 +1,7 @@
+import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
 import ImageBackground from "@/components/common/ImageBackground";
-import HeaderAMW from "@/components/headers/HeaderAMW";
+import HeaderQuest from "@/components/headers/HeaderQuest";
 import React from "react";
 import Faq from "@/components/common/Faq";
 import AMWContactSection from "@/components/homes/amw/AMWContactSection";
@@ -62,12 +63,13 @@ const supportFaqs = [
 ];
 
 export default function MainAboutPage1() {
+  notFound();
   return (
     <>
       <div className="theme-main">
         <div className="page" id="top">
           <nav className="main-nav transparent stick-fixed wow-menubar amw-support-nav">
-            <HeaderAMW />
+            <HeaderQuest />
           </nav>
           <main id="main">
             <section className="page-section pt-0 pb-0" id="home">

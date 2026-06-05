@@ -1,5 +1,6 @@
+import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
-import HeaderAMW from "@/components/headers/HeaderAMW";
+import HeaderQuest from "@/components/headers/HeaderQuest";
 import ImageBackground from "@/components/common/ImageBackground";
 import Link from "next/link";
 import { buildMetadata } from "@/utils/seo";
@@ -14,11 +15,12 @@ export const metadata = buildMetadata({
 // robots.js disallows /thank-you so it doesn't appear in search results.
 // GTM fires a conversion event on this page via a URL-based trigger.
 export default function ThankYou() {
+  notFound();
   return (
     <div className="theme-main">
       <div className="page" id="top">
         <nav className="main-nav transparent stick-fixed wow-menubar amw-ty-nav">
-          <HeaderAMW />
+          <HeaderQuest />
         </nav>
         <main id="main">
           <section className="page-section pt-0 pb-0">

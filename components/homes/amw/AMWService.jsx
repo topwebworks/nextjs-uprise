@@ -10,140 +10,134 @@ import { useSwipeNavigation } from "@/utils/useSwipeNavigation";
 
 const services = [
   {
-    id: "pavers",
-    label: "Paver Installation",
+    id: "pool-builds",
+    label: "Pool Builds",
     number: "01",
-    title: "Paver Installation",
+    title: "Custom Pool Construction",
     description:
-      "Driveways, patios, walkways, and pool decks designed for better curb appeal, cleaner outdoor living, and long-term performance in Arizona conditions.",
+      "New pool construction built from the ground up — every phase in-house. Where others see a finish line, we see the details: seamless coping corners, level tile, consistent overhangs. That's the Quest standard.",
     cards: [
       {
-        image: "/assets/tww-assets/amw-images/IMG_4281.HEIC.jpg",
-        heading: "Paver Installation",
-        body: "AMW installs travertine, concrete pavers, and natural stone for driveways, patios, pool decks, and walkways. Every job starts with excavation, compacted aggregate base, proper pitch, edge restraints, and joint sand so the surface has the support it needs.",
-        bullets: ["Travertine, concrete pavers & natural stone", "Driveways, patios, pool decks & walkways", "Full base prep: compacted gravel & edge restraints"],
+        image: "/assets/tww-assets/quest-images/IMG_9225.jpg",
+        heading: "Full-Scope Pool Construction",
+        body: "Quest handles every phase of a new pool build in-house — design, excavation, steel, plumbing, decking, coping, tile, and finish. No subcontractors, no hand-offs. One crew accountable for the whole project from permit to first swim.",
+        bullets: ["Design, excavation & steel in-house", "Plumbing, decking & coping included", "Tile, finish & equipment installation"],
       },
       {
-        image: "/assets/tww-assets/amw-images/473177002_122133547196562324_3990472910039640132_n.jpg",
-        heading: "Design & Layout",
-        body: "We handle design layout, material selection, and full installation from demolition to final sanding. Whether you want a classic brick pattern, a modern large-format slab, or a custom herringbone design — AMW maps it out before a single paver is set.",
-        bullets: ["Custom pattern design & layout", "Material selection guidance included", "From demolition to final polymeric sand"],
-      },
-      {
-        image: "/assets/tww-assets/amw-images/475318856_122138091542562324_2490206637378486010_n.jpg",
-        heading: "Pool Decks & Outdoor Living",
-        body: "A well-designed paver pool deck makes the backyard more usable and easier to enjoy. We install travertine and concrete pavers around pools with surface pitch, clean borders, and drainage in mind from the layout stage.",
-        bullets: ["Travertine & textured concrete pavers", "Surface pitch planned for drainage", "Pairs with turf, rock & outdoor kitchen areas"],
+        image: "/assets/tww-assets/quest-images/Suburb_home_with_patio_pool_202605131833.jpeg",
+        heading: "Where the Details Live",
+        body: "The difference between a good pool and an exceptional one shows up in the corners. Beveled coping stones that meet seamlessly at every turn. Waterline tile that runs perfectly level all the way around. A consistent coping overhang that looks intentional from every angle. These aren't finishing touches at Quest — they're the standard every build is held to from day one.",
+        bullets: ["★ Gator Finish Installer — premium quality pool finishes", "Seamless beveled coping at every corner & transition", "Waterline tile set level & true — no shortcuts"],
       },
     ],
   },
   {
-    id: "concrete",
-    label: "Concrete Work",
+    id: "pool-remodels",
+    label: "Pool Remodels",
     number: "02",
-    title: "Concrete Work",
+    title: "Pool Remodels & Renovations",
     description:
-      "Driveways, slabs, extensions, and decorative concrete built for strength and longevity. Properly prepped, properly poured — work that holds up in the Arizona heat.",
+      "Transform an aging pool into something that looks and performs like new — new finishes, updated coping, resurfacing, equipment upgrades, and feature additions.",
     cards: [
       {
-        image: "/assets/tww-assets/amw-images/IMG_3706.HEIC.jpg",
-        heading: "Concrete Work",
-        body: "Concrete work is all about the prep and the pour. AMW excavates and grades properly, sets forms precisely, and uses quality mix ratios built for Arizona summers. We pour driveways, patio slabs, RV pads, garage extensions, and decorative concrete.",
-        bullets: ["Driveways, patio slabs & RV pads", "Garage extensions & decorative finishes", "Proper excavation, grading & form-setting"],
+        image: "/assets/tww-assets/quest-images/Arizona_suburb_home_patio_pool_202605131833.jpeg",
+        heading: "Pool Resurfacing & Finish Updates",
+        body: "Old plaster, stained surfaces, or outdated finishes don't have to stay. Quest remodels pools with premium finish materials — pebble, quartz, tile, and Gator brand finishes — that update the look and dramatically improve durability. Gator is one of the most respected pool finish brands in the industry, known for its refined texture and long-term performance in Arizona conditions.",
+        bullets: ["★ Gator Finish Installer — trusted Arizona pool finish brand", "Pebble, quartz & tile options also available", "Surface prep done right before any finish goes on"],
       },
       {
-        image: "/assets/tww-assets/amw-images/IMG_4182.jpg",
-        heading: "Built for Arizona Heat",
-        body: "Every slab is finished cleanly with proper control joints and isolation joints where needed. Good concrete work starts with compacted subgrade, correct forms, reinforcement when the project calls for it, and a finish suited to the space.",
-        bullets: ["Control joints help manage cracking", "Compacted subgrade & reinforcement as needed", "Broom, salt & exposed-aggregate finishes"],
+        image: "/assets/tww-assets/quest-images/Suburb_home_with_patio_pool_202605131833_2.jpeg",
+        heading: "Equipment, Water Features & Upgrades",
+        body: "A remodel is the right time to upgrade equipment, add a spa, or install water features — deck jets, bubblers, sheer descents, and waterfalls that transform the pool experience. Quest upgrades variable-speed pumps, LED lighting, heaters, and smart automation systems, designing every addition around your existing pool so it all looks intentional from day one.",
+        bullets: ["Water features: deck jets, bubblers & waterfalls", "Variable-speed pump & LED lighting upgrades", "Heater, automation & smart control options"],
+      },
+    ],
+  },
+  {
+    id: "hardscape",
+    label: "Hardscape & Pavers",
+    number: "03",
+    title: "Hardscape & Paver Design",
+    description:
+      "Custom paver patios, pool decks, walkways, and travertine installations — designed as a single composition and built to perform in the Arizona climate for decades.",
+    cards: [
+      {
+        image: "/assets/tww-assets/quest-images/Suburb_home_with_patio_pool_202605131833_3.jpeg",
+        heading: "Pool Decks & Patio Design",
+        body: "The pool deck and patio are designed alongside the pool — not added after. Coping transitions, deck pitch, material selection, and border details are determined at the layout stage so the finished result reads as one cohesive space.",
+        bullets: ["Travertine, large-format pavers & natural stone", "Surface pitch engineered for drainage", "Coping, border & transition details included"],
+      },
+      {
+        image: "/assets/tww-assets/quest-images/Arizona_house_backyard_landscaping_202605131833.jpeg",
+        heading: "Walkways, Driveways & Outdoor Spaces",
+        body: "Beyond the pool, Quest installs pavers and hardscape throughout the property — front entries, side yards, driveways, and covered patio extensions. Every installation starts with proper base compaction and edge restraints so the surface holds its shape long-term.",
+        bullets: ["Front entries, driveways & side yards", "Compacted base & edge restraints standard", "Pattern, color & material selection guidance"],
       },
     ],
   },
   {
     id: "turf",
     label: "Artificial Turf",
-    number: "03",
+    number: "04",
     title: "Artificial Turf Installation",
     description:
-      "Low-maintenance, water-saving turf that looks great year-round. Perfect for front yards, side yards, pet runs, and play areas — stays green without the water bill.",
+      "Premium synthetic turf that stays green year-round without irrigation — the right solution for Arizona backyards, side yards, pet runs, and putting greens.",
     cards: [
       {
-        image: "/assets/tww-assets/amw-images/b33260_543fcf34b19b4fea8f524d0346067e3b~mv2.jpg",
-        heading: "Artificial Turf Installation",
-        body: "Arizona summers are brutal on natural grass. AMW installs premium artificial turf with drainage, seam direction, infill, nail spacing, and edge details handled correctly. We prep the sub-base with decomposed granite, compaction, and weed barrier where appropriate.",
-        bullets: ["Premium turf with proper drainage", "DG sub-base, compaction & weed barrier", "Seams, infill, nail spacing & clean edges"],
+        image: "/assets/tww-assets/quest-images/Suburb_home_with_patio_pool_202605131833_4.jpeg",
+        heading: "Turf Around the Pool",
+        body: "Turf and pool decks work together when they're planned together. Quest installs synthetic turf with clean transitions into pavers and coping — proper drainage, weed barrier, and seam direction all dialed in so the finished edge looks intentional and holds up to pool traffic.",
+        bullets: ["Clean transitions into pavers & coping", "Proper drainage & weed barrier", "Pet-friendly & pool-safe infill options"],
       },
       {
-        image: "/assets/tww-assets/amw-images/b33260_60fa8433f1e04529be6632e3d870638c~mv2.jpg",
-        heading: "Front Yards, Dog Runs & Putting Greens",
-        body: "Artificial turf works anywhere natural grass struggles. Front yards, backyards, side yards, dog runs, and even custom putting greens. Stays green 365 days a year without irrigation — a real selling point in San Tan Valley and Queen Creek.",
-        bullets: ["Front yards, backyards & side yards", "Dog runs & pet-friendly infill options", "Custom putting green installs available"],
+        image: "/assets/tww-assets/quest-images/Suburb_home_with_patio_pool_202605131833_5.jpeg",
+        heading: "Front Yards, Side Yards & Putting Greens",
+        body: "Artificial turf works anywhere natural grass struggles in Arizona. We install in front yards, backyards, side yards, dog runs, and custom putting greens — always with proper sub-base prep, infill selection, and edge finishing so the result looks like it belongs.",
+        bullets: ["Front yards, dog runs & putting greens", "DG sub-base, compaction & weed barrier", "Stays green 365 days — no irrigation needed"],
       },
     ],
   },
   {
-    id: "rock",
-    label: "Decorative Rock",
-    number: "04",
-    title: "Decorative Rock",
-    description:
-      "Decorative rock accents built into your hardscape plan for cleaner borders, low-water ground cover, drainage zones, and finished transitions around pavers, turf, and concrete.",
-    cards: [
-      {
-        image: "/assets/tww-assets/amw-images/IMG_4298.HEIC.jpg",
-        heading: "Decorative Rock",
-        body: "Decorative rock helps tie low-water Arizona hardscapes together. AMW uses rock, decomposed granite, boulders, and gravel accents to finish borders, drainage areas, and transitions around turf, pavers, and concrete.",
-        bullets: ["Rock accents for hardscape borders", "Weed barrier & clean-edge transitions", "Pairs with turf, pavers & concrete"],
-      },
-      {
-        image: "/assets/tww-assets/amw-images/wix_inset_04.jpg",
-        heading: "Low Water. Low Maintenance.",
-        body: "Rock areas keep finished hardscapes low-water and easier to maintain: no mowing, less replanting after freezes, and cleaner transitions between pavers, turf, concrete, and planting areas. We build it into the plan so it looks intentional.",
-        bullets: ["No irrigation required for rock areas", "Weed suppression with fabric where needed", "Clean transitions between hardscape zones"],
-      },
-    ],
-  },
-  {
-    id: "demolition",
-    label: "Demolition & Removal",
+    id: "landscaping",
+    label: "Landscaping & Design",
     number: "05",
-    title: "Demolition & Removal",
+    title: "Landscaping & Outdoor Design",
     description:
-      "Let us update your yard by removing old concrete, pavers, or landscaping and installing a fresh new look. We handle full tearout and cleanup before the new install begins.",
+      "Curated desert landscaping, irrigation, and plant installation that frames the hardscape, softens the space, and performs year-round in the Arizona climate.",
     cards: [
       {
-        image: "/assets/tww-assets/amw-images/new_06.jpg",
-        heading: "Demolition & Removal",
-        body: "Before new hardscape goes in, the old has to come out — and AMW does it right. We break out old concrete slabs, remove deteriorating pavers, pull up old landscaping, and haul everything away. Full site cleanup is included.",
-        bullets: ["Concrete slab & paver tearout", "Old turf & landscaping removal", "Full haul-away & site cleanup included"],
+        image: "/assets/tww-assets/quest-images/Architectural_photo_of_Arizona_suburb_202605131833.jpeg",
+        heading: "Desert Plant Design",
+        body: "Great landscaping in Arizona isn't just rock and cactus — it's about texture, depth, and plant selection that complements the hardscape and holds its appearance through the seasons. Quest curates plant palettes scaled to the space, chosen for low water use and year-round visual presence.",
+        bullets: ["Curated desert plant palette", "Scaled to hardscape & architecture", "Low-water, high-impact selections"],
       },
       {
-        image: "/assets/tww-assets/amw-images/b33260_29238812e92f471987cb400a85043da8~mv2.jpg",
-        heading: "Site-Ready for the Next Phase",
-        body: "Whether you're replacing a cracked driveway, removing old turf, or starting fresh on a bare lot, we leave the site ready for the next phase of work. No debris, no surprise charges — just a clean slate.",
-        bullets: ["Site graded & ready for install", "No hidden dump or haul fees", "Can bundle demolition + install into one project"],
+        image: "/assets/tww-assets/quest-images/architectual_photo_of_arizona_house_202605131833.jpeg",
+        heading: "Irrigation & Lighting",
+        body: "Smart drip irrigation and landscape lighting complete the outdoor space. Quest designs drip systems for minimal water waste and installs in-ground lighting that highlights the pool, hardscape, and planting areas — making the backyard as beautiful at night as it is during the day.",
+        bullets: ["Smart drip irrigation design & install", "In-ground landscape lighting", "Timer & smart controller integration"],
       },
     ],
   },
   {
-    id: "driveway",
-    label: "Driveway Additions",
+    id: "outdoor-kitchens",
+    label: "Outdoor Kitchens & Fire",
     number: "06",
-    title: "Driveway Additions",
+    title: "Outdoor Kitchens & Fire Features",
     description:
-      "Create more parking that will look great and last. We extend and expand driveways with pavers or concrete — clean lines, solid base, and a finish that adds instant curb appeal.",
+      "Built-in BBQ islands, outdoor bars, fire pits, linear fire features, and fireplaces — custom-built to become the centerpiece of your outdoor living space.",
     cards: [
       {
-        image: "/assets/tww-assets/amw-images/IMG_0524.jpg",
-        heading: "Driveway Additions",
-        body: "Need more parking for an RV, boat, or extra vehicles? AMW extends and widens driveways using pavers or concrete that matches or complements your existing surface. We check access, drainage, utilities, and HOA or city requirements before the work is finalized.",
-        bullets: ["RV pads, boat parking & extra vehicle space", "Pavers or concrete matched to existing surface", "Base compaction, drainage & access reviewed"],
+        image: "/assets/tww-assets/quest-images/IMG_9225.jpg",
+        heading: "Outdoor Kitchen & BBQ Islands",
+        body: "A built-in outdoor kitchen adds function and permanence to the backyard. Quest builds BBQ islands, outdoor bars, and prep stations on concrete block frames with stone veneer and porcelain tile finishes — materials proven to hold up to Arizona heat, UV exposure, and pool splash zones without cracking or fading.",
+        bullets: ["Built-in BBQ grills & side burners", "Concrete block frame with stone veneer & porcelain tile", "Outdoor bar & prep surface design"],
       },
       {
-        image: "/assets/tww-assets/amw-images/470184191_122127744806562324_7273177088857394801_n.jpg",
-        heading: "Seamless Curb Appeal",
-        body: "A driveway addition done right looks like it was always there. Clean edges, tight seams, and a finish that adds instant curb appeal. We match materials, joint patterns, and finish textures to blend new work with existing hardscape.",
-        bullets: ["Matches existing material & joint pattern", "Clean edges & tight seams throughout", "Improves curb appeal & usable parking"],
+        image: "/assets/tww-assets/quest-images/Suburb_home_with_patio_pool_202605131833_6.jpeg",
+        heading: "Fire Features & Fireplaces",
+        body: "Linear gas fire features, fire pits, and outdoor fireplaces add ambiance and extend the usability of the backyard into Arizona evenings. Quest designs fire features as part of the overall composition — positioned and finished to complement the pool, deck, and kitchen.",
+        bullets: ["Linear gas fire features & fire pits", "Outdoor fireplaces & fire bowls", "Integrated into pool & deck design"],
       },
     ],
   },
@@ -213,7 +207,7 @@ export default function AMWService() {
           <div className="row">
             <div className="col-lg-10">
               <p className="section-descr mb-20 mb-sm-20 wow fadeInUp" data-wow-delay="0.4s">
-                6 services. One call. From paver patios and concrete slabs to turf, rock, and full demolition — AMW handles every phase of your hardscape project with a single point of contact.
+                6 services. One team. From custom pool construction and remodels to hardscape, turf, landscaping, and outdoor kitchens — Quest handles every phase of your outdoor build with a single point of contact.
               </p>
             </div>
           </div>
@@ -356,7 +350,7 @@ export default function AMWService() {
                 <a href="#contact-form" className="btn btn-mod btn-large btn-round btn-hover-anim amw-modal-cta-primary" onClick={closeModal}>
                   <span>Free Estimate</span>
                 </a>
-                <a href="tel:+14807216561" className="btn btn-mod btn-large btn-border btn-round amw-modal-cta-secondary">
+                <a href="tel:+14804778832" className="btn btn-mod btn-large btn-border btn-round amw-modal-cta-secondary">
                   Call Now
                 </a>
               </div>

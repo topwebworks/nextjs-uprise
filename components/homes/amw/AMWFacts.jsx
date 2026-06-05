@@ -4,22 +4,22 @@ const trustSignals = [
   {
     icon: "mi-document-check",
     label: "AZ Licensed & Insured",
-    sub: "ROC #359843 · ROC #346552",
+    sub: "ROC #338848 KA-5 · ROC #338103 CR-21",
   },
   {
     icon: "mi-users",
-    label: "Experienced Crews",
-    sub: "Quality work on every project",
+    label: "Owner-Operated",
+    sub: "You work directly with the builders",
   },
   {
     icon: "mi-location",
-    label: "East Valley Local",
-    sub: "San Tan Valley, Mesa, Queen Creek, Gilbert, Chandler & Phoenix",
+    label: "Queen Creek Based",
+    sub: "Serving the entire East Valley",
   },
   {
     icon: null,
-    label: "5-Star Google Reviews",
-    sub: "Rated 5 stars on Google Business",
+    label: "5-Star Rated",
+    sub: "Exceptional work on every project",
   },
 ];
 

@@ -1,6 +1,7 @@
+import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import HeaderAMW from "@/components/headers/HeaderAMW";
+import HeaderQuest from "@/components/headers/HeaderQuest";
 import Footer1 from "@/components/footers/Footer1";
 import ImageBackground from "@/components/common/ImageBackground";
 import AnimatedText from "@/components/common/AnimatedText";
@@ -22,13 +23,14 @@ function formatDate(dateStr) {
 }
 
 export default function BlogIndexPage() {
+  notFound();
   const posts = getAllPosts();
 
   return (
     <div className="theme-main">
       <div className="page" id="top">
         <nav className="main-nav transparent stick-fixed wow-menubar light-content dark" data-light-nav="true">
-          <HeaderAMW />
+          <HeaderQuest />
         </nav>
         <main id="main">
 
