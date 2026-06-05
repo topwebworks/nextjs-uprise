@@ -50,17 +50,19 @@ export const socialMediaLinks = [
 ];
 
 export const serviceLinks = [
-  { href: "/#services", text: "Pool Builds" },
-  { href: "/#services", text: "Pool Remodels" },
-  { href: "/#services", text: "Hardscape & Pavers" },
-  { href: "/#services", text: "Artificial Turf" },
-  { href: "/#services", text: "Landscaping & Design" },
-  { href: "/#services", text: "Outdoor Kitchens & Fire" },
+  { href: "/services/pool-builds", text: "Pool Builds" },
+  { href: "/services/pool-remodels", text: "Pool Remodels" },
+  { href: "/services/hardscape", text: "Hardscape & Pavers" },
+  { href: "/services/artificial-turf", text: "Artificial Turf" },
+  { href: "/services/landscaping", text: "Landscaping & Design" },
+  { href: "/services/outdoor-kitchens", text: "Outdoor Kitchens & Fire" },
 ];
 
 export const navigationLinks = [
-  { href: "/#portfolio", text: "Portfolio" },
+  { href: "/#services", text: "Services" },
+  { href: "/#portfolio", text: "Our Work" },
   { href: "/about", text: "About" },
   { href: "/blog", text: "Blog" },
+  { href: "/support", text: "Contact Us" },
   { href: "/#contact-form", text: "Free Estimate" },
 ];
