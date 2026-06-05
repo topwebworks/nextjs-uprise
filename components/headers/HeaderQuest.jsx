@@ -9,12 +9,12 @@ import site from "@/data/site";
 import "@/components/headers/HeaderQuest.module.css";
 
 const SERVICE_LINKS = [
-  { href: "/services/pool-builds", text: "Pool Builds" },
-  { href: "/services/pool-remodels", text: "Pool Remodels" },
-  { href: "/services/hardscape", text: "Hardscape & Pavers" },
-  { href: "/services/artificial-turf", text: "Artificial Turf" },
-  { href: "/services/landscaping", text: "Landscaping & Design" },
-  { href: "/services/outdoor-kitchens", text: "Outdoor Kitchens & Fire" },
+  { href: "/#services", text: "Pool Builds" },
+  { href: "/#services", text: "Pool Remodels" },
+  { href: "/#services", text: "Hardscape & Pavers" },
+  { href: "/#services", text: "Artificial Turf" },
+  { href: "/#services", text: "Landscaping & Design" },
+  { href: "/#services", text: "Outdoor Kitchens & Fire" },
 ];
 
 function MobileMenu({ onClose }) {
@@ -98,6 +98,15 @@ export default function HeaderQuest() {
 
   useEffect(() => { setPortalRoot(document.body); }, []);
 
+  const handleServicesClick = (e) => {
+    const desktopNav = document.querySelector(".desktop-nav");
+    const isMobile = desktopNav && desktopNav.classList.contains("js-opened");
+    if (isMobile) {
+      e.preventDefault();
+      setServicesOpen((prev) => !prev);
+    }
+  };
+
   return (
     <>
       <div className="main-nav-sub full-wrapper">
@@ -129,19 +138,19 @@ export default function HeaderQuest() {
           <ul className="clearlist local-scroll">
             <li><a href="/#portfolio" onClick={closeMobileMenu}>Portfolio</a></li>
             <li className={`quest-services-dropdown${servicesOpen ? " js-opened" : ""}`}>
-              <Link
+              <a
                 href="/#services"
                 className={`mn-has-sub${pathname.startsWith("/services") ? " active" : ""}`}
-                onClick={(e) => { e.preventDefault(); setServicesOpen((p) => !p); }}
+                onClick={handleServicesClick}
               >
                 Services <i className="mi-chevron-down nav-chevron" style={{ transform: servicesOpen ? "rotate(180deg)" : "rotate(0deg)" }} />
-              </Link>
+              </a>
               <ul className="mn-sub">
                 {SERVICE_LINKS.map((link) => (
-                  <li key={link.href}>
-                    <Link href={link.href} onClick={() => { setServicesOpen(false); closeMobileMenu(); }}>
+                  <li key={link.text}>
+                    <a href={link.href} onClick={() => { setServicesOpen(false); closeMobileMenu(); }}>
                       {link.text}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>

@@ -84,7 +84,7 @@ a {
 /* Mobile: mn-sub is display:block but collapsed via max-height in style.css.
    Reveal it when the parent li has js-opened. */
 .main-nav.mobile-on .inner-nav li.js-opened > .mn-sub,
-.inner-nav li.amw-services-dropdown.js-opened > .mn-sub {
+.inner-nav li.quest-services-dropdown.js-opened > .mn-sub {
   max-height: 400px !important;
   opacity: 1 !important;
 }
@@ -453,7 +453,7 @@ a {
 
 /* Services dropdown — desktop hover only */
 @media (min-width: 1025px) {
-  .main-nav:not(.mobile-on) .amw-services-dropdown:hover .mn-sub {
+  .main-nav:not(.mobile-on) .quest-services-dropdown:hover .mn-sub {
     display: block;
     animation: mnSubFadeIn 0.18s ease forwards;
     box-shadow: 0 8px 32px rgba(0,0,0,0.45);

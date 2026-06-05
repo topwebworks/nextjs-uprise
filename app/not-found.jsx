@@ -27,7 +27,7 @@ export default function NotFound() {
             }}
             id="home"
           >
-            <ImageBackground src="/assets/tww-assets/amw-images/IMG_4281.HEIC.jpg" alt="" fixed priority />
+            <ImageBackground src="/assets/tww-assets/quest-images/quest-pool-sunset.jpg" alt="" fixed priority />
             <div className="container">
               <div className="row justify-content-center">
                 <div className="col-sm-10 col-md-8 col-lg-6 text-center">

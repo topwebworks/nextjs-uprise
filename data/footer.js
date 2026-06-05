@@ -50,12 +50,12 @@ export const socialMediaLinks = [
 ];
 
 export const serviceLinks = [
-  { href: "/services/pool-builds", text: "Pool Builds" },
-  { href: "/services/pool-remodels", text: "Pool Remodels" },
-  { href: "/services/hardscape", text: "Hardscape & Pavers" },
-  { href: "/services/artificial-turf", text: "Artificial Turf" },
-  { href: "/services/landscaping", text: "Landscaping & Design" },
-  { href: "/services/outdoor-kitchens", text: "Outdoor Kitchens & Fire" },
+  { href: "/#services", text: "Pool Builds" },
+  { href: "/#services", text: "Pool Remodels" },
+  { href: "/#services", text: "Hardscape & Pavers" },
+  { href: "/#services", text: "Artificial Turf" },
+  { href: "/#services", text: "Landscaping & Design" },
+  { href: "/#services", text: "Outdoor Kitchens & Fire" },
 ];
 
 export const navigationLinks = [

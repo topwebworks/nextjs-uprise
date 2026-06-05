@@ -209,7 +209,7 @@ export default function QuestHero() {
           </div>
 
           <div className="hs-status wow fadeInUp quest-status-badge" data-wow-offset={0}>
-            AZ Licensed &amp; Insured &nbsp;&middot;&nbsp; ROC #338848 &nbsp;&middot;&nbsp; <span style={{ color: "#ff6b00", fontWeight: 700 }}>Gator Finish Installer</span>
+            AZ Licensed &amp; Insured &nbsp;&middot;&nbsp; <span style={{ color: "#ff6b00", fontWeight: 700 }}>Gator Finish Installer</span>
           </div>
         </div>
       </div>
