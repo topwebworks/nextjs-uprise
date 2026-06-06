@@ -55,3 +55,7 @@ npm run build
 ```
 
 This site is designed to be deployed as a standard Next.js application.
+
+> **Before going live:** Disable Vercel deployment protection on the client project.
+> Vercel Dashboard → Project → Settings → Deployment Protection → turn off password protection.
+> The demo repo has this enabled to keep preview URLs private — every client clone inherits it.
