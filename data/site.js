@@ -1,30 +1,20 @@
+/**
+ * Re-exports company/site data from the central settings file.
+ * Edit data/settings.js — not this file.
+ */
+import settings from "./settings";
+
 const site = {
-  url: "https://www.questpoolco.com",
-
-  name: "Quest Pool Co.",
-  legalName: "Quest Pool Co.",
-  phone: "+1-480-477-8832",
-  email: "questpoolco@gmail.com",
-  roc: ["ROC #338848 KA-5", "ROC #338103 CR-21"],
-
-  address: {
-    city: "Queen Creek",
-    state: "AZ",
-    zip: "85142",
-    country: "US",
-  },
-
-  businessType: "HomeAndConstructionBusiness",
-
-  ogImage: "/assets/images/og-default.jpg",
-
-  social: {
-    facebook: "",
-    instagram: "https://www.instagram.com/questpoolco/",
-    yelp: "",
-    linkedin: "",
-    twitter: "",
-  },
+  url:          settings.company.url,
+  name:         settings.company.name,
+  legalName:    settings.company.legalName,
+  phone:        settings.company.phone,
+  email:        settings.company.email,
+  roc:          settings.company.licenseNumbers,
+  address:      settings.company.address,
+  businessType: settings.company.businessType,
+  ogImage:      settings.ogImage,
+  social:       settings.social,
 };
 
 export default site;

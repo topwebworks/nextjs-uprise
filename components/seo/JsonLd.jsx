@@ -4,8 +4,8 @@
 import site from "@/data/site";
 
 const TARGET_CITIES = [
-  "San Tan Valley, AZ",
-  "Queen Creek, AZ",
+  "Client City, AZ",
+  "Client City, AZ",
   "Mesa, AZ",
   "Gilbert, AZ",
   "Chandler, AZ",
@@ -88,7 +88,7 @@ export default function JsonLd() {
     image: `${site.url}${site.ogImage}`,
     logo: `${site.url}/assets/images/og-default.jpg`,
     description:
-      "AMW Hardscape Solutions is a licensed hardscape contractor serving San Tan Valley, Queen Creek, Mesa, Gilbert, Chandler, Apache Junction, and the East Valley. Specializing in paver installation, concrete work, artificial turf, decorative rock, demolition & removal, and driveway additions.",
+      "Client Business Name is a licensed hardscape contractor serving Client City, Client City, Mesa, Gilbert, Chandler, Apache Junction, and the Service Area. Specializing in paver installation, concrete work, artificial turf, decorative rock, demolition & removal, and driveway additions.",
     address: {
       "@type": "PostalAddress",
       addressLocality: site.address.city,
@@ -101,7 +101,7 @@ export default function JsonLd() {
       latitude: 33.1914,
       longitude: -111.5390,
     },
-    hasMap: "https://www.google.com/maps/search/AMW+Hardscape+Solutions+San+Tan+Valley+AZ",
+    hasMap: "https://www.google.com/maps/search/Client+Hardscape+Solutions+San+Tan+Valley+AZ",
     areaServed: TARGET_CITIES.map((city) => ({
       "@type": "City",
       name: city,
@@ -122,7 +122,7 @@ export default function JsonLd() {
     ],
     makesOffer: SERVICES,
     sameAs: Object.values(site.social).filter(Boolean),
-    slogan: "Licensed hardscape contractor for the East Valley.",
+    slogan: "Licensed hardscape contractor for the Service Area.",
     knowsAbout: [
       "paver installation",
       "concrete work",

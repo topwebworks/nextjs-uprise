@@ -2,7 +2,7 @@ let initTimer = null;
 let menuTimer = null;
 let wowInstances = [];
 
-const WOW_TRIGGER_CLASS = "amw-wow-running";
+const WOW_TRIGGER_CLASS = "tww-wow-running";
 
 function resetWowElement(el) {
   el.classList.remove(WOW_TRIGGER_CLASS, "animatedfgfg", "animated", "no-animate");

@@ -1,6 +1,6 @@
-# AMW Hardscape Solutions Website
+# TWW Next.js Client Site Template
 
-A Next.js website for AMW Hardscape Solutions.
+A Next.js site template built on the Resonance theme (Bootstrap 5). Clone this repo to start a new client site.
 
 ## Getting Started
 
@@ -40,11 +40,11 @@ npm run start
 
 ## Common Updates
 
-Business information such as phone number, email, service areas, social links, and legal details can be updated in `data/site.js`.
+All business information (phone, email, address, social links, services) is set in `data/settings.js` — that is the only file to edit for a new client.
 
-Navigation and footer links can be updated in the files inside `data/`.
+Navigation and footer links are driven automatically from `data/settings.js`.
 
-Images and static assets are stored in `public/assets/`.
+Images and static assets are stored in `public/assets/tww-assets/`.
 
 ## Deployment
 

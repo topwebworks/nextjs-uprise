@@ -32,7 +32,7 @@ const args = process.argv.slice(2);
 const DRY_RUN = !args.includes("--write");
 const dirArg = args.find((a) => a.startsWith("--dir="))?.split("=")[1];
 const TARGET_DIR = path.resolve(
-  dirArg ?? "public/assets/tww-assets/amw-images"
+  dirArg ?? "public/assets/tww-assets/client-images"
 );
 
 const SUPPORTED = new Set([".jpg", ".jpeg", ".png", ".webp"]);

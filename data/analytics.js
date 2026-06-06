@@ -1,15 +1,9 @@
 /**
- * Analytics configuration — replace with client values when duplicating.
- *
- * GTM_ID:  Google Tag Manager container ID (GTM-XXXXXXX)
- *          GA4 should be configured inside GTM, not loaded directly.
- *
- * GTM fires only after the user accepts analytics cookies (consent = "all").
- * GHL tracking always loads regardless of consent.
+ * Re-exports analytics config from the central settings file.
+ * Edit data/settings.js — not this file.
  */
+import settings from "./settings";
 
-const analytics = {
-  gtmId: "GTM-XXXXXXX",
-};
+const analytics = settings.analytics;
 
 export default analytics;

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Footer1 from "@/components/footers/Footer1";
-import HeaderQuest from "@/components/headers/HeaderQuest";
+import HeaderTWW from "@/components/headers/HeaderTWW";
 import ImageBackground from "@/components/common/ImageBackground";
 import site from "@/data/site";
 
@@ -14,7 +14,7 @@ export default function NotFound() {
     <div className="theme-main">
       <div className="page" id="top">
         <nav className="main-nav dark light-after-scroll transparent stick-fixed wow-menubar">
-          <HeaderQuest />
+          <HeaderTWW />
         </nav>
 
         <main id="main">
@@ -27,7 +27,7 @@ export default function NotFound() {
             }}
             id="home"
           >
-            <ImageBackground src="/assets/tww-assets/quest-images/quest-pool-sunset.jpg" alt="" fixed priority />
+            <ImageBackground src="/assets/tww-assets/tww-images/Suburb_home_with_patio_pool_202605131833.jpeg" alt="" fixed priority />
             <div className="container">
               <div className="row justify-content-center">
                 <div className="col-sm-10 col-md-8 col-lg-6 text-center">
@@ -53,7 +53,7 @@ export default function NotFound() {
                       href={`tel:${site.phone}`}
                       className="btn btn-mod btn-border-w btn-round btn-large btn-hover-anim"
                     >
-                      <span>Call (480) 721-6561</span>
+                      <span>Call {site.phone.replace("+1-", "")}</span>
                     </a>
                   </div>
                 </div>

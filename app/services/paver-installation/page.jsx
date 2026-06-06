@@ -1,18 +1,18 @@
 import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
 import ImageBackground from "@/components/common/ImageBackground";
-import HeaderQuest from "@/components/headers/HeaderQuest";
+import HeaderTWW from "@/components/headers/HeaderTWW";
 import AnimatedText from "@/components/common/AnimatedText";
 import Image from "next/image";
 import Link from "next/link";
 import { buildMetadata } from "@/utils/seo";
-import AMWPaverService from "@/components/homes/amw/AMWPaverService";
+import TWWPaverService from "@/components/homes/tww/TWWPaverService";
 
 
 export const metadata = buildMetadata({
-  title: "Paver Installation San Tan Valley AZ | Travertine, Concrete Pavers & Flagstone | AMW",
+  title: "Paver Installation Client City AZ | Travertine, Concrete Pavers & Flagstone | Client",
   description:
-    "Expert paver installation for driveways, patios, pool decks & walkways. Travertine, concrete pavers, flagstone & porcelain. Serving San Tan Valley, Queen Creek, Gilbert, Mesa, Chandler & Apache Junction AZ. Licensed ROC #359843. Free estimates.",
+    "Expert paver installation for driveways, patios, pool decks & walkways. Travertine, concrete pavers, flagstone & porcelain. Serving the surrounding service area AZ. Licensed License #000000. Free estimates.",
   path: "/services/paver-installation",
 });
 export default function PaverInstallationPage() {
@@ -22,14 +22,14 @@ export default function PaverInstallationPage() {
       <div className="theme-main">
         <div className="page" id="top">
           <nav className="main-nav dark light-after-scroll transparent stick-fixed wow-menubar">
-            <HeaderQuest />
+            <HeaderTWW />
           </nav>
           <main id="main">
             <>
               <section
                 className="page-section bg-dark-1 bg-dark-alpha-70 light-content amw-fixed-bg-host amw-service-hero"
               >
-                <ImageBackground src="/assets/tww-assets/amw-images/IMG_4281.HEIC.jpg" alt="" fixed priority />
+                <ImageBackground src="/assets/tww-assets/tww-images/Arizona_suburb_home_patio_pool_202605131833_2.jpeg" alt="" fixed priority />
                 <div className="container position-relative pt-50">
                   {/* Section Content */}
                   <div className="text-center">
@@ -64,14 +64,14 @@ export default function PaverInstallationPage() {
               </section>
               {/* End Header Section */}
               <section className="page-section" id="services">
-                <AMWPaverService />
+                <TWWPaverService />
               </section>
               <section className="page-section pt-0 z-index-1">
                 <div className="container position-relative">
                   <div className="row mb-50 mb-sm-50">
                     <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center">
                       <h2 className="section-title-small mb-20">
-                        Why choose AMW for pavers?
+                        Why choose Client for pavers?
                       </h2>
                       <p className="text-gray mb-0">
                         The material is only as good as what&rsquo;s under it. Base depth, compaction, pitch, edge restraints, and joint sand are what separate a paver job that holds from one that shifts.
@@ -83,7 +83,7 @@ export default function PaverInstallationPage() {
                       { icon: "mi-clock",           title: "Base Built to Last",        description: "4–6 inches of compacted aggregate base on every job — the foundation that gives pavers the best chance of performing long-term in Arizona conditions." },
                       { icon: "mi-drop",            title: "Drainage Planned First",     description: "Surface pitch confirmed before the first paver goes down. Water drains away from the structure — not toward it. A detail most contractors skip." },
                       { icon: "mi-table",           title: "Clean Cuts & Tight Joints",  description: "Patterns laid out before cutting begins. Cuts made cleanly so joints stay tight, edges hold, and the finished surface looks intentional." },
-                      { icon: "mi-document-check",  title: "Licensed & Insured",         description: "AZ licensed hardscape contractor — ROC #359843 · ROC #346552. Every job is fully insured from start to final walkthrough." },
+                      { icon: "mi-document-check",  title: "Licensed & Insured",         description: "AZ licensed hardscape contractor — License #000000. Every job is fully insured from start to final walkthrough." },
                     ].map((elm, i) => (
                       <div key={i} className="col-sm-6 col-xl-3 d-flex align-items-stretch">
                         <div className="alt-features-item box-shadow text-center mt-30 w-100">
@@ -101,7 +101,7 @@ export default function PaverInstallationPage() {
               <section
                 className="page-section amw-fixed-bg-host amw-service-cta-section"
               >
-                <ImageBackground src="/assets/tww-assets/amw-images/IMG_1773.HEIC.jpg" alt="" fixed />
+                <ImageBackground src="/assets/tww-assets/tww-images/Arizona_house_backyard_landscaping_202605131833.jpeg" alt="" fixed />
                 <div className="container position-relative">
                   <div className="row">
                     <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center">
@@ -120,8 +120,8 @@ export default function PaverInstallationPage() {
                       data-wow-offset={0}
                     >
                       <ImageBackground
-                        src="/assets/tww-assets/amw-images/IMG_2401.HEIC.jpg"
-                        alt="Paver installation - AMW Hardscape Solutions"
+                        src="/assets/tww-assets/tww-images/Arizona_house_in_suburb_frontyard_202605131833.jpeg"
+                        alt="Paver installation - Client Business Name"
                         sizes="(max-width: 991px) 100vw, 66vw"
                         objectPosition="center 48%"
                       />
@@ -151,7 +151,7 @@ export default function PaverInstallationPage() {
                         Ready to get your pavers installed? We come to you, walk the&nbsp;property, and give you a written quote&nbsp;— no&nbsp;obligation, no&nbsp;pressure.
                       </p>
                       <div className="d-flex flex-wrap gap-3 justify-content-center">
-                        <a href="tel:+14807216561" className="btn btn-mod btn-large btn-round btn-hover-anim">
+                        <a href="tel:+10000000000" className="btn btn-mod btn-large btn-round btn-hover-anim">
                           <span>Call (480) 723-6561</span>
                         </a>
                         <Link href="/#contact-form" className="btn btn-mod btn-border btn-large btn-round btn-hover-anim btn-secondary-light">

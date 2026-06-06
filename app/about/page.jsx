@@ -1,19 +1,19 @@
 import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
 import ImageBackground from "@/components/common/ImageBackground";
-import HeaderQuest from "@/components/headers/HeaderQuest";
+import HeaderTWW from "@/components/headers/HeaderTWW";
 import AnimatedText from "@/components/common/AnimatedText";
-import AMWFeatureCarousel from "@/components/homes/amw/AMWFeatureCarousel";
-import AMWSplitPadding from "@/components/homes/amw/AMWSplitPadding";
+import TWWFeatureCarousel from "@/components/homes/tww/TWWFeatureCarousel";
+import TWWSplitPadding from "@/components/homes/tww/TWWSplitPadding";
 import Image from "next/image";
 import Link from "next/link";
 import site from "@/data/site";
 import { buildMetadata } from "@/utils/seo";
 
 export const metadata = buildMetadata({
-  title: "About AMW Hardscape Solutions | Licensed Hardscape Contractor San Tan Valley & East Valley AZ",
+  title: "About Client Business Name | Licensed Hardscape Contractor Client City & Service Area AZ",
   description:
-    "AMW Hardscape Solutions — licensed hardscape contractor (ROC #359843 · ROC #346552) with 5-star Google reviews. Serving San Tan Valley, Queen Creek, Gilbert, Mesa, Chandler, Apache Junction & the East Valley. Pavers, concrete, turf, rock & more.",
+    "Client Business Name — licensed hardscape contractor (License #000000) with 5-star Google reviews. Serving the surrounding service area. Pavers, concrete, turf, rock & more.",
   path: "/about",
 });
 
@@ -26,13 +26,13 @@ const amwStandards = [
 
 const amwWorkCards = [
   {
-    title: "Hands-On AMW Crew",
+    title: "Hands-On Client Crew",
     roleLines: [
       "Crews focused on prep, compaction,",
       "clean edges, and final walkthroughs.",
     ],
     image:
-      "/assets/tww-assets/amw-images/IMG_4281.HEIC.jpg",
+      "/assets/tww-assets/tww-images/Suburb_home_with_patio_pool_202605131833_4.jpeg",
     position: "center",
   },
   {
@@ -42,7 +42,7 @@ const amwWorkCards = [
       "before the first paver is set.",
     ],
     image:
-      "/assets/tww-assets/amw-images/IMG_4182.jpg",
+      "/assets/tww-assets/tww-images/Suburb_home_with_patio_pool_202605131833_5.jpeg",
     position: "center",
   },
   {
@@ -52,7 +52,7 @@ const amwWorkCards = [
       "standards from demolition through cleanup.",
     ],
     image:
-      "/assets/tww-assets/amw-images/472558464_122133547166562324_4988564263005936421_n.jpg",
+      "/assets/tww-assets/tww-images/Suburb_home_with_patio_pool_202605131833_6.jpeg",
     position: "center",
   },
   {
@@ -62,7 +62,7 @@ const amwWorkCards = [
       "and a clean space at sign-off.",
     ],
     image:
-      "/assets/tww-assets/amw-images/b33260_60fa8433f1e04529be6632e3d870638c~mv2.jpg",
+      "/assets/tww-assets/tww-images/Arizona_suburb_home_patio_pool_202605131833.jpeg",
     position: "center",
   },
 ];
@@ -74,14 +74,14 @@ export default function AboutPage() {
       <div className="theme-main">
         <div className="page" id="top">
           <nav className="main-nav dark light-after-scroll transparent stick-fixed wow-menubar">
-            <HeaderQuest />
+            <HeaderTWW />
           </nav>
           <main id="main">
             <section className="page-section pt-0 pb-0" id="home">
               <section
                 className="page-section bg-dark-1 bg-dark-alpha-60 light-content amw-fixed-bg-host amw-secondary-hero"
               >
-                <ImageBackground src="/assets/tww-assets/amw-images/IMG_4280.HEIC.jpg" alt="" fixed priority />
+                <ImageBackground src="/assets/tww-assets/tww-images/Arizona_suburb_home_patio_pool_202605131833_2.jpeg" alt="" fixed priority />
                 <div className="container position-relative pt-50">
                   {/* Section Content */}
                   <div className="text-center">
@@ -130,8 +130,8 @@ export default function AboutPage() {
                     <div className="call-action-4-images">
                       <div className="call-action-4-image-1" style={{ overflow: "hidden" }}>
                         <Image
-                          src="/assets/tww-assets/amw-images/473177002_122133547196562324_3990472910039640132_n.jpg"
-                          alt="Stepping stone entry - AMW Hardscape Solutions"
+                          src="/assets/tww-assets/tww-images/Arizona_house_backyard_landscaping_202605131833.jpeg"
+                          alt="Stepping stone entry - Client Business Name"
                           width={500}
                           height={692}
                           className="wow scaleOutIn"
@@ -148,8 +148,8 @@ export default function AboutPage() {
                         style={{ right: "-8%" }}
                       >
                         <Image
-                          src="/assets/tww-assets/amw-images/472536733_122133547178562324_4552320897647043634_n.jpg"
-                          alt="Front entry pavers - AMW Hardscape Solutions"
+                          src="/assets/tww-assets/tww-images/Arizona_house_in_suburb_frontyard_202605131833.jpeg"
+                          alt="Front entry pavers - Client Business Name"
                           width={500}
                           height={692}
                           className="wow scaleOutIn"
@@ -163,9 +163,9 @@ export default function AboutPage() {
                   <div className="col-sm-7 col-xl-6 offset-xl-1 mt-n10 mt-xs-40 amw-about-content-copy">
                     <div className="wow fadeInUp">
                       <p className="lead mt-0 mb-40">
-                        AMW Hardscape Solutions is a licensed hardscape
-                        contractor serving San Tan Valley, Mesa, Queen Creek,
-                        and the greater East Valley. We specialize in paver
+                        Client Business Name is a licensed hardscape
+                        contractor serving Client City, Mesa, Client City,
+                        and the greater Service Area. We specialize in paver
                         installation, concrete, artificial turf, decorative
                         rock, and driveway additions, with every phase handled
                         through one point of contact from estimate to final
@@ -199,8 +199,8 @@ export default function AboutPage() {
             <section
               className="page-section bg-dark bg-dark-alpha-70 light-content amw-fixed-bg-host"
             >
-              <ImageBackground src="/assets/tww-assets/amw-images/new_04.jpg" alt="" fixed />
-              <AMWFeatureCarousel />
+              <ImageBackground src="/assets/tww-assets/tww-images/Arizona_house_installing_artificial_202605131833.jpeg" alt="" fixed />
+              <TWWFeatureCarousel />
             </section>
             <>
               <section className="page-section" id="team">
@@ -327,14 +327,14 @@ export default function AboutPage() {
                       <Image
                         width={1100}
                         height={930}
-                        src="/assets/tww-assets/amw-images/IMG_4523.HEIC.jpg"
-                        alt="AMW crew setting pavers over a prepared base at an Arizona home"
+                        src="/assets/tww-assets/tww-images/Arizona_house_installing_artificial_202605131833_2.jpeg"
+                        alt="Client crew setting pavers over a prepared base at an Arizona home"
                         sizes="(max-width: 991px) 100vw, 50vw"
                       />
                     </div>
                   </div>
                 </div>
-                <AMWSplitPadding />
+                <TWWSplitPadding />
               </section>
             </>
             <section className="page-section">

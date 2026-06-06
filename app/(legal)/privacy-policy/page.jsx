@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
 import ImageBackground from "@/components/common/ImageBackground";
-import HeaderQuest from "@/components/headers/HeaderQuest";
+import HeaderTWW from "@/components/headers/HeaderTWW";
 import { buildMetadata } from "@/utils/seo";
 import site from "@/data/site";
 
@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
       <div className="theme-main">
         <div className="page" id="top">
           <nav className="main-nav transparent stick-fixed wow-menubar amw-legal-nav">
-            <HeaderQuest />
+            <HeaderTWW />
           </nav>
           <main id="main">
             <section className="page-section pt-0 pb-0">
@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
                 }}
               >
                 <>
-                  <ImageBackground src="/assets/tww-assets/amw-images/IMG_4523.HEIC.jpg" alt="" fixed priority />
+                  <ImageBackground src="/assets/tww-assets/tww-images/Suburb_home_with_patio_pool_202605131833_3.jpeg" alt="" fixed priority />
                   <div className="container position-relative pt-0">
                     <div className="text-center">
                       <div className="row">
@@ -112,7 +112,7 @@ export default function PrivacyPolicyPage() {
                     <p>
                       We retain your information for as long as necessary to provide our services
                       and comply with our legal obligations. Contact and project information is
-                      retained for the duration of your relationship with AMW and for a reasonable
+                      retained for the duration of your relationship with Client and for a reasonable
                       period thereafter for warranty and record-keeping purposes.
                     </p>
 

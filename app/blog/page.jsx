@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import HeaderQuest from "@/components/headers/HeaderQuest";
+import HeaderTWW from "@/components/headers/HeaderTWW";
 import Footer1 from "@/components/footers/Footer1";
 import ImageBackground from "@/components/common/ImageBackground";
 import AnimatedText from "@/components/common/AnimatedText";
@@ -11,7 +11,7 @@ import styles from "./blog.module.css";
 
 export const metadata = buildMetadata({
   title: "Blog | Hardscape Tips & Project Ideas",
-  description: "Helpful guides, project ideas, and expert tips from AMW Hardscape Solutions — serving San Tan Valley, Queen Creek, Gilbert & the East Valley.",
+  description: "Helpful guides, project ideas, and expert tips from Client Business Name — serving the surrounding service area.",
   path: "/blog",
   tags: ["hardscape", "arizona landscaping", "pavers", "artificial turf", "concrete", "san tan valley", "queen creek", "gilbert"],
 });
@@ -30,7 +30,7 @@ export default function BlogIndexPage() {
     <div className="theme-main">
       <div className="page" id="top">
         <nav className="main-nav transparent stick-fixed wow-menubar light-content dark" data-light-nav="true">
-          <HeaderQuest />
+          <HeaderTWW />
         </nav>
         <main id="main">
 
@@ -38,7 +38,7 @@ export default function BlogIndexPage() {
           <section className="page-section pt-0 pb-0">
             <div className="page-section bg-dark-1 bg-dark-alpha-60 light-content amw-fixed-bg-host amw-secondary-hero">
               <ImageBackground
-                src="/assets/tww-assets/amw-images/475073428_122137974338562324_5243938571606077407_n.jpg"
+                src="/assets/tww-assets/tww-images/Suburb_home_with_patio_pool_202605131833.jpeg"
                 alt=""
                 fixed
                 priority
@@ -50,7 +50,7 @@ export default function BlogIndexPage() {
                       From the Field
                     </div>
                     <h1 className="hs-title-1 mb-20">
-                      <AnimatedText text="Hardscape tips from the East Valley." />
+                      <AnimatedText text="Hardscape tips from the Service Area." />
                     </h1>
                     <p className="section-descr mb-0 wow fadeInUp" data-wow-delay="0.3s">
                       Real guides from a crew that works in Arizona heat every day.
@@ -136,7 +136,7 @@ export default function BlogIndexPage() {
           <section className={styles.ctaBand}>
             <div className="container">
               <p className={styles.ctaBandTitle}>Ready to start your project?</p>
-              <p className={styles.ctaBandDesc}>San Tan Valley · Queen Creek · Gilbert · Mesa · Chandler · Apache Junction</p>
+              <p className={styles.ctaBandDesc}>City · City · City · City</p>
               <Link href="/#contact-form" className="btn btn-mod btn-w btn-large btn-round btn-hover-anim">
                 <span>Get a Free Estimate</span>
               </Link>

@@ -17,13 +17,13 @@ export default function ImageBackground({
       fill
       priority={priority}
       sizes={sizes}
-      className={`amw-next-bg-image${className ? ` ${className}` : ""}`}
+      className={`tww-next-bg-image${className ? ` ${className}` : ""}`}
       style={{ objectFit: "cover", objectPosition }}
     />
   );
 
   if (fixed) {
-    return <div className="amw-fixed-bg-layer">{image}</div>;
+    return <div className="tww-fixed-bg-layer">{image}</div>;
   }
 
   return image;

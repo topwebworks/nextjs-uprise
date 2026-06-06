@@ -31,7 +31,7 @@ export default function ClientInit() {
     parallaxScroll();
 
     // Scroll-to-top button visibility
-    const scrollBtn = document.querySelector(".amw-scroll-top");
+    const scrollBtn = document.querySelector(".tww-scroll-top");
     const handleScrollBtn = () => {
       if (scrollBtn) {
         scrollBtn.classList.toggle("visible", window.scrollY > 400);

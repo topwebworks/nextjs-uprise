@@ -53,7 +53,7 @@ const safelist = {
     /^js-/, /^is-/, /^small-height/,
     /^splitting/, /^char/, /^word/, /^line/, /^whitespace/,
     /^rellax/, /^swiper/, /^owl/, /^pswp/,
-    /^amw-/, /^amw/,
+    /^tww-/, /^tww/,
     /^page-section/, /^page-/, /^hs-/,
     /^section-/, /^section/,
     /^blog-/, /^team-/, /^portfolio-/, /^work-/,
@@ -63,7 +63,7 @@ const safelist = {
     /^mn-/, /^main-nav/, /^inner-nav/, /^mobile-nav/,
     /^decoration-/, /^bg-shape/, /^svg-shape/,
     /^light-content/, /^dark-content/, /^bg-dark/, /^bg-gray/,
-    /^parallax/, /^fixed-bg/, /^amw-fixed-bg/,
+    /^parallax/, /^fixed-bg/, /^tww-fixed-bg/,
     /^font-/, /^text-/, /^clearlist/, /^clearlinks/,
   ],
 };

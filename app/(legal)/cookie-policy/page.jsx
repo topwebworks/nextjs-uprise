@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
 import ImageBackground from "@/components/common/ImageBackground";
-import HeaderQuest from "@/components/headers/HeaderQuest";
+import HeaderTWW from "@/components/headers/HeaderTWW";
 import { buildMetadata } from "@/utils/seo";
 import site from "@/data/site";
 
@@ -18,7 +18,7 @@ export default function CookiePolicyPage() {
       <div className="theme-main">
         <div className="page" id="top">
           <nav className="main-nav transparent stick-fixed wow-menubar amw-legal-nav">
-            <HeaderQuest />
+            <HeaderTWW />
           </nav>
           <main id="main">
             <section className="page-section pt-0 pb-0">
@@ -30,7 +30,7 @@ export default function CookiePolicyPage() {
                 }}
               >
                 <>
-                  <ImageBackground src="/assets/tww-assets/amw-images/Arizona_house_installing_artificial_202605131833.jpeg" alt="" fixed priority />
+                  <ImageBackground src="/assets/tww-assets/tww-images/Arizona_house_installing_artificial_202605131833.jpeg" alt="" fixed priority />
                   <div className="container position-relative pt-0">
                     <div className="text-center">
                       <div className="row">
@@ -152,7 +152,7 @@ export default function CookiePolicyPage() {
                       functional cookies necessary for those features to operate. These are
                       classified as essential and load regardless of analytics preference.
                       Google Analytics cookies are set by Google and governed by
-                      Google&rsquo;s privacy policy. AMW does not have direct access to modify
+                      Google&rsquo;s privacy policy. Client does not have direct access to modify
                       or read Google Analytics cookie values beyond the aggregated reporting
                       provided in Google Analytics.
                     </p>

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
-import HeaderQuest from "@/components/headers/HeaderQuest";
+import HeaderTWW from "@/components/headers/HeaderTWW";
 import ImageBackground from "@/components/common/ImageBackground";
 import Link from "next/link";
 import { buildMetadata } from "@/utils/seo";
@@ -20,7 +20,7 @@ export default function ThankYou() {
     <div className="theme-main">
       <div className="page" id="top">
         <nav className="main-nav transparent stick-fixed wow-menubar amw-ty-nav">
-          <HeaderQuest />
+          <HeaderTWW />
         </nav>
         <main id="main">
           <section className="page-section pt-0 pb-0">
@@ -31,7 +31,7 @@ export default function ThankYou() {
                 paddingBottom: 100,
               }}
             >
-              <ImageBackground src="/assets/tww-assets/amw-images/IMG_4280.HEIC.jpg" alt="" fixed priority />
+              <ImageBackground src="/assets/tww-assets/tww-images/Suburb_home_with_patio_pool_202605131833_2.jpeg" alt="" fixed priority />
               <div className="position-absolute top-0 bottom-0 start-0 end-0 bg-gradient-white" />
               <div className="container position-relative pt-0">
                 <div className="text-center">
@@ -63,15 +63,15 @@ export default function ThankYou() {
                       </h1>
 
                       <p className="section-descr text-gray mb-10 wow fadeInUp" data-wow-delay="0.15s">
-                        Someone from AMW will be in touch shortly.
+                        Someone from Client will be in touch shortly.
                       </p>
                       <p className="text-gray mb-40 wow fadeInUp" data-wow-delay="0.2s">
                         If you need to reach us directly, give us a call or check out recent project photos while you wait.
                       </p>
 
                       <div className="d-flex flex-wrap gap-3 justify-content-center wow fadeInUp" data-wow-delay="0.3s">
-                        <a href="tel:+14807216561" className="btn btn-mod btn-large btn-round btn-hover-anim">
-                          <span>Call (480) 721-6561</span>
+                        <a href="tel:+10000000000" className="btn btn-mod btn-large btn-round btn-hover-anim">
+                          <span>Call 000-000-0000</span>
                         </a>
                         <Link href="/#gallery" className="btn btn-mod btn-border btn-large btn-round btn-hover-anim btn-secondary-light">
                           <span>View Our Work</span>

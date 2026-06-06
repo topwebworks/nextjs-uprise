@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
-import HeaderQuest from "@/components/headers/HeaderQuest";
+import HeaderTWW from "@/components/headers/HeaderTWW";
 import ImageBackground from "@/components/common/ImageBackground";
 import AnimatedText from "@/components/common/AnimatedText";
 import Image from "next/image";
@@ -8,9 +8,9 @@ import Link from "next/link";
 import { buildMetadata } from "@/utils/seo";
 
 export const metadata = buildMetadata({
-  title: "Hardscape Services San Tan Valley & East Valley AZ | AMW Hardscape Solutions",
+  title: "Hardscape Services Client City & Service Area AZ | Client Business Name",
   description:
-    "Pavers, concrete, artificial turf, decorative rock, demolition & driveway work. Licensed hardscape contractor serving San Tan Valley, Queen Creek, Gilbert, Mesa, Chandler, Apache Junction, Maricopa & the East Valley. Free estimates.",
+    "Pavers, concrete, artificial turf, decorative rock, demolition & driveway work. Licensed hardscape contractor serving the surrounding service area. Free estimates.",
   path: "/services",
 });
 
@@ -20,7 +20,7 @@ const serviceCards = [
     title: "Paver Installation",
     description:
       "Travertine, concrete pavers, flagstone, and porcelain for driveways, patios, pool decks, and walkways. Base, pitch, and finish — built to hold through Arizona heat cycles.",
-    image: "/assets/tww-assets/amw-images/IMG_4281.HEIC.jpg",
+    image: "/assets/tww-assets/tww-images/Arizona_house_installing_beautiful_202605131833.jpeg",
     href: "/services/paver-installation",
   },
   {
@@ -28,7 +28,7 @@ const serviceCards = [
     title: "Concrete Work",
     description:
       "Driveways, patio slabs, RV pads, driveway extensions, repairs, and full replacement. One crew from demolition through pour — properly prepped, properly poured.",
-    image: "/assets/tww-assets/amw-images/IMG_3706.HEIC.jpg",
+    image: "/assets/tww-assets/tww-images/Arizona_house_installing_pool_backyard_202605131833.jpeg",
     href: "/services/concrete",
   },
   {
@@ -36,7 +36,7 @@ const serviceCards = [
     title: "Artificial Turf & Natural Sod",
     description:
       "Artificial turf and natural sod installation for backyards, front yards, pet runs, and play areas. Sub-base prep, drainage, and the right product for your yard and how you use it.",
-    image: "/assets/tww-assets/amw-images/b33260_543fcf34b19b4fea8f524d0346067e3b~mv2.jpg",
+    image: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833.jpeg",
     href: "/services/artificial-turf",
   },
   {
@@ -44,7 +44,7 @@ const serviceCards = [
     title: "Decorative Rock",
     description:
       "River rock, Apache brown, gold quartzite, DG, and accent boulders installed right — site prep, commercial barrier, metal edging, and proper drainage. Not just material dropped on the ground.",
-    image: "/assets/tww-assets/amw-images/IMG_4298.HEIC.jpg",
+    image: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833_2.jpeg",
     href: "/services/decorative-rock",
   },
   {
@@ -52,7 +52,7 @@ const serviceCards = [
     title: "Demolition & Removal",
     description:
       "Concrete, pavers, turf, and rock removal with full haul and disposal. Site assessment, defined scope, proper removal method — sub-grade left clean and ready for the next install.",
-    image: "/assets/tww-assets/amw-images/new_06.jpg",
+    image: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833_3.jpeg",
     href: "/services/demolition",
   },
   {
@@ -60,7 +60,7 @@ const serviceCards = [
     title: "Driveway Additions",
     description:
       "Widening, parking pads, RV pads, and turnarounds. The tie-in to existing hardscape, the drainage design, and the base spec are what determine whether the addition holds together long-term.",
-    image: "/assets/tww-assets/amw-images/IMG_0524.jpg",
+    image: "/assets/tww-assets/tww-images/Architectural_photo_of_Arizona_suburb_202605131833.jpeg",
     href: "/services/driveways",
   },
 ];
@@ -71,19 +71,19 @@ export default function ServicesPage() {
     <div className="theme-main">
       <div className="page" id="top">
         <nav className="main-nav dark light-after-scroll transparent stick-fixed wow-menubar">
-          <HeaderQuest />
+          <HeaderTWW />
         </nav>
         <main id="main">
           <section
             className="page-section bg-dark-1 bg-dark-alpha-70 light-content amw-fixed-bg-host amw-service-hero"
           >
-            <ImageBackground src="/assets/tww-assets/amw-images/IMG_4280.HEIC.jpg" alt="" fixed priority />
+            <ImageBackground src="/assets/tww-assets/tww-images/architectual_photo_of_arizona_house_202605131833.jpeg" alt="" fixed priority />
             <div className="container position-relative pt-50">
               <div className="text-center">
                 <div className="row">
                   <div className="col-md-8 offset-md-2">
                     <h1 className="hs-title-1 mb-30">
-                      <AnimatedText text="Hardscape services for the East Valley." />
+                      <AnimatedText text="Hardscape services for the Service Area." />
                     </h1>
                     <p className="section-descr mb-0 wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1.2s">
                       Pavers, concrete, turf, rock, demolition, and driveway work — one licensed crew, one point of contact, from estimate to final walkthrough.
@@ -135,8 +135,8 @@ export default function ServicesPage() {
                     We come to you, walk the property, and give you a written quote — no obligation, no pressure.
                   </p>
                   <div className="d-flex flex-wrap gap-3 justify-content-center">
-                    <a href="tel:+14807216561" className="btn btn-mod btn-large btn-round btn-hover-anim">
-                      <span>Call (480) 721-6561</span>
+                    <a href="tel:+10000000000" className="btn btn-mod btn-large btn-round btn-hover-anim">
+                      <span>Call 000-000-0000</span>
                     </a>
                     <Link href="/#contact-form" className="btn btn-mod btn-border btn-large btn-round btn-hover-anim">
                       <span>Get a Free Estimate</span>

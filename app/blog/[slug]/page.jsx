@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import HeaderQuest from "@/components/headers/HeaderQuest";
+import HeaderTWW from "@/components/headers/HeaderTWW";
 import Footer1 from "@/components/footers/Footer1";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { buildMetadata } from "@/utils/seo";
@@ -49,7 +49,7 @@ export default async function BlogPostPage({ params }) {
     <div className="theme-main">
       <div className="page" id="top">
         <nav className="main-nav transparent stick-fixed wow-menubar light-content dark" data-light-nav="true">
-          <HeaderQuest />
+          <HeaderTWW />
         </nav>
         <main id="main">
 
@@ -143,7 +143,7 @@ export default async function BlogPostPage({ params }) {
           <section className={styles.ctaBand}>
             <div className="container">
               <p className={styles.ctaBandTitle}>Ready to start your project?</p>
-              <p className={styles.ctaBandDesc}>San Tan Valley · Queen Creek · Gilbert · Mesa · Chandler · Apache Junction</p>
+              <p className={styles.ctaBandDesc}>City · City · City · City</p>
               <Link href="/#contact-form" className="btn btn-mod btn-w btn-large btn-round btn-hover-anim">
                 <span>Get a Free Estimate</span>
               </Link>

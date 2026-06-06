@@ -1,37 +1,37 @@
 import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
 import ImageBackground from "@/components/common/ImageBackground";
-import HeaderQuest from "@/components/headers/HeaderQuest";
+import HeaderTWW from "@/components/headers/HeaderTWW";
 import React from "react";
 import Faq from "@/components/common/Faq";
-import AMWContactSection from "@/components/homes/amw/AMWContactSection";
+import TWWContactSection from "@/components/homes/tww/TWWContactSection";
 import { buildMetadata } from "@/utils/seo";
 
 export const metadata = buildMetadata({
-  title: "Contact AMW Hardscape Solutions | San Tan Valley, Queen Creek & East Valley",
+  title: "Contact Client Business Name | Client City, Client City & Service Area",
   description:
-    "Questions about a project, scheduling, or existing work? Contact AMW Hardscape Solutions — licensed hardscape contractor serving San Tan Valley, Queen Creek, Gilbert, Mesa, Chandler & Apache Junction.",
+    "Questions about a project, scheduling, or existing work? Contact Client Business Name — licensed hardscape contractor serving the surrounding service area.",
   path: "/support",
   tags: ["contact", "hardscape contractor", "san tan valley", "queen creek", "gilbert", "east valley", "arizona hardscape"],
 });
 
 const cities = [
-  { name: "San Tan Valley, AZ", body: "San Tan Valley is AMW's home base. We work throughout the 85140, 85143, and 85144 zip codes — from newer tract developments along Hunt Highway to established neighborhoods around Schnepf Road. The caliche hardpan common throughout San Tan Valley requires proper excavation and base prep on every hardscape job. We know the soil, the drainage patterns, and the HOA requirements across the major neighborhoods." },
-  { name: "Queen Creek, AZ", body: "Queen Creek is one of AMW's most active service areas. The rapid growth along Ellsworth Road and the established neighborhoods off Rittenhouse have produced strong demand for paver patios, concrete driveways, decorative rock, and artificial turf. Queen Creek's larger lot sizes typically allow for full backyard hardscape transformations. We handle everything from permit coordination to final walkthrough." },
-  { name: "Gilbert, AZ", body: "Gilbert homeowners consistently rank among AMW's most detail-oriented clients. The established neighborhoods throughout Gilbert — from Val Vista Lakes to Agritopia and Morrison Ranch — have mature landscaping that requires careful hardscape integration. We install pavers, concrete, turf, and decorative rock throughout Gilbert, including pool deck work and backyard outdoor living spaces." },
-  { name: "Mesa, AZ", body: "AMW serves Mesa from the Superstition Springs corridor east to the San Tan Valley border. Mesa's mix of older concrete driveways approaching end of life and newer developments seeking paver and turf upgrades represents a large portion of our concrete repair, replacement, and paver installation work. We also handle decorative rock and DG installations throughout Mesa's desert-landscaped front yards." },
-  { name: "Chandler, AZ", body: "Chandler's established neighborhoods — Ocotillo, Fulton Ranch, and the communities east of the 202 — are active AMW service territory. Paver patios, artificial turf conversions from grass, decorative rock, and driveway widening make up the majority of our Chandler work. We regularly work in gated communities and HOA-governed neighborhoods and are familiar with the approval process for hardscape modifications." },
-  { name: "Apache Junction, AZ", body: "Apache Junction's terrain and soil conditions are among the most demanding in the East Valley. Rocky native soil, dramatic grade changes, and proximity to the Superstition Mountains create site conditions that require experienced assessment before any hardscape work begins. AMW handles paver installation, concrete work, decorative rock, and demolition throughout Apache Junction and Gold Canyon." },
-  { name: "Maricopa, AZ", body: "Maricopa is a growing AMW service area as development along SR-347 continues expanding. The newer tract neighborhoods in Maricopa have large lots and clay-heavy soil that benefits from proper hardscape drainage planning. We install pavers, concrete, artificial turf, and decorative rock throughout Maricopa, including RV pad construction for the area's many recreational vehicle owners." },
-  { name: "Florence, AZ", body: "AMW serves Florence and the surrounding Pinal County communities for paver installation, concrete work, decorative rock, and demolition. Florence's growth along Hunt Highway and the communities north of town have seen significant demand for hardscape upgrades. We coordinate with Pinal County permit requirements where applicable." },
-  { name: "Gold Canyon, AZ", body: "Gold Canyon's terrain is characterized by rocky native soil, desert wash crossings, and properties with dramatic elevation changes. Hardscape in Gold Canyon requires careful drainage planning — monsoon runoff on sloped lots can undermine improperly graded surfaces within one season. AMW assesses site drainage before every job and designs hardscape that handles Gold Canyon's specific conditions." },
-  { name: "Higley, AZ", body: "The Higley corridor — including communities along Williams Field Road and the neighborhoods between Gilbert and Queen Creek — is active AMW territory. Newer construction in this area often includes large backyards well-suited to paver patios, turf, and decorative rock combinations. We work in both HOA-governed communities and custom home properties throughout the Higley area." },
-  { name: "Coolidge, AZ", body: "AMW serves Coolidge and the surrounding Pinal County area for hardscape installation and demolition. Coolidge properties tend toward larger lot sizes with significant opportunities for decorative rock, DG pathways, and concrete driveway work. We handle the full project from site assessment through haul-away and final walkthrough." },
+  { name: "Client City, AZ", body: "Client City is Client's home base. We work throughout the 85140, 85143, and 85144 zip codes — from newer tract developments along Hunt Highway to established neighborhoods around Schnepf Road. The caliche hardpan common throughout Client City requires proper excavation and base prep on every hardscape job. We know the soil, the drainage patterns, and the HOA requirements across the major neighborhoods." },
+  { name: "Client City, AZ", body: "Client City is one of Client's most active service areas. The rapid growth along Ellsworth Road and the established neighborhoods off Rittenhouse have produced strong demand for paver patios, concrete driveways, decorative rock, and artificial turf. Client City's larger lot sizes typically allow for full backyard hardscape transformations. We handle everything from permit coordination to final walkthrough." },
+  { name: "Gilbert, AZ", body: "Gilbert homeowners consistently rank among Client's most detail-oriented clients. The established neighborhoods throughout Gilbert — from Val Vista Lakes to Agritopia and Morrison Ranch — have mature landscaping that requires careful hardscape integration. We install pavers, concrete, turf, and decorative rock throughout Gilbert, including pool deck work and backyard outdoor living spaces." },
+  { name: "Mesa, AZ", body: "Client serves Mesa from the Superstition Springs corridor east to the Client City border. Mesa's mix of older concrete driveways approaching end of life and newer developments seeking paver and turf upgrades represents a large portion of our concrete repair, replacement, and paver installation work. We also handle decorative rock and DG installations throughout Mesa's desert-landscaped front yards." },
+  { name: "Chandler, AZ", body: "Chandler's established neighborhoods — Ocotillo, Fulton Ranch, and the communities east of the 202 — are active Client service territory. Paver patios, artificial turf conversions from grass, decorative rock, and driveway widening make up the majority of our Chandler work. We regularly work in gated communities and HOA-governed neighborhoods and are familiar with the approval process for hardscape modifications." },
+  { name: "Apache Junction, AZ", body: "Apache Junction's terrain and soil conditions are among the most demanding in the Service Area. Rocky native soil, dramatic grade changes, and proximity to the Superstition Mountains create site conditions that require experienced assessment before any hardscape work begins. Client handles paver installation, concrete work, decorative rock, and demolition throughout Apache Junction and Gold Canyon." },
+  { name: "Maricopa, AZ", body: "Maricopa is a growing Client service area as development along SR-347 continues expanding. The newer tract neighborhoods in Maricopa have large lots and clay-heavy soil that benefits from proper hardscape drainage planning. We install pavers, concrete, artificial turf, and decorative rock throughout Maricopa, including RV pad construction for the area's many recreational vehicle owners." },
+  { name: "Florence, AZ", body: "Client serves Florence and the surrounding Pinal County communities for paver installation, concrete work, decorative rock, and demolition. Florence's growth along Hunt Highway and the communities north of town have seen significant demand for hardscape upgrades. We coordinate with Pinal County permit requirements where applicable." },
+  { name: "Gold Canyon, AZ", body: "Gold Canyon's terrain is characterized by rocky native soil, desert wash crossings, and properties with dramatic elevation changes. Hardscape in Gold Canyon requires careful drainage planning — monsoon runoff on sloped lots can undermine improperly graded surfaces within one season. Client assesses site drainage before every job and designs hardscape that handles Gold Canyon's specific conditions." },
+  { name: "Higley, AZ", body: "The Higley corridor — including communities along Williams Field Road and the neighborhoods between Gilbert and Client City — is active Client territory. Newer construction in this area often includes large backyards well-suited to paver patios, turf, and decorative rock combinations. We work in both HOA-governed communities and custom home properties throughout the Higley area." },
+  { name: "Coolidge, AZ", body: "Client serves Coolidge and the surrounding Pinal County area for hardscape installation and demolition. Coolidge properties tend toward larger lot sizes with significant opportunities for decorative rock, DG pathways, and concrete driveway work. We handle the full project from site assessment through haul-away and final walkthrough." },
 ];
 
 const supportFaqs = [
   {
-    question: "What photos and details help AMW price the job correctly?",
+    question: "What photos and details help Client price the job correctly?",
     answer:
       "Wide photos of the whole area, close-ups of problem spots, gate or access photos, rough dimensions, and a short description of what you want built all help. Existing concrete, pavers, slope, drainage, irrigation, and tight access can change the prep and price.",
   },
@@ -46,14 +46,14 @@ const supportFaqs = [
       "It depends on how the space will be used. Pavers are great for patios, walkways, and finished outdoor living areas. Concrete fits slabs, RV pads, and driveway work. Turf works for green usable space without watering. Decorative rock is best for low-water borders, transitions, and clean desert hardscape.",
   },
   {
-    question: "Can AMW handle demolition, grading, borders, and cleanup?",
+    question: "Can Client handle demolition, grading, borders, and cleanup?",
     answer:
-      "Yes. Depending on the project, AMW can remove old material, haul away debris, shape the grade, prep the base, set edges or borders, install the finished surface, and clean the site before the final walkthrough.",
+      "Yes. Depending on the project, Client can remove old material, haul away debris, shape the grade, prep the base, set edges or borders, install the finished surface, and clean the site before the final walkthrough.",
   },
   {
     question: "What can change the estimate after a site visit?",
     answer:
-      "Common changes include hidden concrete, poor drainage, soft subgrade, narrow access, irrigation lines, utility conflicts, extra demolition, material changes, or a larger final layout. AMW reviews those items before work begins so the scope is clear.",
+      "Common changes include hidden concrete, poor drainage, soft subgrade, narrow access, irrigation lines, utility conflicts, extra demolition, material changes, or a larger final layout. Client reviews those items before work begins so the scope is clear.",
   },
   {
     question: "How long does a typical hardscape project take?",
@@ -69,7 +69,7 @@ export default function MainAboutPage1() {
       <div className="theme-main">
         <div className="page" id="top">
           <nav className="main-nav transparent stick-fixed wow-menubar amw-support-nav">
-            <HeaderQuest />
+            <HeaderTWW />
           </nav>
           <main id="main">
             <section className="page-section pt-0 pb-0" id="home">
@@ -78,7 +78,7 @@ export default function MainAboutPage1() {
               >
                 <>
                   <>
-                    <ImageBackground src="/assets/tww-assets/amw-images/Patio_pavers_installed_in_backyard_202605131833_2.jpeg" alt="" fixed priority />
+                    <ImageBackground src="/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833_2.jpeg" alt="" fixed priority />
                     <div className="container position-relative pt-50">
                       {/* Section Content */}
                       <div className="text-center">
@@ -106,7 +106,7 @@ export default function MainAboutPage1() {
             <>
               {/* Contact Section */}
               <section className="page-section pt-0 amw-light-hero-next amw-support-contact-section" id="contact">
-                <AMWContactSection
+                <TWWContactSection
                   introTitle="Questions, scheduling, or follow-up — we've got you."
                   introText="Whether you have a question about materials, want to check on scheduling, or need to follow up on work already done — send us a message. We respond to every inquiry directly."
                   formDisclaimer="All fields required. We'll follow up with you directly."
@@ -137,7 +137,7 @@ export default function MainAboutPage1() {
                         Good hardscape starts before anything gets installed.
                         These answers cover the details that affect cost,
                         durability, drainage, access, base prep, material
-                        choices, and what AMW needs to understand the job
+                        choices, and what Client needs to understand the job
                         clearly.
                       </p>
                       <p className="text-gray mb-0 mt-20">
