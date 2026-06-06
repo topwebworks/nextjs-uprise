@@ -29,7 +29,7 @@
   :global(.tww-logo-img-wrap) { width: 190px; height: 96px; }
 }
 
-@media (max-width: 1099px) {
+@media (max-width: 1024px) {
   :global(.tww-logo-img-wrap) { width: 160px; height: 81px; }
 }
 
@@ -108,7 +108,7 @@
   display: none;
 }
 
-@media (max-width: 1099px) {
+@media (max-width: 1024px) {
   :global(.tww-mobile-trigger) { display: flex; align-items: center; }
   :global(.nav-logo-wrap) { padding-left: 12px !important; }
   :global(.mobile-nav) { margin-right: 12px !important; }
