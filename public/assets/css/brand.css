@@ -97,8 +97,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 48px 10px 16px;
-  min-height: 38px;
+  padding: 7px 48px 5px 16px;
+  min-height: 30px;
   position: relative;
 }
 
