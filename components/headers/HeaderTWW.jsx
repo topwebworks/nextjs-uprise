@@ -32,10 +32,10 @@ function MobileMenu({ onClose }) {
       <div className="tww-mobile-menu-header">
         <Link href="/" className="tww-mobile-logo" onClick={onClose}>
           <Image
-            src="/assets/tww-assets/tww-images/main-logo.png"
+            src={settings.logos.dark}
             alt={site.name}
             width={120}
-            height={60}
+            height={40}
             style={{ objectFit: "contain" }}
           />
         </Link>
@@ -109,10 +109,20 @@ export default function HeaderTWW() {
           <Link href="/" className="logo tww-logo">
             <span className="tww-logo-img-wrap" role="img" aria-label={`${site.name} logo`}>
               <Image
-                src="/assets/tww-assets/tww-images/main-logo.png"
+                src={settings.logos.light}
                 alt={site.name}
                 fill
                 sizes="180px"
+                className="tww-logo-dark"
+                style={{ objectFit: "contain", objectPosition: "left center" }}
+              />
+              <Image
+                src={settings.logos.dark}
+                alt=""
+                aria-hidden="true"
+                fill
+                sizes="180px"
+                className="tww-logo-light"
                 style={{ objectFit: "contain", objectPosition: "left center" }}
               />
             </span>

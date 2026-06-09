@@ -1,0 +1,307 @@
+/* ─── BRAND OVERRIDES ───────────────────────────────────────────────────────
+   Per-client brand customization. Edit this file when cloning for a new client.
+   Source of truth for hex values: data/brand.js
+   Load order: last in styles.css — these overrides win automatically.
+─────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  --topbar-height: 4px; /* updated at runtime by TopBar.jsx via ResizeObserver */
+  /* ── Primary brand color ──────────────────────────────────────────────── */
+  /* Replace all values together. Derive from brand.js primary hex.         */
+  --color-primary-1:         #c277ff;  /* main brand color */
+  --color-primary-1-a:       #a855f7;  /* hover / active — darken ~15% */
+  --color-primary-light-1:   #f5e8ff;  /* light tint bg — lighten ~85% */
+  --color-primary-light-1-a: #e9d0fe;  /* deeper light tint — lighten ~70% */
+
+  /* ── Brand dark / very dark ───────────────────────────────────────────── */
+  /* Use for dark section backgrounds, hero overlays, footer.               */
+  --brand-dark:       #7c3aed;  /* dark — saturated deep purple */
+  --brand-very-dark:  #4c1d95;  /* very dark — near-black purple */
+  /* Overlay base: hue of primary crushed toward black (10–15% lightness).  */
+  /* For yellow/orange clients this must be manually set to a near-black     */
+  /* version of the primary hue — e.g. orange #ff6600 → overlay #1a0800     */
+  --brand-overlay-base: #0e0518; /* near-black purple — safe dark for overlays */
+
+  /* ── Overlays — alpha layers over images ─────────────────────────────── */
+  /* Light overlay: washes image toward white — use on light-bg hero sections */
+  --overlay-light:      rgba(245, 232, 255, 0.55);  /* primary-light at 55% */
+  --overlay-light-soft: rgba(245, 232, 255, 0.30);  /* subtle tint, 30% */
+  /* Dark overlay: derived from --brand-overlay-base.                        */
+  /* To update opacity only, change the alpha below.                         */
+  /* To update color, change --brand-overlay-base hex AND the RGB triplet.   */
+  /* RGB of --brand-overlay-base #0e0518 = 14, 5, 24                        */
+  --overlay-dark-rgb:   14, 5, 24;
+  --overlay-dark:       rgba(var(--overlay-dark-rgb), 0.60);
+  --overlay-dark-soft:  rgba(var(--overlay-dark-rgb), 0.45);
+
+  /* ── Neutralize rainbow gradient → single brand color ────────────────── */
+  /* The demo theme uses a 4-stop gradient across primary-1 through primary-4. */
+  /* Setting all stops to the same color collapses it to a flat brand color.   */
+  --color-primary-2: #c277ff;
+  --color-primary-3: #c277ff;
+  --color-primary-4: #c277ff;
+  --color-primary-light-2: #f5e8ff;
+  --color-primary-light-3: #f5e8ff;
+  --color-primary-light-4: #f5e8ff;
+
+  /* ── Shape / radius ──────────────────────────────────────────────────── */
+  /* Controls cards, inputs, and most component corners sitewide.          */
+  /* 0px = sharp/industrial | 4px = default slight | 8px = modern rounded  */
+  /* 30px = pill (use --border-radius-large for pill buttons specifically)  */
+  --border-radius-default: 50px;
+  --border-radius-large:   30px;
+
+  /* ── Fonts ────────────────────────────────────────────────────────────── */
+  /* Must match the next/font/google import in app/layout.js               */
+  --font-global: "DM Sans", sans-serif;
+  --font-alt:    "DM Sans", sans-serif;
+
+  /* ── Bootstrap overrides ──────────────────────────────────────────────── */
+  /* Bootstrap uses --bs-primary-rgb for rgba() calls — keep in sync.      */
+  --bs-primary:          #c277ff;
+  --bs-primary-rgb:      194, 119, 255;
+  --bs-link-color:       #c277ff;
+  --bs-link-hover-color: #a855f7;
+  --bs-body-font-family: var(--font-global);
+}
+
+/* ─── Top bar ────────────────────────────────────────────────────────────── */
+
+.tww-topbar-sliver {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  z-index: 1040;
+}
+
+.tww-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1040;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+/* Push page content down so it starts below topbar + nav */
+body {
+  padding-top: var(--topbar-height, 4px);
+}
+
+.tww-topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 48px 10px 16px;
+  min-height: 38px;
+  position: relative;
+}
+
+.tww-topbar-message {
+  text-align: center;
+  transition: opacity 0.4s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 40px); /* leave room for dismiss button */
+}
+
+.tww-topbar-in  { opacity: 1; }
+.tww-topbar-out { opacity: 0; }
+
+.tww-topbar-link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.tww-topbar-link:hover {
+  text-decoration-color: currentColor;
+}
+
+.tww-topbar-dismiss {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.6;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 4px 6px;
+  transition: opacity 0.15s;
+}
+
+.tww-topbar-dismiss:hover {
+  opacity: 1;
+}
+
+/* ─── btn-w hover-anim fill restore ─────────────────────────────────────── */
+/* custom.css sets background:none !important on btn-w:hover which kills    */
+/* the btn-hover-anim ripple fill. Restore it by targeting the :before.     */
+
+.btn-mod.btn-w.btn-hover-anim:before {
+  background: rgba(255, 255, 255, 0.18) !important;
+}
+
+.btn-mod.btn-w.btn-hover-anim:hover {
+  border-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* ─── Nav CTA button ─────────────────────────────────────────────────────── */
+
+.tww-nav-cta {
+  background: var(--brand-dark) !important;
+  color: #fff !important;
+  font-weight: 800 !important;
+  border-radius: var(--border-radius-default) !important;
+}
+
+.tww-nav-cta:hover {
+  background: var(--brand-very-dark) !important;
+  color: #fff !important;
+}
+
+/* ─── Sticky header — topbar aware ──────────────────────────────────────── */
+/* .stick-fixed is applied by the theme when the nav becomes sticky.        */
+/* We push it down by --topbar-height so it never covers the top bar.       */
+
+.stick-fixed {
+  top: var(--topbar-height, 4px) !important;
+}
+
+/* ─── Cookie consent — brand accent ──────────────────────────────────────── */
+/* Toggle "on" state and Save button use brand primary instead of #111.      */
+
+.cookie-toggle.on {
+  background: var(--color-primary-1) !important;
+}
+
+.cookie-settings-save {
+  background: var(--color-primary-1) !important;
+  border-color: var(--color-primary-1) !important;
+}
+
+.cookie-settings-save:hover {
+  background: var(--color-primary-1-a) !important;
+  border-color: var(--color-primary-1-a) !important;
+}
+
+/* ─── Buttons — brand primary default ───────────────────────────────────── */
+/* Base .btn-mod defaults to --color-dark-1 (black). Override to brand.      */
+/* Excludes btn-w, btn-border-w, btn-border (white/outline variants on dark  */
+/* backgrounds), and quest-cta-primary (hero CTA, styled separately).        */
+
+.btn-mod:not(.btn-w):not(.btn-border-w):not(.btn-border):not(.btn-white) {
+  background: var(--brand-dark) !important;
+  border-color: var(--brand-dark) !important;
+}
+
+.btn-mod:not(.btn-w):not(.btn-border-w):not(.btn-border):not(.btn-white):hover,
+.btn-mod:not(.btn-w):not(.btn-border-w):not(.btn-border):not(.btn-white):focus {
+  background: var(--brand-very-dark) !important;
+  border-color: var(--brand-very-dark) !important;
+}
+
+/* ─── Phase 4: Typography — hero title font override ────────────────────── */
+/* style.css hardcodes var(--font-poppins) on .hs-title-11/12 with !important */
+/* Override here so brand font applies to hero headlines.                     */
+
+.hs-title-11,
+.hs-title-12,
+.hs-title-13 {
+  font-family: var(--font-global) !important;
+}
+
+/* ─── Phase 2: Nav / Footer ──────────────────────────────────────────────── */
+
+/* Footer background — near-black brand hue instead of generic charcoal */
+.tww-footer {
+  background: var(--brand-overlay-base) !important;
+  border-top: 4px solid var(--color-primary-1) !important;
+}
+
+/* Footer accent colors — links and social use brand primary */
+.tww-footer-social-link:hover {
+  border-color: var(--color-primary-1) !important;
+  color: var(--color-primary-1) !important;
+}
+
+.tww-footer-links a:hover {
+  color: var(--color-primary-1) !important;
+}
+
+.tww-footer-contact-link:hover {
+  color: var(--color-primary-1) !important;
+}
+
+/* Scroll-to-top button */
+.tww-scroll-top:hover {
+  background: var(--color-primary-1) !important;
+  color: #fff !important;
+}
+
+/* ─── Phase 3: Hero & section overlay tints ──────────────────────────────── */
+/* Replaces hardcoded #111 overlays with brand-tinted dark.                  */
+/* Uses rgba so color+opacity are one value — no separate opacity needed.    */
+
+.bg-dark-alpha:before,
+.bg-dark-alpha .YTPOverlay:before {
+  background: rgba(var(--overlay-dark-rgb), 0.97) !important;
+}
+
+.bg-dark-alpha-30:before,
+.bg-dark-alpha-30 .YTPOverlay:before {
+  background: rgba(var(--overlay-dark-rgb), 0.30) !important;
+}
+
+.bg-dark-alpha-50:before,
+.bg-dark-alpha-50 .YTPOverlay:before {
+  background: rgba(var(--overlay-dark-rgb), 0.50) !important;
+}
+
+.bg-dark-alpha-60:before,
+.bg-dark-alpha-60 .YTPOverlay:before {
+  background: rgba(var(--overlay-dark-rgb), 0.60) !important;
+}
+
+.bg-dark-alpha-70:before,
+.bg-dark-alpha-70 .YTPOverlay:before {
+  background: rgba(var(--overlay-dark-rgb), 0.70) !important;
+}
+
+.bg-dark-alpha-80:before,
+.bg-dark-alpha-80 .YTPOverlay:before {
+  background: rgba(var(--overlay-dark-rgb), 0.80) !important;
+}
+
+.bg-dark-alpha-90:before,
+.bg-dark-alpha-90 .YTPOverlay:before {
+  background: rgba(var(--overlay-dark-rgb), 0.90) !important;
+}
+
+/* Service + secondary page hero overlays */
+.tww-service-hero:before {
+  background: rgba(var(--overlay-dark-rgb), 0.60) !important;
+}
+
+/* ─── Image hover overlays ───────────────────────────────────────────────── */
+
+.quest-project-card:hover .quest-project-card-overlay {
+  background: rgba(var(--overlay-dark-rgb), 0.50) !important;
+}
+
+.amw-gallery-caption {
+  background: linear-gradient(transparent, rgba(var(--overlay-dark-rgb), 0.75)) !important;
+}

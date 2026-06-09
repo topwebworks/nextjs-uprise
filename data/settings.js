@@ -60,6 +60,15 @@ const settings = {
     youtube:   "",
   },
 
+  // ─── Logos ──────────────────────────────────────────────────────────────────
+  // logoDark:  shown on transparent/dark nav (hero state) — use reversed/white version
+  // logoLight: shown on scrolled/white nav (sticky state) — use standard/dark version
+  // Both should be SVG at roughly 3:1 aspect ratio (e.g. 219×73)
+  logos: {
+    dark:  "/assets/tww-assets/client-images/cywire-logo-rev.svg",
+    light: "/assets/tww-assets/client-images/cywire-logo.svg",
+  },
+
   // ─── SEO / OG ───────────────────────────────────────────────────────────────
   ogImage: "/assets/images/og-default.jpg",
 
