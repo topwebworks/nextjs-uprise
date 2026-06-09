@@ -64,7 +64,7 @@
 }
 
 :global(.quest-eyebrow-dot) {
-  color: #ff6b00;
+  color: var(--color-primary-light-1);
 }
 
 /* Service pills */

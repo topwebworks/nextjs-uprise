@@ -18,7 +18,7 @@ export default function Footer1() {
             <Link href="/" className="tww-footer-logo" aria-label={`${site.name} — home`}>
               <span className="tww-footer-logo-badge" role="img" aria-label={`${site.name} logo`}>
                 <Image
-                  src="/assets/tww-assets/tww-images/main-logo.png"
+                  src={site.logoDark}
                   alt=""
                   fill
                   sizes="120px"

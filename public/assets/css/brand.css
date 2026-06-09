@@ -31,7 +31,7 @@
   /* To update color, change --brand-overlay-base hex AND the RGB triplet.   */
   /* RGB of --brand-overlay-base #0e0518 = 14, 5, 24                        */
   --overlay-dark-rgb:   14, 5, 24;
-  --overlay-dark:       rgba(var(--overlay-dark-rgb), 0.60);
+  --overlay-dark:       rgba(var(--overlay-dark-rgb), 0.50);
   --overlay-dark-soft:  rgba(var(--overlay-dark-rgb), 0.45);
 
   /* ── Neutralize rainbow gradient → single brand color ────────────────── */
@@ -82,10 +82,10 @@
   left: 0;
   right: 0;
   z-index: 1040;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0.03em;
-  line-height: 1;
+  line-height: 1.4;
 }
 
 /* Push page content down so it starts below topbar + nav */
@@ -106,26 +106,27 @@ body {
   text-align: center;
   transition: opacity 0.4s ease;
   white-space: nowrap;
-  overflow: hidden;
+  overflow: visible;
   text-overflow: ellipsis;
   max-width: calc(100% - 40px); /* leave room for dismiss button */
+  padding-bottom: 2px;
 }
 
 .tww-topbar-in  { opacity: 1; }
 .tww-topbar-out { opacity: 0; }
 
 .tww-topbar-link {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  text-decoration-color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block;
 }
 
-.tww-topbar-link:hover {
-  text-decoration-color: currentColor;
+.tww-topbar-link::after {
+  content: " →";
+  opacity: 0.7;
+}
+
+.tww-topbar-link:hover::after {
+  opacity: 1;
 }
 
 .tww-topbar-dismiss {
@@ -147,6 +148,16 @@ body {
   opacity: 1;
 }
 
+/* ─── btn-hover-anim ripple fill — use brand color instead of #333 ─────── */
+
+.btn-mod:not(.btn-w):not(.btn-border-w):not(.btn-border):not(.btn-white).btn-hover-anim:before {
+  background: var(--brand-very-dark) !important;
+}
+
+.btn-mod:not(.btn-w):not(.btn-border-w):not(.btn-border):not(.btn-white).btn-hover-anim:hover {
+  border-color: var(--brand-very-dark) !important;
+}
+
 /* ─── btn-w hover-anim fill restore ─────────────────────────────────────── */
 /* custom.css sets background:none !important on btn-w:hover which kills    */
 /* the btn-hover-anim ripple fill. Restore it by targeting the :before.     */
@@ -157,6 +168,8 @@ body {
 
 .btn-mod.btn-w.btn-hover-anim:hover {
   border-color: rgba(255, 255, 255, 0.6) !important;
+  color: #fff !important;
+  background: transparent !important;
 }
 
 /* ─── Nav CTA button ─────────────────────────────────────────────────────── */
@@ -246,9 +259,33 @@ body {
   color: var(--color-primary-1) !important;
 }
 
+/* Scroll-down arrow (hero) */
+.quest-scroll-down {
+  background: var(--brand-dark) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  opacity: 0.65;
+  transition: background 0.25s ease, opacity 0.3s ease, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+.quest-scroll-down:before {
+  display: none !important;
+}
+.quest-scroll-down:hover {
+  background: var(--brand-very-dark) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
 /* Scroll-to-top button */
+.tww-scroll-top {
+  background: var(--brand-dark) !important;
+  color: #fff !important;
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), background 0.25s ease !important;
+}
 .tww-scroll-top:hover {
-  background: var(--color-primary-1) !important;
+  background: var(--brand-very-dark) !important;
   color: #fff !important;
 }
 

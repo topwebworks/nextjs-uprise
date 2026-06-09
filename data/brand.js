@@ -57,12 +57,11 @@ const brand = {
   // Add 1–3 strings for a full announcement bar.
   // 1 item = static. 2–3 items = fade-cycles automatically.
   // Each item can be a plain string or an object { text, href } for a linked message.
-  topBar: [],
-  // topBar: [
-  //   "Free estimates — no obligation",
-  //   { text: "Serving Phoenix & surrounding areas", href: "/service-areas" },
-  //   "Call us today: (000) 000-0000",
-  // ],
+  topBar: [
+    "Free estimates — no obligation",
+    { text: "Serving Phoenix & surrounding areas", href: "/#contact-form" },
+    "Call us today: (000) 000-0000",
+  ],
 
   // Top bar colors — defaults to brand primary bg with white text.
   // Override if primary color has poor white contrast (e.g. yellow brands).

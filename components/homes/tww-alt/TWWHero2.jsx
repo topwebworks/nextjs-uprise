@@ -214,7 +214,7 @@ export default function TWWHero2() {
 
           <div className="local-scroll scroll-down-wrap-4 wow fadeInUp" data-wow-offset={0}>
             <div className="full-wrapper text-end">
-              <a href="#services" className="scroll-down-4 quest-scroll-down">
+              <a href="#portfolio" className="scroll-down-4 quest-scroll-down">
                 <i className="mi-arrow-down size-24" />
               </a>
             </div>

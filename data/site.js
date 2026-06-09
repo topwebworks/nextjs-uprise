@@ -15,6 +15,8 @@ const site = {
   businessType: settings.company.businessType,
   ogImage:      settings.ogImage,
   social:       settings.social,
+  logoDark:     settings.logos.dark,
+  logoLight:    settings.logos.light,
 };
 
 export default site;

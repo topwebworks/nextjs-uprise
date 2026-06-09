@@ -19,7 +19,7 @@ export default function NotFound() {
 
         <main id="main">
           <section
-            className="home-section bg-dark-1 bg-dark-alpha-60 light-content amw-fixed-bg-host"
+            className="home-section bg-dark-1 bg-dark-alpha-80 light-content tww-fixed-bg-host"
             style={{
               minHeight: "100vh",
               display: "flex",

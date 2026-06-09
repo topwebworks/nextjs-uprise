@@ -5,7 +5,7 @@ import Link from "next/link";
 import brand from "@/data/brand";
 
 const STORAGE_KEY    = "tww_topbar_dismissed";
-const CYCLE_INTERVAL = 3500;
+const CYCLE_INTERVAL = 6000;
 const FADE_DURATION  = 400;
 const SLIVER_HEIGHT  = 4; // px — must match .tww-topbar-sliver height in brand.css
 
