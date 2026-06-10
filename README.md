@@ -32,6 +32,8 @@ npm run start
 
 ## Project Structure
 
+This template intentionally keeps the main Next.js folders at the repository root. Do not move the project into a `src/` folder unless that cleanup/refactor is planned separately.
+
 - `app/` - site pages and route-level files
 - `components/` - reusable page sections and UI components
 - `data/` - site settings, navigation, services, and content helpers
