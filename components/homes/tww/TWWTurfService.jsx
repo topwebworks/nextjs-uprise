@@ -242,12 +242,12 @@ export default function TWWTurfService() {
                 id={`tsvc-${svc.id}`}
                 role="tabpanel"
               >
-                <div className="amw-service-img-wrap">
+                <div className="tww-service-img-wrap">
                   <Image
                     fill
                     src={svc.cards[0].image}
                     alt={svc.title}
-                    className="amw-svc-tab-img"
+                    className="tww-svc-tab-img"
                     sizes="(max-width: 992px) 100vw, 50vw"
                     priority={i === 0}
                     loading={i === 0 ? "eager" : "lazy"}

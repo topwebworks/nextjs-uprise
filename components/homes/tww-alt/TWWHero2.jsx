@@ -1,6 +1,7 @@
 "use client";
 import AnimatedText from "@/components/common/AnimatedText";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import "@/components/homes/tww-alt/TWWHero2.module.css";
 import site from "@/data/site";
@@ -186,7 +187,7 @@ export default function TWWHero2() {
                 </div>
 
                 <div className="wch-unset wow fadeInUp d-flex flex-column flex-sm-row gap-2 justify-content-center" data-wow-delay="0.55s" data-wow-duration="1.2s">
-                  <a
+                  <Link
                     href="/#contact-form"
                     className="btn btn-mod btn-large btn-round align-middle quest-cta-primary"
                     data-btn-animate="y"
@@ -195,7 +196,7 @@ export default function TWWHero2() {
                       <span className="btn-animate-y-1">Get a Free Estimate</span>
                       <span className="btn-animate-y-2" aria-hidden="true">Get a Free Estimate</span>
                     </span>
-                  </a>
+                  </Link>
                   <a
                     href={`tel:${site.phone}`}
                     className="btn btn-mod btn-border btn-border-w btn-large btn-round align-middle"

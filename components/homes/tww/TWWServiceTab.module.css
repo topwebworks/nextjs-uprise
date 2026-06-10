@@ -1,10 +1,10 @@
-/* Shared service tab styles used by all AMW service components */
+/* Shared service tab styles used by all TWW service components */
 
 :global(.services-content) {
   width: 100%;
 }
 
-:global(.amw-svc-tab-img) {
+:global(.tww-svc-tab-img) {
   object-fit: cover;
   object-position: center;
   filter: contrast(1.12) saturate(1.25) brightness(1.06);
@@ -35,7 +35,12 @@
   }
 }
 
-:global(.amw-service-img-wrap) {
+:global(.psvc-img-col .tww-service-img-wrap),
+:global(.csvc-img-col .tww-service-img-wrap),
+:global(.dsvc-img-col .tww-service-img-wrap),
+:global(.wvsvc-img-col .tww-service-img-wrap),
+:global(.rsvc-img-col .tww-service-img-wrap),
+:global(.tsvc-img-col .tww-service-img-wrap) {
   position: relative;
   width: 100%;
   height: 680px;
@@ -44,7 +49,12 @@
 }
 
 @media (max-width: 575px) {
-  :global(.amw-service-img-wrap) {
+  :global(.psvc-img-col .tww-service-img-wrap),
+  :global(.csvc-img-col .tww-service-img-wrap),
+  :global(.dsvc-img-col .tww-service-img-wrap),
+  :global(.wvsvc-img-col .tww-service-img-wrap),
+  :global(.rsvc-img-col .tww-service-img-wrap),
+  :global(.tsvc-img-col .tww-service-img-wrap) {
     height: 280px;
   }
 }

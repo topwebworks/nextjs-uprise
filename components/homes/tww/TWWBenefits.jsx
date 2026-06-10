@@ -7,17 +7,17 @@ const benefits = [
     description: "Fully licensed hardscape contractor in Arizona. Every job is insured — your property is protected.",
   },
   {
-    icon: "mi-price",
+    icon: "mi-tag",
     title: "Free Estimates",
     description: "We come to you, assess the project, and give you a clear written quote. No obligation, no pressure.",
   },
   {
-    icon: "mi-diamond",
+    icon: "mi-layers",
     title: "High-Quality Materials",
     description: "Pavers, travertine, concrete, turf, and base materials selected for Arizona heat, drainage, and daily use.",
   },
   {
-    icon: "mi-time",
+    icon: "mi-clock",
     title: "Shows Up & Gets It Done",
     description: "On time, works clean, stays until the job is 100% complete. No surprises.",
   },

@@ -67,8 +67,8 @@ function MobileMenu({ onClose }) {
           )}
         </div>
 
-        <a href="/#portfolio" className="tww-mobile-nav-link" onClick={onClose}>Portfolio</a>
-        <a href="/#contact-form" className="tww-mobile-nav-link tww-mobile-nav-cta" onClick={onClose}>Free Estimate</a>
+        <Link href="/#portfolio" className="tww-mobile-nav-link" onClick={onClose}>Portfolio</Link>
+        <Link href="/#contact-form" className="tww-mobile-nav-link tww-mobile-nav-cta" onClick={onClose}>Free Estimate</Link>
       </nav>
 
       <div className="tww-mobile-menu-footer">
@@ -140,30 +140,30 @@ export default function HeaderTWW() {
 
         <div className="inner-nav desktop-nav">
           <ul className="clearlist local-scroll">
-            <li><a href="/#portfolio" onClick={closeMobileMenu}>Portfolio</a></li>
+            <li><Link href="/#portfolio" onClick={closeMobileMenu}>Portfolio</Link></li>
             <li className={`tww-services-dropdown${servicesOpen ? " js-opened" : ""}`}>
-              <a
+              <Link
                 href="/#services"
                 className={`mn-has-sub${pathname.startsWith("/services") ? " active" : ""}`}
                 onClick={handleServicesClick}
               >
                 Services <i className="mi-chevron-down nav-chevron" style={{ transform: servicesOpen ? "rotate(180deg)" : "rotate(0deg)" }} />
-              </a>
+              </Link>
               <ul className="mn-sub">
                 {SERVICE_LINKS.map((link) => (
                   <li key={link.text}>
-                    <a href={link.href} onClick={() => { setServicesOpen(false); closeMobileMenu(); }}>
+                    <Link href={link.href} onClick={() => { setServicesOpen(false); closeMobileMenu(); }}>
                       {link.text}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
             </li>
             <li><Link href="/about" className={pathname === "/about" ? "active" : ""} onClick={closeMobileMenu}>About</Link></li>
             <li>
-              <a href="/#contact-form" onClick={closeMobileMenu} className="tww-nav-cta">
+              <Link href="/#contact-form" onClick={closeMobileMenu} className="tww-nav-cta">
                 Free Estimate
-              </a>
+              </Link>
             </li>
           </ul>
           <ul className="items-end clearlist">

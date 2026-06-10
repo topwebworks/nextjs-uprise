@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { createPortal } from "react-dom";
 import portfolio, { categories } from "@/data/tww-portfolio";
 import "@/components/homes/tww-alt/TWWPortfolio.module.css";
@@ -97,9 +98,9 @@ function ProjectModal({ project, onClose }) {
               ))}
             </ul>
             <div className="qp-lightbox-cta">
-              <a href="/#contact-form" className="qp-lightbox-btn" onClick={onClose}>
+              <Link href="/#contact-form" className="qp-lightbox-btn" onClick={onClose}>
                 Start Your Project
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -139,9 +140,9 @@ export default function TWWPortfolio() {
             <h2 className="section-title mb-0">Project Portfolio</h2>
           </div>
           <div className="col-md-4 d-flex align-items-end justify-content-md-end mt-20 mt-md-0">
-            <a href="/#contact-form" className="btn btn-mod btn-large btn-round btn-hover-anim local-scroll">
+            <Link href="/#contact-form" className="btn btn-mod btn-large btn-round btn-hover-anim local-scroll">
               <span>Start Your Project</span>
-            </a>
+            </Link>
           </div>
         </div>
 

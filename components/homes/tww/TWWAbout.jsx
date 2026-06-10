@@ -38,7 +38,7 @@ export default function TWWAbout() {
             Who We Are
           </h2>
           <p className="text-gray mb-28 wow fadeInUp amw-about-intro" data-wow-delay="0.3s">
-            Client Business Name is owner-operated, which means the person overseeing your build has an eye for the details most contractors never notice — the way a beveled coping corner meets, whether the waterline tile runs true, how the finish looks in different light. That standard of care doesn't come from a checklist. It comes from someone who genuinely cares about the craft.
+            Client Business Name is owner-operated, which means the person overseeing your build has an eye for the details most contractors never notice — the way a beveled coping corner meets, whether the waterline tile runs true, how the finish looks in different light. That standard of care doesn&apos;t come from a checklist. It comes from someone who genuinely cares about the craft.
           </p>
           <p className="text-gray mb-28 wow fadeInUp amw-about-intro" data-wow-delay="0.35s">
             Based in Client City, we handle every phase in-house — design, excavation, plumbing, structural shell, decking, tile, coping, and finish. One team, one standard, accountable from permit to first swim.

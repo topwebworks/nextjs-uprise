@@ -165,11 +165,11 @@ export default function HeaderTWWAlt() {
                 ))}
               </ul>
             </li>
-            <li><a href="/#gallery" onClick={closeMobileMenu}>Gallery</a></li>
+            <li><Link href="/#gallery" onClick={closeMobileMenu}>Gallery</Link></li>
             <li>
               <Link href="/about" className={pathname === "/about" ? "active" : ""} onClick={closeMobileMenu}>About</Link>
             </li>
-            <li><a href="/#contact-form" onClick={closeMobileMenu}>FREE ESTIMATE</a></li>
+            <li><Link href="/#contact-form" onClick={closeMobileMenu}>FREE ESTIMATE</Link></li>
           </ul>
           <ul className="items-end clearlist">
             <li>

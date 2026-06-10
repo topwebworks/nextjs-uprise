@@ -1,7 +1,7 @@
-/* AMWService — component-specific tab/image styles */
+/* TWWService - component-specific tab/image styles */
 
 /* Image wrap here is shorter (520px) than service detail pages (680px) */
-:global(.amw-service-img-wrap) {
+:global(.tww-svc-img-col .tww-service-img-wrap) {
   position: relative;
   width: 100%;
   height: 520px;
@@ -10,20 +10,20 @@
 }
 
 @media (max-width: 575px) {
-  :global(.amw-service-img-wrap) {
+  :global(.tww-svc-img-col .tww-service-img-wrap) {
     height: 220px;
   }
 }
 
-:global(.amw-svc-tabs-mobile) {
+:global(.tww-svc-tabs-mobile) {
   display: none;
 }
 
 @media (max-width: 1100px) {
-  :global(.amw-svc-tabs-desktop) {
+  :global(.tww-svc-tabs-desktop) {
     display: none !important;
   }
-  :global(.amw-svc-tabs-mobile) {
+  :global(.tww-svc-tabs-mobile) {
     display: block !important;
     width: 100%;
     padding: 14px 18px;
@@ -49,10 +49,10 @@
     max-width: 100% !important;
     overflow: hidden !important;
   }
-  :global(.amw-svc-tabs-mobile) {
+  :global(.tww-svc-tabs-mobile) {
     max-width: 100% !important;
   }
-  :global(.amw-svc-img-col) {
+  :global(.tww-svc-img-col) {
     margin-top: 40px !important;
   }
 }

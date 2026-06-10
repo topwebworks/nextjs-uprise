@@ -212,7 +212,7 @@ export default function TWWService() {
               </p>
             </div>
           </div>
-          <ul className="nav nav-tabs services-tabs amw-svc-tabs-desktop wow fadeInUp" data-wow-delay="0.55s" role="tablist">
+          <ul className="nav nav-tabs services-tabs tww-svc-tabs-desktop wow fadeInUp" data-wow-delay="0.55s" role="tablist">
             {services.map((svc, i) => (
               <li key={svc.id} role="presentation">
                 <a
@@ -229,7 +229,7 @@ export default function TWWService() {
             ))}
           </ul>
           <select
-            className="amw-svc-tabs-mobile"
+            className="tww-svc-tabs-mobile"
             defaultValue={services[0].id}
             onChange={(e) => {
               const tab = document.querySelector(`a[href="#service-${e.target.value}"]`);
@@ -249,7 +249,7 @@ export default function TWWService() {
           </div>
         </div>
 
-        <div className="col-lg-6 amw-svc-img-col d-flex wow fadeInLeft" data-wow-delay="0.55s" data-wow-offset={275}>
+        <div className="col-lg-6 tww-svc-img-col d-flex wow fadeInLeft" data-wow-delay="0.55s" data-wow-offset={275}>
           <div className="tab-content services-content">
             {services.map((svc, i) => (
               <div
@@ -258,12 +258,12 @@ export default function TWWService() {
                 id={`service-${svc.id}`}
                 role="tabpanel"
               >
-                <div className="amw-service-img-wrap">
+                <div className="tww-service-img-wrap">
                   <Image
                     fill
                     src={svc.cards[0].image}
                     alt={svc.title.replace(/&amp;/g, "&")}
-                    className="amw-svc-tab-img"
+                    className="tww-svc-tab-img"
                     sizes="(max-width: 992px) 100vw, 50vw"
                     priority={i === 0}
                     loading={i === 0 ? "eager" : "lazy"}

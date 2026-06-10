@@ -50,7 +50,7 @@ export default function TWWService2() {
                 Pools, hardscape, and landscaping handled in-house — one team, one timeline, one vision from concept to completion.
               </p>
               <p className="section-descr mb-50 mb-sm-30 wow fadeInUp" data-wow-delay="0.5s">
-                We don't hand off to subcontractors. Every phase — from excavation to final finish — is managed by the same crew, held to the same standard.
+                We don&apos;t hand off to subcontractors. Every phase — from excavation to final finish — is managed by the same crew, held to the same standard.
               </p>
             </div>
           </div>

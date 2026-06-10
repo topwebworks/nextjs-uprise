@@ -40,7 +40,7 @@ export default function TWWAbout2() {
             {site.name} is owner-operated — which means the people who designed your project are the same people overseeing every phase of the build. No layers. No hand-offs. When you call, you reach someone who knows your job by name.
           </p>
           <p className="text-gray mb-28 wow fadeInUp amw-about-intro" data-wow-delay="0.35s">
-            We believe outdoor spaces deserve the same level of care and precision as the homes they surround. Every material choice and finish detail reflects that standard — and we don't sign off until it does.
+            We believe outdoor spaces deserve the same level of care and precision as the homes they surround. Every material choice and finish detail reflects that standard — and we don&apos;t sign off until it does.
           </p>
           <ul className="amw-about-claims wow fadeInUp" data-wow-delay="0.4s">
             {claims.map((c, i) => (
