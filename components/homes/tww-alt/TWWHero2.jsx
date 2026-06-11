@@ -2,14 +2,23 @@
 import AnimatedText from "@/components/common/AnimatedText";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import "@/components/homes/tww-alt/TWWHero2.module.css";
 import site from "@/data/site";
 
-const YT_ID = "AXL8VsJl2kA";
+// TO ADD A VIDEO SLIDE:
+// 1. Uncomment { type: "video" } below
+// 2. Set YT_ID to the YouTube video ID
+// 3. Copy the facade implementation from components/homes/amw/AMWHero.jsx in nextjs-reso-amw:
+//    - YT_THUMB const, videoState, handlePlayClick, handleSkip
+//    - YouTube thumbnail slide, amw-yt-wrap player div
+//    - Watch/Skip badge inside hero content (amw-video-badge-center)
+//    - Slide timer logic that pauses when videoState === "playing"
+// 4. Copy the badge/player CSS from AMWHero.module.css (amw-video-play-btn, etc.)
+//    into TWWHero2.module.css, renaming classes to tww- prefix if desired
 
+// const YT_ID = "YOUR_VIDEO_ID";
 const IMAGE_DURATION = 5000;
-const VIDEO_DURATION = 9000;
 
 const slides = [
   { type: "image", src: "/assets/tww-assets/tww-images/Suburb_home_with_patio_pool_202605131833.jpeg" },
@@ -17,91 +26,21 @@ const slides = [
   { type: "image", src: "/assets/tww-assets/tww-images/Suburb_home_with_patio_pool_202605131833.jpeg" },
   { type: "image", src: "/assets/tww-assets/tww-images/Arizona_suburb_home_patio_pool_202605131833.jpeg" },
   { type: "image", src: "/assets/tww-assets/tww-images/Arizona_house_backyard_landscaping_202605131833.jpeg" },
-  // { type: "video" }, // re-enable when client provides a video
+  // { type: "video" },
 ];
 
 export default function TWWHero2() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [, setYtReady] = useState(false);
-  const playerRef = useRef(null);
   const timerRef = useRef(null);
 
-  function advance() {
+  const advance = useCallback(() => {
     setActiveIndex((i) => (i + 1) % slides.length);
-  }
-
-  useEffect(() => {
-    const current = slides[activeIndex];
-    const duration = current.type === "video" ? VIDEO_DURATION : IMAGE_DURATION;
-    timerRef.current = setTimeout(advance, duration);
-    return () => clearTimeout(timerRef.current);
-  }, [activeIndex]);
-
-  useEffect(() => {
-    function initPlayer() {
-      playerRef.current = new window.YT.Player("hero-yt-player", {
-        videoId: YT_ID,
-        playerVars: {
-          autoplay: 1,
-          mute: 1,
-          controls: 0,
-          disablekb: 1,
-          enablejsapi: 1,
-          fs: 0,
-          iv_load_policy: 3,
-          modestbranding: 1,
-          rel: 0,
-          showinfo: 0,
-          playsinline: 1,
-        },
-        events: {
-          onReady(e) {
-            e.target.mute();
-            e.target.setPlaybackQuality("hd1080");
-            e.target.playVideo();
-            setYtReady(true);
-          },
-          onStateChange(e) {
-            if (e.data === window.YT.PlayerState.PLAYING) {
-              e.target.setPlaybackQuality("hd1080");
-              const duration = e.target.getDuration();
-              if (duration > 0) {
-                clearInterval(e.target._loopInterval);
-                e.target._loopInterval = setInterval(() => {
-                  if (e.target.getCurrentTime() >= duration - 0.5) {
-                    e.target.seekTo(0);
-                  }
-                }, 250);
-              }
-            }
-            if (
-              e.data === window.YT.PlayerState.PAUSED ||
-              e.data === window.YT.PlayerState.ENDED
-            ) {
-              clearInterval(e.target._loopInterval);
-              e.target.playVideo();
-            }
-          },
-        },
-      });
-    }
-
-    if (window.YT && window.YT.Player) {
-      initPlayer();
-    } else {
-      window.onYouTubeIframeAPIReady = initPlayer;
-      if (!document.getElementById("yt-iframe-api")) {
-        const tag = document.createElement("script");
-        tag.id = "yt-iframe-api";
-        tag.src = "https://www.youtube.com/iframe_api";
-        document.head.appendChild(tag);
-      }
-    }
-
-    return () => {
-      if (playerRef.current?.destroy) playerRef.current.destroy();
-    };
   }, []);
+
+  useEffect(() => {
+    timerRef.current = setTimeout(advance, IMAGE_DURATION);
+    return () => clearTimeout(timerRef.current);
+  }, [activeIndex, advance]);
 
   return (
     <>
@@ -128,11 +67,6 @@ export default function TWWHero2() {
             </div>
           ) : null
         )}
-
-        {/* YouTube slide — disabled until client provides a video; set opacity to 0 always */}
-        <div className="quest-yt-wrap" style={{ opacity: 0, pointerEvents: "none" }}>
-          <div id="hero-yt-player" />
-        </div>
 
         <div className="quest-hero-overlay" />
       </div>
