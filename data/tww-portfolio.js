@@ -92,6 +92,121 @@ const portfolio = [
       },
     ],
   },
+  {
+    id: "paver-patio-transformation",
+    title: "Paver Patio Transformation",
+    category: "Hardscape",
+    location: "City, ST",
+    cover: "/assets/tww-assets/tww-images/Suburb_home_with_patio_pool_202605131833_5.jpeg",
+    slides: [
+      {
+        src: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833_3.jpeg",
+        heading: "Completed Outdoor Space",
+        description: "The finished patio creates a usable outdoor room that flows naturally from the home's interior. Material color and texture were selected to complement the stucco exterior, so the hardscape reads as an extension of the home rather than an addition to it.",
+        highlights: [
+          "Material matched to home exterior",
+          "Seamless indoor-outdoor flow",
+          "Full patio & entertaining zone",
+          "Low-maintenance surface",
+        ],
+      },
+      {
+        src: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833_2.jpeg",
+        heading: "Detail & Finish Work",
+        description: "The edge detail and step transitions are where the quality of a paver job shows. Cuts were made tight, borders were set to a consistent reveal, and every transition — step, wall cap, planter edge — was treated as a design moment rather than an afterthought.",
+        highlights: [
+          "Precision edge cuts throughout",
+          "Consistent border reveal",
+          "Step & wall cap integration",
+          "Planter border detail",
+        ],
+      },
+      {
+        src: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833.jpeg",
+        heading: "Behind the Install",
+        description: "Before the first paver goes down, the base work determines whether the job lasts 5 years or 25. This project started with full concrete removal, proper excavation depth, and a compacted aggregate base — the unglamorous work that makes everything above it look great long-term.",
+        highlights: [
+          "Full concrete removal & excavation",
+          "Compacted aggregate base",
+          "Proper depth for Arizona soil",
+          "Built to last, not just to look good",
+        ],
+      },
+    ],
+  },
+  {
+    id: "pool-backyard-build",
+    title: "Backyard Pool Build",
+    category: "Pools",
+    location: "City, ST",
+    cover: "/assets/tww-assets/tww-images/Suburb_home_with_patio_pool_202605131833_4.jpeg",
+    slides: [
+      {
+        src: "/assets/tww-assets/tww-images/Suburb_home_with_patio_pool_202605131833_4.jpeg",
+        heading: "Finished Pool & Surrounds",
+        description: "The completed pool and deck deliver exactly what was designed — a clean, functional outdoor space built to handle Arizona summers for decades. Every finish detail, from coping to deck surface, was locked in at the design stage and executed without shortcuts.",
+        highlights: [
+          "Pool & deck finished as designed",
+          "Arizona-rated materials throughout",
+          "Coping & deck surface coordinated",
+          "Delivered on schedule",
+        ],
+      },
+      {
+        src: "/assets/tww-assets/tww-images/Arizona_house_installing_pool_backyard_202605131833.jpeg",
+        heading: "New Pool Construction",
+        description: "A full new-build pool on a standard Arizona lot requires careful planning around utilities, drainage, and HOA setbacks before the first shovel hits the ground. This project was permitted, excavated, and finished on schedule with no surprises — the way it should go.",
+        highlights: [
+          "Full permit & HOA coordination",
+          "Utility mapping before excavation",
+          "On-schedule project delivery",
+          "Clean site throughout construction",
+        ],
+      },
+    ],
+  },
+  {
+    id: "artificial-turf-install",
+    title: "Artificial Turf & Landscaping",
+    category: "Landscaping",
+    location: "City, ST",
+    cover: "/assets/tww-assets/tww-images/architectual_photo_of_arizona_house_202605131833.jpeg",
+    slides: [
+      {
+        src: "/assets/tww-assets/tww-images/Arizona_house_installing_beautiful_202605131833.jpeg",
+        heading: "Completed Turf & Landscape",
+        description: "The finished yard delivers year-round curb appeal with zero irrigation. Desert landscaping borders, decomposed granite pathways, and the turf zone were designed as one composition — so the result looks intentional, not assembled.",
+        highlights: [
+          "Zero-irrigation finished yard",
+          "Coordinated turf, DG & planting zones",
+          "Year-round curb appeal",
+          "Designed as one composition",
+        ],
+      },
+      {
+        src: "/assets/tww-assets/tww-images/Arizona_house_installing_artificial_202605131833.jpeg",
+        heading: "Turf Installation",
+        description: "Artificial turf in Arizona isn't a compromise — it's the smart choice. This installation used a high-density, UV-stabilized turf rated for desert heat, laid over a compacted decomposed granite base with proper drainage fall to prevent any pooling after monsoon rains.",
+        highlights: [
+          "UV-stabilized, heat-rated turf product",
+          "Compacted DG base with drainage fall",
+          "Monsoon drainage design",
+          "No irrigation required post-install",
+        ],
+      },
+      {
+        src: "/assets/tww-assets/tww-images/Arizona_house_installing_artificial_202605131833_2.jpeg",
+        heading: "Landscaping Integration",
+        description: "The turf zone was integrated with desert landscaping borders, decomposed granite pathways, and low-water plants to create a cohesive yard that looks intentional from the street. The transition from turf to hardscape was detailed to avoid the plastic-edging look.",
+        highlights: [
+          "Desert plant border integration",
+          "DG pathway & transition detail",
+          "Clean turf-to-hardscape edge",
+          "Curb appeal from street level",
+        ],
+      },
+    ],
+  },
 ];
 
 export const categories = ["All", "Pools", "Hardscape", "Landscaping"];

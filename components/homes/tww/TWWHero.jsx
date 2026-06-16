@@ -234,7 +234,7 @@ export default function TWWHero() {
             </div>
           </div>
 
-          <div className="hs-status wow fadeInUp amw-status-badge" data-wow-offset={0}>
+          <div className="wow fadeInUp amw-status-badge" data-wow-offset={0}>
             AZ Licensed &amp; Insured
           </div>
         </div>
