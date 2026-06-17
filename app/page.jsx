@@ -3,6 +3,7 @@ import HeaderTWW from "@/components/headers/HeaderTWW";
 import TWWHero2 from "@/components/homes/tww-alt/TWWHero2";
 import TWWPortfolio from "@/components/homes/tww-alt/TWWPortfolio";
 import TWWHome from "@/components/homes/tww/TWWHome";
+import TWWProtoBanner from "@/components/common/TWWProtoBanner";
 import { buildMetadata } from "@/utils/seo";
 
 export const metadata = buildMetadata({
@@ -27,6 +28,7 @@ export default function Home() {
           <TWWHome />
         </main>
         <Footer1 />
+        <TWWProtoBanner />
       </div>
     </div>
   );
