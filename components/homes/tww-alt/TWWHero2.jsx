@@ -112,6 +112,8 @@ export default function TWWHero2() {
                         setTimeout(() => {
                           const tab = document.querySelector(`a[href="#service-${id}"]`);
                           if (tab) tab.click();
+                          const select = document.querySelector(".tww-svc-tabs-mobile");
+                          if (select) select.value = id;
                         }, 600);
                       }}
                     >

@@ -173,12 +173,12 @@ export default function TWWHero() {
 
                 <div className="amw-service-pills wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.2s">
                   {[
-                    { label: "Pavers", id: "pavers" },
-                    { label: "Concrete", id: "concrete" },
+                    { label: "Pool Builds", id: "pool-builds" },
+                    { label: "Pool Remodels", id: "pool-remodels" },
+                    { label: "Hardscape", id: "hardscape" },
                     { label: "Turf", id: "turf" },
-                    { label: "Rock", id: "rock" },
-                    { label: "Demolition & Removal", id: "demolition" },
-                    { label: "Driveways", id: "driveway" },
+                    { label: "Landscaping", id: "landscaping" },
+                    { label: "Fire & Kitchen", id: "outdoor-kitchens" },
                   ].map(({ label, id }) => (
                     <a
                       key={id}
@@ -191,6 +191,8 @@ export default function TWWHero() {
                         setTimeout(() => {
                           const tab = document.querySelector(`a[href="#service-${id}"]`);
                           if (tab) tab.click();
+                          const select = document.querySelector(".tww-svc-tabs-mobile");
+                          if (select) select.value = id;
                         }, 600);
                       }}
                     >

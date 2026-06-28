@@ -1,28 +1,27 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Script from "next/script";
-import { analyticsAllowed } from "@/utils/consent";
 import analytics from "@/data/analytics";
 
-// Loads GTM only after the user has accepted analytics cookies.
-// Also listens for the tww:consent event so it fires immediately on accept
-// without requiring a page reload.
+// Consent Mode v2 — GTM always loads, consent signals control what fires.
+// Defaults to denied. Updates immediately for returning visitors and in
+// real-time when the user responds to the cookie banner (tww:consent event).
 export default function GTMScript() {
-  const [load, setLoad] = useState(false);
-
   useEffect(() => {
-    if (analyticsAllowed()) {
-      setLoad(true);
-      return;
-    }
     function onConsent(e) {
-      if (e.detail?.value === "all") setLoad(true);
+      const granted = e.detail?.value === "all" ? "granted" : "denied";
+      window.gtag?.("consent", "update", {
+        analytics_storage: granted,
+        ad_storage: granted,
+        ad_user_data: granted,
+        ad_personalization: granted,
+      });
     }
     window.addEventListener("tww:consent", onConsent);
     return () => window.removeEventListener("tww:consent", onConsent);
   }, []);
 
-  if (!load || !analytics.gtmId || analytics.gtmId === "GTM-XXXXXXX") return null;
+  if (!analytics.gtmId || analytics.gtmId === "GTM-XXXXXXX") return null;
 
   return (
     <Script
@@ -30,6 +29,19 @@ export default function GTMScript() {
       strategy="afterInteractive"
       dangerouslySetInnerHTML={{
         __html: `
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function(){window.dataLayer.push(arguments);};
+          var _c = localStorage.getItem('tww_cookie_consent');
+          var _g = _c === 'all' ? 'granted' : 'denied';
+          window.gtag('consent', 'default', {
+            analytics_storage: _g,
+            ad_storage: _g,
+            ad_user_data: _g,
+            ad_personalization: _g,
+            functionality_storage: 'granted',
+            security_storage: 'granted',
+            wait_for_update: _c === null ? 500 : 0
+          });
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
