@@ -22,10 +22,9 @@ const IMAGE_DURATION = 5000;
 
 const slides = [
   { type: "image", src: "/assets/tww-assets/tww-images/Suburb_home_with_patio_pool_202605131833.jpeg" },
-  { type: "image", src: "/assets/tww-assets/tww-images/Suburb_home_with_patio_pool_202605131833_2.jpeg" },
-  { type: "image", src: "/assets/tww-assets/tww-images/Suburb_home_with_patio_pool_202605131833.jpeg" },
-  { type: "image", src: "/assets/tww-assets/tww-images/Arizona_suburb_home_patio_pool_202605131833.jpeg" },
-  { type: "image", src: "/assets/tww-assets/tww-images/Arizona_house_backyard_landscaping_202605131833.jpeg" },
+  { type: "image", src: "/assets/tww-assets/client-images/pexels-photo-261410-1920w.webp" },
+  { type: "image", src: "/assets/tww-assets/tww-images/Arizona_suburb_home_patio_pool_202605131833_2.jpeg" },
+  { type: "image", src: "/assets/tww-assets/tww-images/Suburb_home_with_patio_pool_202605131833_3.jpeg" },
   // { type: "video" },
 ];
 
@@ -79,27 +78,19 @@ export default function TWWHero2() {
               <div className="col-md-10 offset-md-1 mb-20 mb-sm-0 text-center">
 
                 <h2 className="hs-title-11 mb-20 mb-xs-10 wow fadeInUp" data-wow-duration="1.2s">
-                  <span className="quest-eyebrow-item">Custom Pools</span>
-                  <span className="d-sm-none" aria-hidden="true">, </span>
-                  <span className="d-none d-sm-inline quest-eyebrow-dot" aria-hidden="true"> &middot; </span>
-                  <span className="quest-eyebrow-item">Hardscape</span>
-                  <span className="d-sm-none" aria-hidden="true">, </span>
-                  <span className="d-none d-sm-inline quest-eyebrow-dot" aria-hidden="true"> &middot; </span>
-                  <span className="quest-eyebrow-item">Landscaping</span>
+                  <span className="quest-eyebrow-item">Better Than Before</span>
                 </h2>
 
                 <h1 className="hs-title-12 mb-30 mb-sm-20">
-                  <AnimatedText text="Where Every Detail is Deliberate." />
+                  <AnimatedText text="We Bring Pools Back to Life." />
                 </h1>
 
                 <div className="quest-service-pills wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.2s">
                   {[
-                    { label: "Pool Builds", id: "pool-builds" },
-                    { label: "Remodels", id: "pool-remodels" },
-                    { label: "Hardscape", id: "hardscape" },
-                    { label: "Turf", id: "turf" },
-                    { label: "Landscaping", id: "landscaping" },
-                    { label: "Fire & Kitchen", id: "outdoor-kitchens" },
+                    { label: "Pool Repair", id: "pool-repair" },
+                    { label: "Resurfacing", id: "pool-resurfacing" },
+                    { label: "Deck Repair", id: "deck-repair" },
+                    { label: "Equipment", id: "equipment" },
                   ].map(({ label, id }) => (
                     <a
                       key={id}

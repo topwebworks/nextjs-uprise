@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+﻿import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
 import ImageBackground from "@/components/common/ImageBackground";
 import HeaderTWW from "@/components/headers/HeaderTWW";
@@ -130,7 +130,7 @@ export default function AboutPage() {
                     <div className="call-action-4-images">
                       <div className="call-action-4-image-1" style={{ overflow: "hidden" }}>
                         <Image
-                          src="/assets/tww-assets/tww-images/Arizona_house_backyard_landscaping_202605131833.jpeg"
+                          src="/assets/tww-assets/tww-images/Arizona_suburb_home_patio_pool_202605131833.jpeg"
                           alt="Stepping stone entry - Client Business Name"
                           width={500}
                           height={692}
@@ -148,7 +148,7 @@ export default function AboutPage() {
                         style={{ right: "-8%" }}
                       >
                         <Image
-                          src="/assets/tww-assets/tww-images/Arizona_house_in_suburb_frontyard_202605131833.jpeg"
+                          src="/assets/tww-assets/tww-images/Architectural_photo_of_Arizona_suburb_202605131833.jpeg"
                           alt="Front entry pavers - Client Business Name"
                           width={500}
                           height={692}
@@ -199,7 +199,7 @@ export default function AboutPage() {
             <section
               className="page-section bg-dark bg-dark-alpha-70 light-content amw-fixed-bg-host"
             >
-              <ImageBackground src="/assets/tww-assets/tww-images/Arizona_house_installing_artificial_202605131833.jpeg" alt="" fixed />
+              <ImageBackground src="/assets/tww-assets/tww-images/Arizona_house_installing_beautiful_202605131833.jpeg" alt="" fixed />
               <TWWFeatureCarousel />
             </section>
             <>
@@ -327,7 +327,7 @@ export default function AboutPage() {
                       <Image
                         width={1100}
                         height={930}
-                        src="/assets/tww-assets/tww-images/Arizona_house_installing_artificial_202605131833_2.jpeg"
+                        src="/assets/tww-assets/tww-images/Arizona_house_installing_pool_backyard_202605131833.jpeg"
                         alt="Client crew setting pavers over a prepared base at an Arizona home"
                         sizes="(max-width: 991px) 100vw, 50vw"
                       />

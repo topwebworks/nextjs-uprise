@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+﻿import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
 import ImageBackground from "@/components/common/ImageBackground";
 import HeaderTWW from "@/components/headers/HeaderTWW";
@@ -101,7 +101,7 @@ export default function PaverInstallationPage() {
               <section
                 className="page-section amw-fixed-bg-host amw-service-cta-section"
               >
-                <ImageBackground src="/assets/tww-assets/tww-images/Arizona_house_backyard_landscaping_202605131833.jpeg" alt="" fixed />
+                <ImageBackground src="/assets/tww-assets/tww-images/Arizona_suburb_home_patio_pool_202605131833.jpeg" alt="" fixed />
                 <div className="container position-relative">
                   <div className="row">
                     <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center">
@@ -120,7 +120,7 @@ export default function PaverInstallationPage() {
                       data-wow-offset={0}
                     >
                       <ImageBackground
-                        src="/assets/tww-assets/tww-images/Arizona_house_in_suburb_frontyard_202605131833.jpeg"
+                        src="/assets/tww-assets/tww-images/Architectural_photo_of_Arizona_suburb_202605131833.jpeg"
                         alt="Paver installation - Client Business Name"
                         sizes="(max-width: 991px) 100vw, 66vw"
                         objectPosition="center 48%"

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import site from "@/data/site";
 import AnimatedText from "@/components/common/AnimatedText";
 import Image from "next/image";
@@ -85,13 +85,13 @@ const services = [
       "Material selection is an installation decision — it affects how we prep the sub-grade, set the depth, detail the edging, and manage drainage. We walk through it with every client before anything gets ordered.",
     cards: [
       {
-        image: "/assets/tww-assets/tww-images/Arizona_house_backyard_landscaping_202605131833.jpeg",
+        image: "/assets/tww-assets/tww-images/Arizona_suburb_home_patio_pool_202605131833.jpeg",
         heading: "How Material Affects the Install",
         body: "River rock, Apache brown, gold quartzite, and black lava all install differently. Larger, rounder material migrates more under foot traffic — it needs tighter edging and a slightly deeper bed to stay stable. Angular crushed material compacts and locks; it holds an edge better and is more forgiving on slopes. Dark material — black lava, dark Apache brown — absorbs significantly more heat and radiates it toward the structure through the night. On south and west exposures, that's a factor worth discussing before material is chosen, not after it's placed.",
         bullets: ["Material size and shape determine edging spec, bed depth, and slope tolerance", "Angular crushed material holds edges and slopes better than round river rock", "Dark material heat absorption on south & west exposures — a real installation consideration"],
       },
       {
-        image: "/assets/tww-assets/tww-images/Arizona_house_in_suburb_frontyard_202605131833.jpeg",
+        image: "/assets/tww-assets/tww-images/Architectural_photo_of_Arizona_suburb_202605131833.jpeg",
         heading: "Decomposed Granite",
         body: "DG is the most installation-specific material in Arizona hardscape — it has to be compacted to perform. Installed loose, DG tracks into the house, erodes in monsoon runoff, and never holds an edge. Installed correctly — compacted in lifts over a firm, graded sub-grade — it creates a stable, drainable surface for pathways, entries, and fill zones. Stabilized DG with a polymer binder gives a harder surface for high-traffic areas without going to concrete, but it requires a clean, compacted base and proper cure time to bond correctly.",
         bullets: ["DG must be compacted in lifts — installed loose it erodes and tracks indoors", "Stabilized DG with polymer binder for high-traffic entries and pathways", "Transitions to pavers and concrete detailed with edging, not butted loose"],
@@ -107,13 +107,13 @@ const services = [
       "Boulders are the most misplaced element in Arizona hardscape. Set correctly, they look like they belong to the property. Set wrong — sitting flat on grade, wrong scale, wrong position — they look like they were dropped and forgotten.",
     cards: [
       {
-        image: "/assets/tww-assets/tww-images/Arizona_house_installing_artificial_202605131833.jpeg",
+        image: "/assets/tww-assets/tww-images/Arizona_house_installing_beautiful_202605131833.jpeg",
         heading: "Placement & Setting",
         body: "A boulder sitting flat on grade looks placed, not settled. Client buries the bottom third to half of every accent boulder into the sub-grade so the stone reads as part of the ground, not as an object resting on top of it. The most visually interesting face — the one with the best color, texture, or profile — gets oriented toward the primary viewing angle before the surrounding rock field goes in. Once the field is placed, repositioning a boulder means pulling and regrading. We position first.",
         bullets: ["Bottom third to half buried into sub-grade — reads settled, not placed", "Most interesting face oriented toward street, entry, or patio before rock field is installed", "Position is permanent once the surrounding field is placed — we get it right before we commit"],
       },
       {
-        image: "/assets/tww-assets/tww-images/Arizona_house_installing_artificial_202605131833_2.jpeg",
+        image: "/assets/tww-assets/tww-images/Arizona_house_installing_pool_backyard_202605131833.jpeg",
         heading: "Scale & Grouping",
         body: "Single boulders almost never work at residential scale — they read as an afterthought regardless of how well they're set. Groupings of odd numbers in varied sizes — three or five — look deliberate and natural because that's how stone actually occurs in the landscape. Scale matters: a 12-inch stone in front of a 2,500-square-foot house reads as gravel, not a feature. Client sizes boulders to the structure, the rock field, and the viewing distance so the composition reads as a designed element from the street.",
         bullets: ["Odd-number groupings — three or five — in varied sizes look natural and deliberate", "Scale matched to structure size and viewing distance from street or entry", "Boulders selected and positioned as a composition, not placed individually"],

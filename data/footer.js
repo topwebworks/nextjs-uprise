@@ -21,7 +21,7 @@ export const footerLinks2 = [
 // Driven by settings.services — edit there, not here
 export const serviceLinks = settings.services.map((s) => ({
   href: s.href,
-  text: s.label,
+  text: s.navLabel || s.label,
 }));
 
 export const navigationLinks = [

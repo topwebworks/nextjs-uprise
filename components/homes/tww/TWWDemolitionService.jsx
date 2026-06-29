@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import site from "@/data/site";
 import AnimatedText from "@/components/common/AnimatedText";
 import Image from "next/image";
@@ -63,13 +63,13 @@ const services = [
       "Pavers and natural stone can often be salvaged during removal — which changes the method, the time, and sometimes whether the homeowner wants to keep them for a future project.",
     cards: [
       {
-        image: "/assets/tww-assets/tww-images/Arizona_house_backyard_landscaping_202605131833.jpeg",
+        image: "/assets/tww-assets/tww-images/Arizona_suburb_home_patio_pool_202605131833.jpeg",
         heading: "Salvage vs. Disposal",
         body: "Before paver demolition starts, Client determines whether the material is worth salvaging. Travertine, quality concrete pavers, and natural flagstone in good condition have real value — a homeowner who plans another project may want to store them. Salvage removal is slower: pavers come up individually or in sections, are stacked on pallets, and kept intact. Disposal removal is faster: material is broken up and loaded for haul. The method is the client's call, made before work starts.",
         bullets: ["Salvage or disposal determined before demolition begins — client's decision", "Salvage: pavers pulled intact, stacked on pallets for reuse", "Disposal: broken and loaded for haul — faster, lower labor cost"],
       },
       {
-        image: "/assets/tww-assets/tww-images/Arizona_house_in_suburb_frontyard_202605131833.jpeg",
+        image: "/assets/tww-assets/tww-images/Architectural_photo_of_Arizona_suburb_202605131833.jpeg",
         heading: "Base Removal & Sub-Grade Condition",
         body: "Pulling pavers exposes the base underneath — and the base condition determines what the next install requires. A compacted aggregate base in good condition can often stay; a failed, undermined, or contaminated base has to come out. Client assesses the exposed sub-grade after paver removal and tells the client what they're working with before any new work is scoped. Covering a bad base with new pavers is how a five-year job gets built on a two-year foundation.",
         bullets: ["Sub-grade condition assessed after paver removal — before new work is scoped", "Good base retained where possible — saves excavation and material cost", "Failed or contaminated base removed and rebuilt to spec"],
@@ -85,13 +85,13 @@ const services = [
       "Artificial turf and decorative rock removal are common precursors to hardscape installs in the Service Area. Each has specific removal considerations that affect what comes out, how long it takes, and what the sub-grade looks like when it's done.",
     cards: [
       {
-        image: "/assets/tww-assets/tww-images/Arizona_house_installing_artificial_202605131833.jpeg",
+        image: "/assets/tww-assets/tww-images/Arizona_house_installing_beautiful_202605131833.jpeg",
         heading: "Artificial Turf Removal",
         body: "Artificial turf removal involves pulling the turf, removing the infill material, pulling the weed barrier, and assessing the DG base underneath. Infill — especially silica sand or zeolite — adds significant weight and has to be shoveled out separately before the turf roll can be pulled. Staples and nails along the perimeter have to be pulled clean so they don't end up in the new base. Client leaves the sub-grade clean and assessed, not just the turf gone.",
         bullets: ["Infill removed separately before turf is pulled — adds weight and volume", "Perimeter staples and nails pulled clean from the sub-grade", "DG base condition assessed after removal — retained or rebuilt based on condition"],
       },
       {
-        image: "/assets/tww-assets/tww-images/Arizona_house_installing_artificial_202605131833_2.jpeg",
+        image: "/assets/tww-assets/tww-images/Arizona_house_installing_pool_backyard_202605131833.jpeg",
         heading: "Decorative Rock Removal",
         body: "Decorative rock removal is labor-intensive in proportion to the depth and area. Rock has to be raked and loaded by hand or with a small machine — it can't be scraped off grade without pulling the barrier and sub-grade with it. Client removes rock, pulls barrier material, and assesses the exposed sub-grade before the next scope begins. Existing DG base is retained where it meets spec for the new install and rebuilt where it doesn't.",
         bullets: ["Rock raked and loaded — not scraped, which pulls barrier and sub-grade", "Weed barrier fully removed after rock is cleared", "Existing DG sub-grade assessed after clearing — retained where it meets spec, rebuilt where it doesn't"],
@@ -129,13 +129,13 @@ const services = [
       "Demolition is preparation, not an end in itself. The standard Client holds demolition work to is: when the demolition crew leaves, the next crew can start. Grade set, sub-grade assessed, utilities clear, debris gone.",
     cards: [
       {
-        image: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833.jpeg",
+        image: "/assets/tww-assets/client-images/after4-800h.webp",
         heading: "Sub-Grade Left to Spec",
         body: "After demolition, Client grades the exposed sub-grade to the elevation and slope needed for the next install — whether that's pavers, concrete, turf, or decorative rock. Positive drainage away from the structure is confirmed at this stage. If demolition uncovers unexpected conditions — buried footings, unmarked utilities, soft spots, or contaminated fill — we document them and communicate them to the client before the site is turned over. Unexpected conditions get disclosed, not covered back up.",
         bullets: ["Sub-grade graded to elevation and slope for the next install", "Positive drainage confirmed away from structure at demolition completion", "Unexpected buried conditions documented and communicated before site turnover — not covered up"],
       },
       {
-        image: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833_2.jpeg",
+        image: "/assets/tww-assets/client-images/luxury-custom-inground-swimming-pool-800h.webp",
         heading: "Coordination with the Install Scope",
         body: "When Client is handling both demolition and the new install, the two scopes are coordinated from the start — not treated as separate jobs that happen to be sequential. Depth of excavation, base spec, drainage direction, and any conditions uncovered during demolition are resolved before install begins, not rediscovered mid-job. Demolition-only clients get a site walkthrough at completion — conditions noted, photographed, and communicated so the install contractor knows what they're starting with.",
         bullets: ["Demolition and install scopes coordinated from planning — not handed off cold", "Excavation depth, base spec, and drainage resolved at demolition stage", "Demolition-only clients: site walkthrough at completion, conditions noted and photographed"],

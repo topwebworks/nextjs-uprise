@@ -41,7 +41,8 @@ export default function TWWContact() {
                       {site.email}
                     </a>
                   </div>
-                  <div>Mon–Fri 8am–4pm</div>
+                  <div style={{ whiteSpace: "nowrap" }}>Mon–Fri 7am–5pm</div>
+                  <div style={{ whiteSpace: "nowrap" }}>Sat 8am–4pm</div>
                 </div>
               </div>
             </div>
@@ -73,7 +74,7 @@ export default function TWWContact() {
             form="estimate"
             className="amw-estimate-embed"
             placeholderTitle="Request a Free Estimate"
-            placeholderText="Tell us about your project — new pool, remodel, hardscape, turf, landscaping, or outdoor kitchen. We'll be in touch soon."
+            placeholderText="Tell us about your pool — repair, resurfacing, deck work, or equipment. We'll be in touch soon."
             placeholderFields={[
               "Name",
               "Phone",
@@ -106,8 +107,8 @@ export default function TWWContact() {
 
           {/* Reviews */}
           {[
-            { quote: "They walked us through every detail before asking us to sign anything. The finished pool is stunning — the coping, the tile work, the tanning ledge — everything exactly as we discussed.", author: "Melissa T., Client City" },
-            { quote: "The attention to detail is what sets them apart. The beveled coping edges, the way the pavers transition to the turf — it all looks intentional. Our neighbors keep asking who built it.", author: "Sarah L., Client City" },
+            { quote: "He was completely transparent during the whole process. Shane did a great job being available and always answering any question we had. Any hiccups we had he took care of. We were his primary focus. I would suggest this company 100%.", author: "Matt R., Greenfield, WI" },
+            { quote: "Shane was great to work with — prompt with responses and on-time with appointments. The tile looks great and from start to finish the whole job took less than a week. The price was fair and we are very happy with the work.", author: "Scott T., Tempe, AZ" },
           ].map((r, i) => (
             <div key={i} className="amw-form-review">
               <div className="amw-form-review-stars">
@@ -118,7 +119,7 @@ export default function TWWContact() {
               <p className="amw-form-review-quote">&ldquo;{r.quote}&rdquo;</p>
               <div className="amw-form-review-footer">
                 <span className="amw-form-review-author">{r.author}</span>
-                <span className="amw-form-review-g">G</span>
+                <span className="amw-form-review-g"><i className="fab fa-yelp" aria-hidden="true" /></span>
               </div>
             </div>
           ))}

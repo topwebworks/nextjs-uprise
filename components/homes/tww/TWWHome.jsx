@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState } from "react";
 import AnimatedText from "@/components/common/AnimatedText";
 import ImageBackground from "@/components/common/ImageBackground";
@@ -9,9 +9,9 @@ import Image from "next/image";
 import site from "@/data/site";
 
 const howImages = [
-  { src: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833.jpeg", alt: "Project photo 1", width: 1200, height: 1600 },
-  { src: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833_2.jpeg", alt: "Project photo 2", width: 1200, height: 900 },
-  { src: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833_3.jpeg", alt: "Project photo 3", width: 1200, height: 900 },
+  { src: "/assets/tww-assets/client-images/after4-800h.webp", alt: "Deck resurfacing completed by Uprise Pools", width: 1200, height: 1600 },
+  { src: "/assets/tww-assets/client-images/12.jpg", alt: "Pebble-finish pool resurfacing by Uprise Pools", width: 1200, height: 900 },
+  { src: "/assets/tww-assets/client-images/9.jpg", alt: "Pool equipment pad serviced by Uprise Pools", width: 1200, height: 900 },
 ];
 
 function TWWHowGrid() {
@@ -45,7 +45,6 @@ function TWWHowGrid() {
 }
 
 import TWWAbout from "./TWWAbout";
-import TWWBenefits from "./TWWBenefits";
 import TWWService from "./TWWService";
 import TWWFacts from "./TWWFacts";
 import TWWTestimonials from "./TWWTestimonials";
@@ -86,8 +85,8 @@ export default function TWWHome() {
             </div>
             <div className="col-lg-5 d-flex align-items-start justify-content-lg-end mb-md-40 mb-xs-30">
               <blockquote className="wow fadeInUp tww-dark-quote" data-wow-delay="0.2s">
-                <p>&ldquo;Absolutely stunning work — every detail was perfect.&rdquo;</p>
-                <footer>Client Name &mdash; Verified Review</footer>
+                <p>&ldquo;My pool has taken on a complete new life.&rdquo;</p>
+                <footer>Mike C., Mesa, AZ &mdash; Yelp Review</footer>
               </blockquote>
             </div>
             <TWWFacts />
@@ -133,21 +132,21 @@ export default function TWWHome() {
 
       {/* Final CTA */}
       <section
-        className="page-section bg-dark bg-dark-alpha-70 light-content tww-fixed-bg-host"
+        className="page-section bg-dark bg-dark-alpha-70 light-content tww-fixed-bg-host tww-final-cta"
       >
         <ImageBackground src="/assets/tww-assets/tww-images/Architectural_photo_of_Arizona_suburb_202605131833.jpeg" alt="" fixed />
         <div className="container position-relative">
           <div className="row text-center wow fadeInUp">
             <div className="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-              <h2 className="section-title mb-20">Let&rsquo;s Build Something Exceptional.</h2>
+              <h2 className="section-title mb-20">Ready to Bring Your Pool Back?</h2>
               <p className="section-descr mb-50 mb-sm-30">
-                We&rsquo;ll come to you, walk the property, and put together a written estimate — no pressure, no obligation. Just an honest conversation about what&rsquo;s possible.
+                We&rsquo;ll come to you, assess the pool, and put together a written estimate — no pressure, no obligation. Just an honest conversation about what it takes to get it right.
               </p>
-              <div className="d-flex flex-wrap gap-3 justify-content-center">
-                <a href={`tel:${site.phone}`} className="btn btn-mod btn-w btn-large btn-round btn-hover-anim">
+              <div>
+                <a href={`tel:${site.phone}`} className="btn btn-mod btn-w btn-large btn-round btn-hover-anim" style={{ margin: "0 6px 12px" }}>
                   <span>Call {site.phone.replace("+1-", "")}</span>
                 </a>
-                <Link href="#contact-form" className="btn btn-mod btn-border btn-border-w btn-large btn-round btn-hover-anim">
+                <Link href="#contact-form" className="btn btn-mod btn-border btn-border-w btn-large btn-round btn-hover-anim" style={{ margin: "0 6px 12px" }}>
                   <span>Free Estimate</span>
                 </Link>
               </div>

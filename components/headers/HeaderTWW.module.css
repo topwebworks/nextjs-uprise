@@ -12,42 +12,42 @@
   max-width: none !important;
   overflow: visible !important;
   text-decoration: none !important;
-  padding: 20px 0 8px;
+  padding: 4px 0;
   transition: padding 0.3s ease;
 }
 
-/* Logo container — sized for standard 3:1 wide/short SVG logos */
+/* Logo container — square for badge/circle logos */
 :global(.tww-logo-img-wrap) {
   position: relative;
   display: block;
   width: 180px;
-  height: 60px;
+  height: 180px;
   flex-shrink: 0;
   transition: width 0.3s ease, height 0.3s ease;
 }
 
 @media (max-width: 1280px) {
-  :global(.tww-logo-img-wrap) { width: 160px; height: 53px; }
+  :global(.tww-logo-img-wrap) { width: 155px; height: 155px; }
 }
 
 @media (max-width: 1024px) {
-  :global(.tww-logo-img-wrap) { width: 140px; height: 47px; }
+  :global(.tww-logo-img-wrap) { width: 110px; height: 110px; }
 }
 
 @media (max-width: 576px) {
-  :global(.tww-logo-img-wrap) { width: 120px; height: 40px; }
-  :global(.nav-logo-wrap .logo.tww-logo) { padding: 16px 0 8px !important; }
-  :global(.small-height .nav-logo-wrap .logo.tww-logo) { padding: 10px 0 6px !important; }
+  :global(.tww-logo-img-wrap) { width: 72px; height: 72px; }
+  :global(.nav-logo-wrap .logo.tww-logo) { padding: 10px 0 6px !important; }
+  :global(.small-height .nav-logo-wrap .logo.tww-logo) { padding: 8px 0 6px !important; }
 }
 
 /* Scrolled sticky state */
 :global(.small-height .nav-logo-wrap .logo.tww-logo) {
-  padding: 12px 0 !important;
+  padding: 4px 0 !important;
 }
 
 :global(.small-height .tww-logo-img-wrap) {
-  width: 140px;
-  height: 47px;
+  width: 80px;
+  height: 80px;
 }
 
 /*

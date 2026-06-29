@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+﻿import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
 import ImageBackground from "@/components/common/ImageBackground";
 import HeaderTWW from "@/components/headers/HeaderTWW";
@@ -29,7 +29,7 @@ export default function DemoRemovalPage() {
               <section
                 className="page-section bg-dark-1 bg-dark-alpha-70 light-content amw-fixed-bg-host amw-service-hero"
               >
-                <ImageBackground src="/assets/tww-assets/tww-images/Arizona_house_installing_artificial_202605131833.jpeg" alt="" fixed priority />
+                <ImageBackground src="/assets/tww-assets/tww-images/Arizona_house_installing_beautiful_202605131833.jpeg" alt="" fixed priority />
                 <div className="container position-relative pt-50">
                   <div className="text-center">
                     <div className="row">
@@ -96,7 +96,7 @@ export default function DemoRemovalPage() {
               <section
                 className="page-section amw-fixed-bg-host amw-service-cta-section"
               >
-                <ImageBackground src="/assets/tww-assets/tww-images/Arizona_house_installing_artificial_202605131833_2.jpeg" alt="" fixed />
+                <ImageBackground src="/assets/tww-assets/tww-images/Arizona_house_installing_pool_backyard_202605131833.jpeg" alt="" fixed />
                 <div className="container position-relative">
                   <div className="row">
                     <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center">

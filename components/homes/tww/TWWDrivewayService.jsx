@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import site from "@/data/site";
 import AnimatedText from "@/components/common/AnimatedText";
 import Image from "next/image";
@@ -19,7 +19,7 @@ const services = [
       "A driveway addition ties into what's already there — existing concrete, existing pavers, existing grade, and existing drainage. Getting the assessment right determines whether the addition looks and performs like it was always part of the property.",
     cards: [
       {
-        image: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833_3.jpeg",
+        image: "/assets/tww-assets/tww-images/Arizona_suburb_home_patio_pool_202605131833_2.jpeg",
         heading: "Existing Conditions",
         body: "Before Client scopes a driveway addition, we assess the existing surface condition, thickness, reinforcement, and the drainage pattern of the current driveway. Existing concrete that's cracked through, heaving at joints, or undermined at the edges isn't a good candidate for a clean tie-in — that needs to be disclosed upfront so the client can decide whether to add onto a failing surface or address the root problem first. Tying a new pour to a deteriorating slab creates two failing surfaces instead of one.",
         bullets: ["Existing surface condition, thickness, and reinforcement assessed before quote", "Drainage pattern of current driveway confirmed — addition must drain with it, not against it", "Failing or undermined existing surface flagged before new work is scoped"],
@@ -41,7 +41,7 @@ const services = [
       "The most common driveway addition in the Service Area — adding width to an existing single-car drive to accommodate two cars, or widening a two-car drive to give real clearance on both sides. The tie-in to the existing edge is where this job succeeds or fails.",
     cards: [
       {
-        image: "/assets/tww-assets/tww-images/architectual_photo_of_arizona_house_202605131833.jpeg",
+        image: "/assets/tww-assets/tww-images/architectual_photo_of_arizona_house_202605131833_2.jpeg",
         heading: "The Tie-In",
         body: "Where the new concrete or pavers meet the existing driveway edge is the most critical detail on a widening job. For concrete-to-concrete tie-ins, Client saw-cuts the existing edge straight, drills and epoxy-sets rebar dowels into the existing slab at 18-inch centers, and pours the addition against a clean, prepared face. Doweled tie-ins prevent differential vertical movement at the joint — one slab can't rise or drop relative to the other, which eliminates trip edges and keeps the surface flush over time. Undoweled butt joints have nothing holding elevation and crack apart under Arizona thermal cycling within a few summers.",
         bullets: ["Existing edge saw-cut straight before new pour", "Rebar dowels epoxy-set at 18\" centers — prevents differential movement at the joint", "Undoweled butt joints lose elevation and crack apart under AZ thermal cycling — we don't pour them"],

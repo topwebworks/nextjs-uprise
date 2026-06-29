@@ -4,17 +4,13 @@
 import site from "@/data/site";
 
 const TARGET_CITIES = [
-  "Client City, AZ",
-  "Client City, AZ",
-  "Mesa, AZ",
   "Gilbert, AZ",
+  "Mesa, AZ",
+  "Tempe, AZ",
   "Chandler, AZ",
-  "Apache Junction, AZ",
-  "Maricopa, AZ",
-  "Florence, AZ",
-  "Gold Canyon, AZ",
-  "Higley, AZ",
-  "Coolidge, AZ",
+  "Ahwatukee, AZ",
+  "Paradise Valley, AZ",
+  "Scottsdale, AZ",
 ];
 
 const SERVICES = [
@@ -22,54 +18,36 @@ const SERVICES = [
     "@type": "Offer",
     itemOffered: {
       "@type": "Service",
-      name: "Paver Installation",
+      name: "Pool Repair & Maintenance",
       description:
-        "Travertine, concrete pavers, flagstone, and porcelain installation for driveways, patios, pool decks, and walkways.",
+        "Leak detection, plaster and structural crack repair, bond beam repair, and plumbing repair for residential pools.",
     },
   },
   {
     "@type": "Offer",
     itemOffered: {
       "@type": "Service",
-      name: "Concrete Work",
+      name: "Pool Resurfacing & Renovation",
       description:
-        "Concrete driveways, patio slabs, RV pads, driveway extensions, repairs, and full replacement.",
+        "Pebble, plaster, and aggregate resurfacing, plus waterline tile, coping, and feature additions during renovation.",
     },
   },
   {
     "@type": "Offer",
     itemOffered: {
       "@type": "Service",
-      name: "Artificial Turf & Natural Sod Installation",
+      name: "Deck Repair & Resurfacing",
       description:
-        "Artificial turf and natural sod installation for backyards, front yards, pet runs, and play areas.",
+        "Pool deck crack repair, travertine and paver deck replacement, and pool-rated resurfacing overlays.",
     },
   },
   {
     "@type": "Offer",
     itemOffered: {
       "@type": "Service",
-      name: "Decorative Rock Installation",
+      name: "Equipment Install & Repair",
       description:
-        "Decorative rock, decomposed granite, and accent boulder installation with proper site prep, barrier, and edging.",
-    },
-  },
-  {
-    "@type": "Offer",
-    itemOffered: {
-      "@type": "Service",
-      name: "Demolition & Removal",
-      description:
-        "Concrete, paver, turf, and rock demolition and removal with full haul and disposal.",
-    },
-  },
-  {
-    "@type": "Offer",
-    itemOffered: {
-      "@type": "Service",
-      name: "Driveway Additions",
-      description:
-        "Driveway widening, parking pads, RV pads, and turnarounds for residential properties.",
+        "Pump, filter, and heater diagnosis, repair, and replacement, plus equipment pad rebuilds and replumbing.",
     },
   },
 ];
@@ -86,9 +64,9 @@ export default function JsonLd() {
     email: site.email,
     priceRange: "$$",
     image: `${site.url}${site.ogImage}`,
-    logo: `${site.url}/assets/images/og-default.jpg`,
+    logo: `${site.url}${site.logoLight}`,
     description:
-      "Client Business Name is a licensed hardscape contractor serving Client City, Client City, Mesa, Gilbert, Chandler, Apache Junction, and the Service Area. Specializing in paver installation, concrete work, artificial turf, decorative rock, demolition & removal, and driveway additions.",
+      "Uprise Pools is a licensed pool repair and resurfacing contractor serving Gilbert, Mesa, Tempe, Chandler, Ahwatukee, Paradise Valley, Scottsdale, and Queen Creek, AZ. Specializing in pool repair, resurfacing & renovation, deck repair & resurfacing, and equipment install & repair.",
     address: {
       "@type": "PostalAddress",
       addressLocality: site.address.city,
@@ -98,10 +76,10 @@ export default function JsonLd() {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 33.1914,
-      longitude: -111.5390,
+      latitude: 33.3528,
+      longitude: -111.7890,
     },
-    hasMap: "https://www.google.com/maps/search/Client+Hardscape+Solutions+San+Tan+Valley+AZ",
+    hasMap: "https://www.google.com/maps/search/Uprise+Pools+Gilbert+AZ",
     areaServed: TARGET_CITIES.map((city) => ({
       "@type": "City",
       name: city,
@@ -111,26 +89,25 @@ export default function JsonLd() {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         opens: "07:00",
-        closes: "18:00",
+        closes: "17:00",
       },
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Saturday"],
         opens: "08:00",
-        closes: "15:00",
+        closes: "16:00",
       },
     ],
     makesOffer: SERVICES,
     sameAs: Object.values(site.social).filter(Boolean),
-    slogan: "Licensed hardscape contractor for the Service Area.",
+    slogan: site.tagline,
     knowsAbout: [
-      "paver installation",
-      "concrete work",
-      "artificial turf installation",
-      "decorative rock installation",
-      "hardscape contractor",
-      "driveway additions",
-      "demolition and removal",
+      "pool repair",
+      "pool resurfacing",
+      "pool renovation",
+      "pool deck repair",
+      "pool equipment repair",
+      "pool leak detection",
     ],
   };
 

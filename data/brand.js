@@ -26,29 +26,23 @@
 const brand = {
 
   // ─── Colors ─────────────────────────────────────────────────────────────
-  primary:       "#c277ff",   // → --color-primary-1, --bs-primary, --bs-link-color
-  primaryHover:  "#a855f7",   // → --color-primary-1-a, --bs-link-hover-color (darken ~15%)
-  primaryLight:  "#f5e8ff",   // → --color-primary-light-1  (lighten ~85%)
-  primaryLightB: "#e9d0fe",   // → --color-primary-light-1-a (lighten ~70%)
-  primaryRgb:    "194, 119, 255", // → --bs-primary-rgb (keep in sync with primary)
-  primaryDark:       "#7c3aed",   // → --brand-dark      (saturated deep purple)
-  primaryVeryDark:   "#4c1d95",   // → --brand-very-dark (near-black purple)
+  primary:       "#f18553",   // → --color-primary-1, --bs-primary, --bs-link-color
+  primaryHover:  "#d4622c",   // → --color-primary-1-a, --bs-link-hover-color (darken ~15%)
+  primaryLight:  "#fdeee5",   // → --color-primary-light-1  (lighten ~85%)
+  primaryLightB: "#fbdacb",   // → --color-primary-light-1-a (lighten ~70%)
+  primaryRgb:    "241, 133, 83", // → --bs-primary-rgb (keep in sync with primary)
+  primaryDark:       "#c05020",   // → --brand-dark      (saturated deep orange)
+  primaryVeryDark:   "#7c2d00",   // → --brand-very-dark (near-black orange)
 
-  // Overlay base: take primary hue, crush lightness to ~5–8%.
-  // This ensures dark overlays are always dark regardless of how light the primary is.
-  // e.g. yellow #ffcc00 → overlayBase "#1a1400"
-  //      orange #ff6600 → overlayBase "#1a0800"
-  //      purple #c277ff → overlayBase "#0e0518"
-  //      blue   #4567ed → overlayBase "#04071a"
   // Overlay base: near-black version of primary hue.
   // Update hex AND overlayBaseRgb together — both are used in brand.css.
-  overlayBase:       "#0e0518",        // → --brand-overlay-base, hex
-  overlayBaseRgb:    "14, 5, 24",      // → --overlay-dark-rgb (RGB triplet of overlayBase)
+  overlayBase:       "#1a0800",        // → --brand-overlay-base, hex
+  overlayBaseRgb:    "26, 8, 0",       // → --overlay-dark-rgb (RGB triplet of overlayBase)
 
   // ─── Overlays ────────────────────────────────────────────────────────────
   // All dark overlays derive from overlayBaseRgb — change that one value to retint all.
-  overlayLight:      "rgba(245, 232, 255, 0.55)",  // → --overlay-light
-  overlayLightSoft:  "rgba(245, 232, 255, 0.30)",  // → --overlay-light-soft
+  overlayLight:      "rgba(253, 238, 229, 0.55)",  // → --overlay-light
+  overlayLightSoft:  "rgba(253, 238, 229, 0.30)",  // → --overlay-light-soft
   // overlayDark and overlayDarkSoft are generated from --overlay-dark-rgb in brand.css
   // Only update overlayBase/overlayBaseRgb above — no need to touch these manually.
 
@@ -59,8 +53,8 @@ const brand = {
   // Each item can be a plain string or an object { text, href } for a linked message.
   topBar: [
     "Free estimates — no obligation",
-    { text: "Serving Phoenix & surrounding areas", href: "/#contact-form" },
-    "Call us today: (000) 000-0000",
+    { text: "Serving Gilbert, Mesa, Tempe, Chandler, Ahwatukee, Paradise Valley & Scottsdale", href: "/#contact-form" },
+    "5-Star Rated on Yelp & Google",
   ],
 
   // Top bar colors — defaults to brand primary bg with white text.
@@ -76,8 +70,8 @@ const brand = {
   borderRadiusLarge: "30px",  // → --border-radius-large (pill buttons, tags)
 
   // ─── Fonts ───────────────────────────────────────────────────────────────
-  fontHeading: "DM Sans",     // → --font-alt (headings / labels)
-  fontBody:    "DM Sans",     // → --font-global, --bs-body-font-family
+  fontHeading: "Poppins",     // → --font-alt (headings / labels)
+  fontBody:    "Poppins",     // → --font-global, --bs-body-font-family
 
 };
 

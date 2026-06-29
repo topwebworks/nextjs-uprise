@@ -9,7 +9,7 @@ import site from "@/data/site";
 import settings from "@/data/settings";
 import "@/components/headers/HeaderTWW.module.css";
 
-const SERVICE_LINKS = settings.services.map((s) => ({ href: s.href, text: s.label }));
+const SERVICE_LINKS = settings.services.map((s) => ({ href: s.href, text: s.navLabel || s.label }));
 
 function MobileMenu({ onClose }) {
   const pathname = usePathname();
@@ -75,6 +75,11 @@ function MobileMenu({ onClose }) {
         <a href={site.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="tww-mobile-social">
           <i className="fab fa-instagram" aria-hidden="true" />
         </a>
+        {site.social.yelp && (
+          <a href={site.social.yelp} target="_blank" rel="noopener noreferrer" aria-label="Yelp" className="tww-mobile-social">
+            <i className="fab fa-yelp" aria-hidden="true" />
+          </a>
+        )}
         <a href={`tel:${site.phone}`} className="tww-mobile-phone">
           {site.phone.replace("+1-", "")}
         </a>
@@ -112,7 +117,7 @@ export default function HeaderTWW() {
                 src={settings.logos.light}
                 alt={site.name}
                 fill
-                sizes="180px"
+                sizes="190px"
                 className="tww-logo-dark"
                 style={{ objectFit: "contain", objectPosition: "left center" }}
               />
@@ -121,7 +126,7 @@ export default function HeaderTWW() {
                 alt=""
                 aria-hidden="true"
                 fill
-                sizes="180px"
+                sizes="190px"
                 className="tww-logo-light"
                 style={{ objectFit: "contain", objectPosition: "left center" }}
               />
@@ -172,6 +177,13 @@ export default function HeaderTWW() {
                 <i className="fab fa-instagram" aria-hidden="true" />
               </a>
             </li>
+            {site.social.yelp && (
+              <li>
+                <a href={site.social.yelp} target="_blank" rel="noopener noreferrer" aria-label="Yelp" className="nav-social-link">
+                  <i className="fab fa-yelp" aria-hidden="true" />
+                </a>
+              </li>
+            )}
             <li>
               <a href={`tel:${site.phone}`} className="opacity-1 no-hover">
                 <span className="link-hover-anim underline" data-link-animate="y">

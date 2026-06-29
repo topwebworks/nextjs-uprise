@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+﻿import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
 import ImageBackground from "@/components/common/ImageBackground";
 import HeaderTWW from "@/components/headers/HeaderTWW";
@@ -30,7 +30,7 @@ export default function TermsOfServicePage() {
                 }}
               >
                 <>
-                  <ImageBackground src="/assets/tww-assets/tww-images/Arizona_house_in_suburb_frontyard_202605131833.jpeg" alt="" fixed priority />
+                  <ImageBackground src="/assets/tww-assets/tww-images/Architectural_photo_of_Arizona_suburb_202605131833.jpeg" alt="" fixed priority />
                   <div className="container position-relative pt-0">
                     <div className="text-center">
                       <div className="row">

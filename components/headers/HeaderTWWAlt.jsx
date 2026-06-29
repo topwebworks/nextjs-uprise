@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { toggleMobileMenu, closeMobileMenu } from "@/utils/toggleMobileMenu";
 import Image from "next/image";
 import Link from "next/link";
@@ -36,7 +36,7 @@ function MobileMenu({ onClose }) {
       <div className="tww-mobile-menu-header">
         <Link href="/" className="tww-mobile-logo" onClick={onClose}>
           <Image
-            src="/assets/tww-assets/tww-images/main-logo.png"
+            src="/assets/tww-assets/client-images/MainLogo+-+Uprise-1920w.webp"
             alt=""
             width={36}
             height={32}
@@ -126,7 +126,7 @@ export default function HeaderTWWAlt() {
         <div className="nav-logo-wrap local-scroll">
           <Link href="/" className="logo tww-logo">
             <span className="tww-logo-badge-wrap" role="img" aria-label={`${site.name} logo`}>
-              <Image src="/assets/tww-assets/tww-images/main-logo.png" alt="" fill sizes="90px" className="tww-logo-badge-image" />
+              <Image src="/assets/tww-assets/client-images/MainLogo+-+Uprise-1920w.webp" alt="" fill sizes="90px" className="tww-logo-badge-image" />
             </span>
             <span className="tww-logo-text">
               <span className="tww-logo-primary">{site.name}</span>

@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+﻿import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
 import ImageBackground from "@/components/common/ImageBackground";
 import HeaderTWW from "@/components/headers/HeaderTWW";
@@ -78,7 +78,7 @@ export default function MainAboutPage1() {
               >
                 <>
                   <>
-                    <ImageBackground src="/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833_2.jpeg" alt="" fixed priority />
+                    <ImageBackground src="/assets/tww-assets/client-images/luxury-custom-inground-swimming-pool-800h.webp" alt="" fixed priority />
                     <div className="container position-relative pt-50">
                       {/* Section Content */}
                       <div className="text-center">

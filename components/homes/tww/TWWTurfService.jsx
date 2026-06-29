@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import site from "@/data/site";
 import AnimatedText from "@/components/common/AnimatedText";
 import Image from "next/image";
@@ -19,13 +19,13 @@ const services = [
       "The sub-base determines whether turf drains properly, stays level, and holds its edge over time. It's the same decision on every job — artificial or natural — and it has to be right before anything goes down.",
     cards: [
       {
-        image: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833.jpeg",
+        image: "/assets/tww-assets/client-images/after4-800h.webp",
         heading: "Sub-Base Prep",
         body: "Client excavates 4–6 inches, kills the existing weed layer, removes vegetation and roots, and installs a compacted decomposed granite base. DG drains well, compacts firm, and gives turf a stable, level surface to sit on. We compact in lifts so the base doesn't settle unevenly after install. On artificial turf jobs, a weed barrier is stapled over the DG before the turf goes down to prevent breakthrough and block organic material from working up into the infill.",
         bullets: ["4–6\" excavation depth on every turf job", "DG compacted in lifts for uniform density across the full area", "Weed barrier stapled over DG before artificial turf install"],
       },
       {
-        image: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833_2.jpeg",
+        image: "/assets/tww-assets/client-images/luxury-custom-inground-swimming-pool-800h.webp",
         heading: "Drainage",
         body: "Turf fails at the drainage layer before it fails anywhere else. Client grades the sub-base so water moves away from structures on every job — artificial or sod. On artificial installs, we specify flow-through perforated backing and confirm drainage direction before the first roll goes down. In yards with poor natural drainage or caliche hardpan close to the surface, we address the grade and add perforated pipe as needed — not after the fact.",
         bullets: ["Sub-base graded away from structures on every install — artificial and sod", "Flow-through perforated backing specified on artificial turf jobs", "Perforated pipe added where caliche or poor native drainage requires it"],
@@ -41,7 +41,7 @@ const services = [
       "The install method and the specification together determine how long artificial turf lasts in Arizona. Face weight, blade profile, and UV rating are the specs that matter — and they only perform if the sub-base underneath them is built correctly.",
     cards: [
       {
-        image: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833_3.jpeg",
+        image: "/assets/tww-assets/tww-images/Arizona_suburb_home_patio_pool_202605131833_2.jpeg",
         heading: "Specs That Actually Matter",
         body: "Face weight — measured in ounces per square foot — is the primary indicator of material quality. Below 40 oz is builder-grade that mats quickly regardless of how well it's installed. Quality residential turf runs 40–60 oz. Pile height affects the look: shorter pile (1–1.5\") reads manicured and suits front yards and putting greens; taller pile (1.5–2\") looks lusher for backyards and play areas. Blade shape determines recovery — C-shaped, M-shaped, and W-shaped profiles spring back under foot traffic far longer than flat blades. A high-spec product on a poorly compacted base still fails early. The installation has to support the material.",
         bullets: ["Face weight 40–60 oz for quality residential installs — below 40 oz mats fast", "C, M & W blade profiles recover under traffic; flat blades don't", "Spec and installation together determine lifespan — neither works without the other"],
@@ -63,7 +63,7 @@ const services = [
       "Infill keeps artificial turf blades upright, adds cushion, and determines how the surface performs for the specific use — pets, kids, or general residential. The wrong infill for the application is a problem that can't be corrected after install without pulling the turf.",
     cards: [
       {
-        image: "/assets/tww-assets/tww-images/architectual_photo_of_arizona_house_202605131833.jpeg",
+        image: "/assets/tww-assets/tww-images/architectual_photo_of_arizona_house_202605131833_2.jpeg",
         heading: "Infill Types",
         body: "Silica sand is the standard — affordable, stable, and correct for most residential installs. For pet runs, zeolite is the right call: it neutralizes odors through ion exchange, trapping ammonium compounds before they off-gas. For play areas where children spend extended time on the surface, Client recommends TPE (thermoplastic elastomer) or cork over crumb rubber — crumb rubber retains more heat and has documented concerns around microplastics in contact areas. We explain what's in each option and let you make the call.",
         bullets: ["Silica sand: standard, stable, correct for most residential installs", "Zeolite: odor-neutralizing ion exchange — right choice for pet runs", "TPE or cork for play areas — lower heat retention, no microplastic concerns"],

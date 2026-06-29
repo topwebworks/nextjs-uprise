@@ -222,13 +222,14 @@
   white-space: nowrap;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 840px) {
   :global(.amw-modal-ctas) {
     flex-direction: column;
   }
   :global(.amw-modal-cta-primary),
   :global(.amw-modal-cta-secondary) {
     flex: 1 1 auto;
+    width: 100%;
     text-align: center;
   }
 }

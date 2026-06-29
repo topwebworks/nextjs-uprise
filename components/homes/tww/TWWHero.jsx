@@ -11,9 +11,9 @@ const IMAGE_DURATION = 4000;
 const VIDEO_DURATION = 9000;
 
 const slides = [
-  { type: "image", src: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833_3.jpeg" },
+  { type: "image", src: "/assets/tww-assets/client-images/pexels-photo-261410-1920w.webp" },
   { type: "image", src: "/assets/tww-assets/tww-images/Architectural_photo_of_Arizona_suburb_202605131833.jpeg" },
-  { type: "image", src: "/assets/tww-assets/tww-images/architectual_photo_of_arizona_house_202605131833.jpeg" },
+  { type: "image", src: "/assets/tww-assets/client-images/luxury-custom-inground-swimming-pool-800h.webp" },
   { type: "image", src: "/assets/tww-assets/tww-images/architectual_photo_of_arizona_house_202605131833_2.jpeg" },
   { type: "video" },
 ];
@@ -149,36 +149,34 @@ export default function TWWHero() {
               <div className="col-md-10 offset-md-1 mb-20 mb-sm-0 text-center">
 
                 <h2 className="hs-title-11 mb-20 mb-xs-10 wow fadeInUp" data-wow-duration="1.2s">
-                  <span className="city">Client City</span>
-                  <span className="d-sm-none" aria-hidden="true">, </span>
-                  <span className="d-none d-sm-inline" aria-hidden="true"> &middot; </span>
-                  <span className="city">Client City</span>
-                  <span className="d-sm-none" aria-hidden="true">, </span>
-                  <span className="d-none d-sm-inline" aria-hidden="true"> &middot; </span>
                   <span className="city">Gilbert</span>
                   <span className="d-sm-none" aria-hidden="true">, </span>
                   <span className="d-none d-sm-inline" aria-hidden="true"> &middot; </span>
                   <span className="city">Mesa</span>
                   <span className="d-sm-none" aria-hidden="true">, </span>
                   <span className="d-none d-sm-inline" aria-hidden="true"> &middot; </span>
+                  <span className="city">Tempe</span>
+                  <span className="d-sm-none" aria-hidden="true">, </span>
+                  <span className="d-none d-sm-inline" aria-hidden="true"> &middot; </span>
                   <span className="city">Chandler</span>
                   <span className="d-sm-none" aria-hidden="true">, </span>
                   <span className="d-none d-sm-inline" aria-hidden="true"> &middot; </span>
-                  <span className="city">Apache Junction</span>
+                  <span className="city">Ahwatukee</span>
+                  <span className="d-sm-none" aria-hidden="true">, </span>
+                  <span className="d-none d-sm-inline" aria-hidden="true"> &middot; </span>
+                  <span className="city">Scottsdale</span>
                 </h2>
 
                 <h1 className="hs-title-12 mb-30 mb-sm-20">
-                  <AnimatedText text="Your property, built right." />
+                  <AnimatedText text="Your pool, fixed and finished right." />
                 </h1>
 
                 <div className="amw-service-pills wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.2s">
                   {[
-                    { label: "Pool Builds", id: "pool-builds" },
-                    { label: "Pool Remodels", id: "pool-remodels" },
-                    { label: "Hardscape", id: "hardscape" },
-                    { label: "Turf", id: "turf" },
-                    { label: "Landscaping", id: "landscaping" },
-                    { label: "Fire & Kitchen", id: "outdoor-kitchens" },
+                    { label: "Pool Repair", id: "pool-repair" },
+                    { label: "Resurfacing", id: "pool-resurfacing" },
+                    { label: "Deck Repair", id: "deck-repair" },
+                    { label: "Equipment", id: "equipment" },
                   ].map(({ label, id }) => (
                     <a
                       key={id}

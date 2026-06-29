@@ -27,9 +27,7 @@ export default function Footer1() {
               </span>
             </Link>
 
-            <p className="tww-footer-tagline">
-              {site.name} — {site.address.city}, {site.address.state}.
-            </p>
+            <p className="tww-footer-tagline">{site.tagline}</p>
 
             <div className="tww-footer-contact">
               <a href={`tel:${site.phone}`} className="tww-footer-contact-link">
@@ -53,6 +51,11 @@ export default function Footer1() {
               {site.social.instagram && (
                 <a href={site.social.instagram} target="_blank" rel="noopener nofollow" aria-label="Instagram" className="tww-footer-social-link">
                   <i className="fab fa-instagram" aria-hidden="true" />
+                </a>
+              )}
+              {site.social.yelp && (
+                <a href={site.social.yelp} target="_blank" rel="noopener nofollow" aria-label="Yelp" className="tww-footer-social-link">
+                  <i className="fab fa-yelp" aria-hidden="true" />
                 </a>
               )}
             </div>

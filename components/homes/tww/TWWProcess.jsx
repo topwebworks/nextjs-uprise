@@ -6,12 +6,12 @@ const steps = [
     description: "We visit your property, assess the space, and listen to what you want. No pressure — just an honest conversation about what's possible and what it takes to get there.",
   },
   {
-    title: "Design & Written Scope",
-    description: "We develop the design, walk you through material selections, and provide a written scope of work with clear pricing before anything is signed. No surprises later.",
+    title: "Written Scope & Material Selection",
+    description: "We document exactly what needs to be done, walk you through material options, and provide clear pricing before anything is signed. No scope creep, no surprise charges.",
   },
   {
-    title: "Construction & Communication",
-    description: "Our crew handles every phase in-house — excavation, plumbing, structure, decking, tile, and finish. You'll hear from us throughout, not just at the beginning and end.",
+    title: "The Work & Communication",
+    description: "Shane is on-site at every critical phase — from prep and repairs through finish and equipment. You'll hear from us throughout, not just at the beginning and end.",
   },
   {
     title: "Final Walkthrough & Handoff",

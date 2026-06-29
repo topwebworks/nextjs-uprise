@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+﻿import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
 import ImageBackground from "@/components/common/ImageBackground";
 import HeaderTWW from "@/components/headers/HeaderTWW";
@@ -30,7 +30,7 @@ export default function CookiePolicyPage() {
                 }}
               >
                 <>
-                  <ImageBackground src="/assets/tww-assets/tww-images/Arizona_house_installing_artificial_202605131833.jpeg" alt="" fixed priority />
+                  <ImageBackground src="/assets/tww-assets/tww-images/Arizona_house_installing_beautiful_202605131833.jpeg" alt="" fixed priority />
                   <div className="container position-relative pt-0">
                     <div className="text-center">
                       <div className="row">

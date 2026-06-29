@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import site from "@/data/site";
 import AnimatedText from "@/components/common/AnimatedText";
 import Image from "next/image";
@@ -41,13 +41,13 @@ const services = [
       "Flat, level, properly pitched patio slabs that drain away from the structure. Built with control joints to manage Arizona heat cycles the right way.",
     cards: [
       {
-        image: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833.jpeg",
+        image: "/assets/tww-assets/client-images/after4-800h.webp",
         heading: "Patio Slabs",
         body: "Patio slabs need to be flat enough for furniture and pitched enough to drain. Client grades before forming so water sheets away from the house — not toward it. We pour covered patios, open patios, pool surrounds, and outdoor kitchen pads. Every slab gets control joints to prevent random cracking.",
         bullets: ["Surface pitched for drainage away from structure", "Control joints prevent random cracking", "Covered patios, pool surrounds & outdoor kitchen pads"],
       },
       {
-        image: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833_2.jpeg",
+        image: "/assets/tww-assets/client-images/luxury-custom-inground-swimming-pool-800h.webp",
         heading: "Finish Options",
         body: "The finish affects how the patio looks and performs. Broom finish is clean and slip-resistant — the right call for most patios. Exposed aggregate adds texture and visual character. Salt finish gives a non-slip pitted surface that handles Arizona heat well. We walk you through the options based on your exterior and how the space will be used.",
         bullets: ["Broom finish: clean, slip-resistant standard", "Exposed aggregate: texture & visual character", "Salt finish: non-slip, performs well in Arizona heat"],
@@ -63,7 +63,7 @@ const services = [
       "Heavy-duty concrete pads for RVs, boats, trailers, and extra vehicles. Built thick, with the right reinforcement for the load.",
     cards: [
       {
-        image: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833_3.jpeg",
+        image: "/assets/tww-assets/tww-images/Arizona_suburb_home_patio_pool_202605131833_2.jpeg",
         heading: "RV & Parking Pads",
         body: "RV pads and heavy vehicle parking require more than a standard residential pour. Client sizes the slab correctly, adds reinforcement where the load calls for it, and pitches for drainage. We match the finish to your existing driveway or hardscape so the addition looks like it was always there.",
         bullets: ["Reinforcement sized for vehicle load", "Pitched for drainage — no standing water", "Finish matched to existing hardscape"],
@@ -85,7 +85,7 @@ const services = [
       "What determines whether concrete lasts 5 years or 30 is what happens before the truck arrives. Grade, compaction, and forms — this is where the job is won or lost.",
     cards: [
       {
-        image: "/assets/tww-assets/tww-images/architectual_photo_of_arizona_house_202605131833.jpeg",
+        image: "/assets/tww-assets/tww-images/architectual_photo_of_arizona_house_202605131833_2.jpeg",
         heading: "Subgrade & Compaction",
         body: "Concrete cracks when the ground underneath it moves. Client excavates to the correct depth, removes organic material, and compacts the subgrade before any forming begins. In areas with expansive clay soil — common in the Service Area — we take extra steps to ensure the base is stable before the pour.",
         bullets: ["Excavation to correct depth", "Organic material removed before compaction", "Extra steps for Service Area clay soil conditions"],

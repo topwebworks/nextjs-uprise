@@ -4,12 +4,13 @@ import { createPortal } from "react-dom";
 import "@/components/homes/tww/TWWContact.module.css";
 
 const cities = [
-  { name: "City 1",  q: "City+1,+ST" },
-  { name: "City 2",  q: "City+2,+ST" },
-  { name: "Gilbert",         q: "Gilbert,+AZ" },
-  { name: "Mesa",            q: "Mesa,+AZ" },
-  { name: "Chandler",        q: "Chandler,+AZ" },
-  { name: "Scottsdale",      q: "Scottsdale,+AZ" },
+  { name: "Gilbert",        q: "Gilbert,+AZ" },
+  { name: "Mesa",           q: "Mesa,+AZ" },
+  { name: "Tempe",          q: "Tempe,+AZ" },
+  { name: "Chandler",       q: "Chandler,+AZ" },
+  { name: "Ahwatukee",      q: "Ahwatukee,+AZ" },
+  { name: "Paradise Valley", q: "Paradise+Valley,+AZ" },
+  { name: "Scottsdale",     q: "Scottsdale,+AZ" },
 ];
 
 export default function TWWServiceAreaLinks() {

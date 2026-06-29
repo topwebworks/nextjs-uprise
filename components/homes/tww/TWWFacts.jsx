@@ -4,17 +4,17 @@ const trustSignals = [
   {
     icon: "mi-document-check",
     label: "AZ Licensed & Insured",
-    sub: "License #000000",
+    sub: "ROC 340539 & ROC 347588",
   },
   {
     icon: "mi-users",
     label: "Owner-Operated",
-    sub: "You work directly with the builders",
+    sub: "You work directly with Shane — the owner",
   },
   {
     icon: "mi-location",
-    label: "Client City Based",
-    sub: "Serving the entire Service Area",
+    label: "Gilbert-Based",
+    sub: "Serving the East Valley",
   },
   {
     icon: null,

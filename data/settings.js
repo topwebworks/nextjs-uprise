@@ -13,48 +13,44 @@ const settings = {
 
   // ─── Company Info ───────────────────────────────────────────────────────────
   company: {
-    name:       "Client Business Name",
-    legalName:  "Client Business Name LLC",
-    phone:      "+1-000-000-0000",
-    email:      "hello@example.com",
-    url:        "https://www.example.com",
+    name:       "Uprise Pools",
+    legalName:  "Uprise Pools LLC",
+    phone:      "+1-480-579-9301",
+    email:      "uprisepools@gmail.com",
+    url:        "https://www.uprisepools.com",
 
     address: {
-      street:  "",
-      city:    "City",
-      state:   "ST",
-      zip:     "00000",
+      street:  "250 W Juniper Ave #95",
+      city:    "Gilbert",
+      state:   "AZ",
+      zip:     "85233",
       country: "US",
     },
 
-    // License/registration numbers — shown in footer, legal pages, schema
-    // Set to [] if not applicable
-    licenseNumbers: [],
+    licenseNumbers: ["ROC 340539", "ROC 347588"],
 
-    // Schema.org business type — see https://schema.org/LocalBusiness subtypes
-    // Common: "HomeAndConstructionBusiness", "ProfessionalService", "HealthAndBeautyBusiness"
-    businessType: "LocalBusiness",
+    businessType: "HomeAndConstructionBusiness",
   },
 
-  // ─── Industry ───────────────────────────────────────────────────────────────
-  // Used for content defaults and meta copy hints — not used in code logic,
-  // just a reference for when you're writing page copy.
-  // Examples: "pools", "hvac", "landscaping", "roofing", "dental", "legal"
-  industry: "general",
+  tagline: "Better Than Before.",
+
+  industry: "pools",
 
   // ─── Services ───────────────────────────────────────────────────────────────
   // Drives: header nav dropdown, footer services column, sitemap
+  // ponytail: placeholder services — update with actual Uprise Pools offerings
   services: [
-    { slug: "service-1", label: "Service 1", href: "/services/service-1" },
-    { slug: "service-2", label: "Service 2", href: "/services/service-2" },
-    { slug: "service-3", label: "Service 3", href: "/services/service-3" },
+    { slug: "pool-repair-maintenance",    navLabel: "Pool Repair",   label: "Pool Repair & Maintenance",    href: "/services/pool-repair-maintenance"    },
+    { slug: "pool-resurfacing-renovation",navLabel: "Resurfacing",   label: "Pool Resurfacing & Renovation",href: "/services/pool-resurfacing-renovation"},
+    { slug: "deck-repair-resurfacing",    navLabel: "Deck Repair",   label: "Deck Repair & Resurfacing",    href: "/services/deck-repair-resurfacing"    },
+    { slug: "equipment-install-repair",   navLabel: "Equipment",     label: "Equipment Install & Repair",   href: "/services/equipment-install-repair"   },
   ],
 
   // ─── Social Media ───────────────────────────────────────────────────────────
   social: {
     facebook:  "",
-    instagram: "",
-    yelp:      "",
+    instagram: "https://www.instagram.com/uprisepoolsaz",
+    yelp:      "https://www.yelp.com/biz/uprise-pools-gilbert",
     linkedin:  "",
     twitter:   "",
     youtube:   "",
@@ -65,8 +61,8 @@ const settings = {
   // logoLight: shown on scrolled/white nav (sticky state) — use standard/dark version
   // Both should be SVG at roughly 3:1 aspect ratio (e.g. 219×73)
   logos: {
-    dark:  "/assets/tww-assets/client-images/cywire-logo-rev.svg",
-    light: "/assets/tww-assets/client-images/cywire-logo.svg",
+    dark:  "/assets/tww-assets/client-images/MainLogo+-+Uprise-1920w.webp",
+    light: "/assets/tww-assets/client-images/MainLogo+-+Uprise-1920w.webp",
   },
 
   // ─── SEO / OG ───────────────────────────────────────────────────────────────

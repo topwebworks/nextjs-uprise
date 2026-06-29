@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+﻿import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
 import HeaderTWW from "@/components/headers/HeaderTWW";
 import ImageBackground from "@/components/common/ImageBackground";
@@ -36,7 +36,7 @@ const serviceCards = [
     title: "Artificial Turf & Natural Sod",
     description:
       "Artificial turf and natural sod installation for backyards, front yards, pet runs, and play areas. Sub-base prep, drainage, and the right product for your yard and how you use it.",
-    image: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833.jpeg",
+    image: "/assets/tww-assets/client-images/after4-800h.webp",
     href: "/services/artificial-turf",
   },
   {
@@ -44,7 +44,7 @@ const serviceCards = [
     title: "Decorative Rock",
     description:
       "River rock, Apache brown, gold quartzite, DG, and accent boulders installed right — site prep, commercial barrier, metal edging, and proper drainage. Not just material dropped on the ground.",
-    image: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833_2.jpeg",
+    image: "/assets/tww-assets/client-images/luxury-custom-inground-swimming-pool-800h.webp",
     href: "/services/decorative-rock",
   },
   {
@@ -52,7 +52,7 @@ const serviceCards = [
     title: "Demolition & Removal",
     description:
       "Concrete, pavers, turf, and rock removal with full haul and disposal. Site assessment, defined scope, proper removal method — sub-grade left clean and ready for the next install.",
-    image: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833_3.jpeg",
+    image: "/assets/tww-assets/tww-images/Arizona_suburb_home_patio_pool_202605131833_2.jpeg",
     href: "/services/demolition",
   },
   {
@@ -77,7 +77,7 @@ export default function ServicesPage() {
           <section
             className="page-section bg-dark-1 bg-dark-alpha-70 light-content amw-fixed-bg-host amw-service-hero"
           >
-            <ImageBackground src="/assets/tww-assets/tww-images/architectual_photo_of_arizona_house_202605131833.jpeg" alt="" fixed priority />
+            <ImageBackground src="/assets/tww-assets/tww-images/architectual_photo_of_arizona_house_202605131833_2.jpeg" alt="" fixed priority />
             <div className="container position-relative pt-50">
               <div className="text-center">
                 <div className="row">

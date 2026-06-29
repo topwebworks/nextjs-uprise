@@ -44,8 +44,8 @@
 }
 
 :global(.amw-city-link:not(:last-child)::after) {
-  content: " ·";
-  margin-right: 5px;
+  content: ",";
+  margin-right: 4px;
   text-decoration: none;
   display: inline-block;
 }
@@ -143,8 +143,8 @@
 :global(.amw-form-review-g) {
   font-size: 16px;
   font-weight: 700;
-  color: #4285f4;
-  font-family: 'Google Sans', Arial, sans-serif;
+  color: #d32323;
+  font-family: inherit;
 }
 
 /* Next steps */

@@ -39,8 +39,7 @@ MEMORY.md
 docs/northstar.md
 docs/build-plan.md
 
-# client images — never commit real client photos to the template repo
-public/assets/tww-assets/client-images/
+# client images from other projects — not for this repo
 public/assets/tww-assets/amw-images/
 public/assets/tww-assets/quest-images/
 public/assets/tww-assets/tww-images/8726*

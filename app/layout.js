@@ -23,7 +23,7 @@ export const metadata = {
     default: site.name,
     template: `%s | ${site.name}`,
   },
-  description: "Licensed hardscape contractor serving the surrounding service area. Pavers, concrete, artificial turf, decorative rock, demolition & driveway work. License #000000. Free estimates.",
+  description: "Uprise Pools — licensed pool remodeling, repair, resurfacing & deck services in Gilbert, Mesa, Chandler & the East Valley. ROC#340539. Free estimates.",
   metadataBase: new URL(site.url),
 };
 

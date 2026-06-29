@@ -7,9 +7,9 @@ import TWWProtoBanner from "@/components/common/TWWProtoBanner";
 import { buildMetadata } from "@/utils/seo";
 
 export const metadata = buildMetadata({
-  title: "Client Business Name | City, ST",
+  title: "Uprise Pools | Pool Repair & Resurfacing — Gilbert, AZ",
   description:
-    "Client Business Name provides professional services in City, ST. Contact us today for a free estimate.",
+    "Uprise Pools specializes in pool repair, resurfacing, deck restoration, and equipment repair across Gilbert, Mesa, Tempe, Chandler, and Scottsdale, AZ. Owner-operated. Free estimates.",
   path: "/",
 });
 
@@ -28,7 +28,7 @@ export default function Home() {
           <TWWHome />
         </main>
         <Footer1 />
-        <TWWProtoBanner />
+        {/* <TWWProtoBanner /> */}
       </div>
     </div>
   );

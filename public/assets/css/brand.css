@@ -8,41 +8,31 @@
   --topbar-height: 4px; /* updated at runtime by TopBar.jsx via ResizeObserver */
   /* ── Primary brand color ──────────────────────────────────────────────── */
   /* Replace all values together. Derive from brand.js primary hex.         */
-  --color-primary-1:         #c277ff;  /* main brand color */
-  --color-primary-1-a:       #a855f7;  /* hover / active — darken ~15% */
-  --color-primary-light-1:   #f5e8ff;  /* light tint bg — lighten ~85% */
-  --color-primary-light-1-a: #e9d0fe;  /* deeper light tint — lighten ~70% */
+  --color-primary-1:         #f18553;  /* main brand color */
+  --color-primary-1-a:       #d4622c;  /* hover / active — darken ~15% */
+  --color-primary-light-1:   #fdeee5;  /* light tint bg — lighten ~85% */
+  --color-primary-light-1-a: #fbdacb;  /* deeper light tint — lighten ~70% */
 
   /* ── Brand dark / very dark ───────────────────────────────────────────── */
-  /* Use for dark section backgrounds, hero overlays, footer.               */
-  --brand-dark:       #7c3aed;  /* dark — saturated deep purple */
-  --brand-very-dark:  #4c1d95;  /* very dark — near-black purple */
-  /* Overlay base: hue of primary crushed toward black (10–15% lightness).  */
-  /* For yellow/orange clients this must be manually set to a near-black     */
-  /* version of the primary hue — e.g. orange #ff6600 → overlay #1a0800     */
-  --brand-overlay-base: #0e0518; /* near-black purple — safe dark for overlays */
+  --brand-dark:       #c05020;  /* dark — saturated deep orange */
+  --brand-very-dark:  #7c2d00;  /* very dark — near-black orange */
+  --brand-overlay-base: #1a0800; /* near-black orange — safe dark for overlays */
 
   /* ── Overlays — alpha layers over images ─────────────────────────────── */
-  /* Light overlay: washes image toward white — use on light-bg hero sections */
-  --overlay-light:      rgba(245, 232, 255, 0.55);  /* primary-light at 55% */
-  --overlay-light-soft: rgba(245, 232, 255, 0.30);  /* subtle tint, 30% */
-  /* Dark overlay: derived from --brand-overlay-base.                        */
-  /* To update opacity only, change the alpha below.                         */
-  /* To update color, change --brand-overlay-base hex AND the RGB triplet.   */
-  /* RGB of --brand-overlay-base #0e0518 = 14, 5, 24                        */
-  --overlay-dark-rgb:   14, 5, 24;
+  --overlay-light:      rgba(253, 238, 229, 0.55);
+  --overlay-light-soft: rgba(253, 238, 229, 0.30);
+  /* RGB of --brand-overlay-base #1a0800 = 26, 8, 0                         */
+  --overlay-dark-rgb:   26, 8, 0;
   --overlay-dark:       rgba(var(--overlay-dark-rgb), 0.50);
   --overlay-dark-soft:  rgba(var(--overlay-dark-rgb), 0.45);
 
   /* ── Neutralize rainbow gradient → single brand color ────────────────── */
-  /* The demo theme uses a 4-stop gradient across primary-1 through primary-4. */
-  /* Setting all stops to the same color collapses it to a flat brand color.   */
-  --color-primary-2: #c277ff;
-  --color-primary-3: #c277ff;
-  --color-primary-4: #c277ff;
-  --color-primary-light-2: #f5e8ff;
-  --color-primary-light-3: #f5e8ff;
-  --color-primary-light-4: #f5e8ff;
+  --color-primary-2: #f18553;
+  --color-primary-3: #f18553;
+  --color-primary-4: #f18553;
+  --color-primary-light-2: #fdeee5;
+  --color-primary-light-3: #fdeee5;
+  --color-primary-light-4: #fdeee5;
 
   /* ── Shape / radius ──────────────────────────────────────────────────── */
   /* Controls cards, inputs, and most component corners sitewide.          */
@@ -53,15 +43,15 @@
 
   /* ── Fonts ────────────────────────────────────────────────────────────── */
   /* Must match the next/font/google import in app/layout.js               */
-  --font-global: "DM Sans", sans-serif;
-  --font-alt:    "DM Sans", sans-serif;
+  --font-global: "Poppins", sans-serif;
+  --font-alt:    "Poppins", sans-serif;
 
   /* ── Bootstrap overrides ──────────────────────────────────────────────── */
   /* Bootstrap uses --bs-primary-rgb for rgba() calls — keep in sync.      */
-  --bs-primary:          #c277ff;
-  --bs-primary-rgb:      194, 119, 255;
-  --bs-link-color:       #c277ff;
-  --bs-link-hover-color: #a855f7;
+  --bs-primary:          #f18553;
+  --bs-primary-rgb:      241, 133, 83;
+  --bs-link-color:       #f18553;
+  --bs-link-hover-color: #d4622c;
   --bs-body-font-family: var(--font-global);
 }
 
@@ -186,12 +176,45 @@ body {
   color: #fff !important;
 }
 
+/* ─── Logo overflow — badge logo extends below nav bar ──────────────────── */
+.main-nav,
+.nav-logo-wrap,
+.full-wrapper {
+  overflow: visible !important;
+}
+
+/* ─── Sticky logo — shift image up to show more of badge ─────────────────── */
+.main-nav.small-height .tww-logo-img-wrap img {
+  top: -16px !important;
+}
+
+
 /* ─── Sticky header — topbar aware ──────────────────────────────────────── */
 /* .stick-fixed is applied by the theme when the nav becomes sticky.        */
 /* We push it down by --topbar-height so it never covers the top bar.       */
 
 .stick-fixed {
   top: var(--topbar-height, 4px) !important;
+}
+
+/* ─── Hero height — compensate for body padding-top from topbar ─────────── */
+/* body gets padding-top: topbar-height, which pushes the 100vh hero below  */
+/* the viewport. Subtract that offset so the scroll arrow stays in view.    */
+#home.home-section {
+  height: calc(100vh - var(--topbar-height, 4px));
+}
+
+/* ─── Services dropdown width ────────────────────────────────────────────── */
+.tww-services-dropdown .mn-sub {
+  min-width: 240px !important;
+}
+
+/* ─── Nav above topbar — logo badge overlaps orange bar ─────────────────── */
+/* TopBar z-index is 1040. Nav must be higher so the badge circle appears   */
+/* in front of the bar. Nav and TopBar don't overlap (nav starts below bar) */
+/* so this doesn't affect TopBar clickability.                               */
+.main-nav {
+  z-index: 1041 !important;
 }
 
 /* ─── Cookie consent — brand accent ──────────────────────────────────────── */
@@ -341,4 +364,10 @@ body {
 
 .amw-gallery-caption {
   background: linear-gradient(transparent, rgba(var(--overlay-dark-rgb), 0.75)) !important;
+}
+
+/* ─── Prevent full-width buttons on mobile in flex CTA rows ─────────────── */
+.tww-built-to-last-section .btn-mod,
+.tww-final-cta .btn-mod {
+  width: auto !important;
 }

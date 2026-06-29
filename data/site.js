@@ -17,6 +17,7 @@ const site = {
   social:       settings.social,
   logoDark:     settings.logos.dark,
   logoLight:    settings.logos.light,
+  tagline:      settings.tagline,
 };
 
 export default site;

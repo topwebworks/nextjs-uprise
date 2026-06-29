@@ -61,6 +61,7 @@
 
 :global(.quest-eyebrow-item) {
   white-space: nowrap;
+  letter-spacing: 0.25em;
 }
 
 :global(.quest-eyebrow-dot) {

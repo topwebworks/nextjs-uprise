@@ -10,17 +10,9 @@ import { getAllPosts } from "@/lib/blog";
 // DYNAMIC routes: blog posts are fetched and appended when the blog is active.
 // To enable: uncomment the blog section below and wire to your data source.
 
+// ponytail: homepage prototype only — expand when client approves and full site is built
 const staticRoutes = [
-  { url: "/",                            priority: 1.0,  changeFrequency: "weekly"  },
-  { url: "/about",                       priority: 0.8,  changeFrequency: "monthly" },
-  { url: "/support",                     priority: 0.8,  changeFrequency: "monthly" },
-  { url: "/services",                    priority: 0.9,  changeFrequency: "monthly" },
-  { url: "/services/paver-installation", priority: 0.85, changeFrequency: "monthly" },
-  { url: "/services/concrete",      priority: 0.85, changeFrequency: "monthly" },
-  { url: "/services/artificial-turf",    priority: 0.85, changeFrequency: "monthly" },
-  { url: "/services/decorative-rock",    priority: 0.85, changeFrequency: "monthly" },
-  { url: "/services/demolition",       priority: 0.8,  changeFrequency: "monthly" },
-  { url: "/services/driveways", priority: 0.8,  changeFrequency: "monthly" },
+  { url: "/", priority: 1.0, changeFrequency: "weekly" },
 ];
 
 export default async function sitemap() {

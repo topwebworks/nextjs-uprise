@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import AnimatedText from "@/components/common/AnimatedText";
 import "@/components/homes/tww-alt/TWWService.module.css";
@@ -29,7 +29,7 @@ const services = [
     title: "Landscaping & Outdoor Living",
     description:
       "Complete outdoor transformations — from curated desert plant palettes and irrigation to outdoor kitchens, pergolas, and lighting. We design environments that perform as well in the Arizona summer as they look year-round.",
-    image: "/assets/tww-assets/tww-images/Arizona_house_backyard_landscaping_202605131833.jpeg",
+    image: "/assets/tww-assets/tww-images/Arizona_suburb_home_patio_pool_202605131833.jpeg",
   },
 ];
 

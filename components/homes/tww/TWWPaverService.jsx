@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import site from "@/data/site";
 import AnimatedText from "@/components/common/AnimatedText";
 import Image from "next/image";
@@ -19,13 +19,13 @@ const services = [
       "The most popular paver in Arizona — stays cooler underfoot than concrete or brick in direct sun, ideal for pool decks and patios where bare feet are the norm.",
     cards: [
       {
-        image: "/assets/tww-assets/tww-images/Arizona_house_backyard_landscaping_202605131833.jpeg",
+        image: "/assets/tww-assets/tww-images/Arizona_suburb_home_patio_pool_202605131833.jpeg",
         heading: "Why Travertine?",
         body: "Travertine stays significantly cooler underfoot than concrete or brick in direct sun, making it the right call for pool decks and patios. Its natural variation means no two jobs look identical, and the tumbled-edge finish hides chips and wear over time. We set travertine on a compacted base with proper pitch so surface water sheets off cleanly.",
         bullets: ["Stays cool underfoot in Arizona sun", "Natural variation — no two jobs identical", "Tumbled-edge finish hides wear over time"],
       },
       {
-        image: "/assets/tww-assets/tww-images/Arizona_house_in_suburb_frontyard_202605131833.jpeg",
+        image: "/assets/tww-assets/tww-images/Architectural_photo_of_Arizona_suburb_202605131833.jpeg",
         heading: "Installation & Base Prep",
         body: "Every travertine job starts with excavation, a compacted aggregate base, proper surface pitch, edge restraints, and joint sand. The base is what makes travertine last — skip that step and even the best stone will shift and crack within a few years.",
         bullets: ["Compacted aggregate base — 4 to 6 inches", "Surface pitched 1/8\" per foot minimum", "Polymeric sand joints for weed suppression"],
@@ -41,13 +41,13 @@ const services = [
       "Widest range of colors, shapes, and sizes. Denser than poured concrete, easier to repair, and the best all-around performer for driveways, patios, and front yards.",
     cards: [
       {
-        image: "/assets/tww-assets/tww-images/Arizona_house_installing_artificial_202605131833.jpeg",
+        image: "/assets/tww-assets/tww-images/Arizona_house_installing_beautiful_202605131833.jpeg",
         heading: "Why Concrete Pavers?",
         body: "Concrete pavers are manufactured to tight tolerances so cuts stay clean and patterns stay consistent. High-quality concrete pavers are denser than poured concrete, resist cracking better, and individual units can be pulled and reset if a utility line ever needs access. Best all-around performer for most AZ projects.",
         bullets: ["Denser than poured concrete — resists cracking", "Widest color, shape & size range available", "Individual units removable for utility access"],
       },
       {
-        image: "/assets/tww-assets/tww-images/Arizona_house_installing_artificial_202605131833_2.jpeg",
+        image: "/assets/tww-assets/tww-images/Arizona_house_installing_pool_backyard_202605131833.jpeg",
         heading: "Driveways & Patios",
         body: "For large driveways, extended patios, and front yards, concrete pavers deliver long-term performance at a price point that makes sense. They hold up to vehicle traffic, heavy foot traffic, and Arizona heat cycles without the cracking risk of a monolithic slab.",
         bullets: ["Handles vehicle & heavy foot traffic", "No cracking risk from heat expansion", "Cleaner repair — replace units, not slabs"],
@@ -85,13 +85,13 @@ const services = [
       "Large-format, non-porous, virtually zero maintenance. The fastest-growing paver choice for upscale Arizona patios — worth the higher install cost for the right project.",
     cards: [
       {
-        image: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833.jpeg",
+        image: "/assets/tww-assets/client-images/after4-800h.webp",
         heading: "Why Porcelain?",
         body: "Large-format porcelain is non-porous — it won't stain from pool chemicals, sunscreen, or hard water, and it needs virtually zero maintenance. The large slab format creates a clean, modern look that's hard to achieve with traditional pavers. For the right project, it's worth every dollar.",
         bullets: ["Non-porous — won't stain from pool chemicals", "Virtually zero maintenance after install", "Large-format modern look, clean lines"],
       },
       {
-        image: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833_2.jpeg",
+        image: "/assets/tww-assets/client-images/luxury-custom-inground-swimming-pool-800h.webp",
         heading: "What to Know Before Choosing Porcelain",
         body: "Porcelain requires a very flat, stable base and more precise cuts than natural stone or concrete pavers. Install cost runs higher — but the long-term maintenance savings make it the right call for pool surrounds, covered patios, and outdoor kitchens where appearance matters most.",
         bullets: ["Requires flat, stable base — no shortcuts", "More precise cuts than concrete or stone", "Best for pool surrounds & covered patios"],
@@ -107,7 +107,7 @@ const services = [
       "What separates a 5-year paver job from a 30-year one. The base, pitch, and drainage are decided before the first stone is set — and they can't be fixed afterward.",
     cards: [
       {
-        image: "/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833_3.jpeg",
+        image: "/assets/tww-assets/tww-images/Arizona_suburb_home_patio_pool_202605131833_2.jpeg",
         heading: "The Foundation of Every Job",
         body: "Every installation needs a compacted aggregate base — typically 4 to 6 inches of crushed rock — and a 1-inch bedding layer of coarse sand or decomposed granite. We check grade before we compact and confirm drainage direction before the first paver goes down. No shortcuts here.",
         bullets: ["4–6\" compacted crushed rock base", "1\" bedding layer: coarse sand or DG", "Grade checked before compaction begins"],
@@ -129,7 +129,7 @@ const services = [
       "Pattern affects structural performance, not just aesthetics. The right choice for a driveway is different from the right choice for a patio — and we map it out before a single paver is set.",
     cards: [
       {
-        image: "/assets/tww-assets/tww-images/architectual_photo_of_arizona_house_202605131833.jpeg",
+        image: "/assets/tww-assets/tww-images/architectual_photo_of_arizona_house_202605131833_2.jpeg",
         heading: "Choosing the Right Pattern",
         body: "A 45-degree herringbone is the strongest pattern for driveways — the interlocking cuts distribute load across more joints and resist shifting under vehicle weight. Running bond works well for walkways and makes narrow spaces feel longer. Basketweave and pinwheel suit patios where the visual detail is the point.",
         bullets: ["Herringbone: strongest for driveways", "Running bond: walkways & narrow spaces", "Basketweave & pinwheel: patio focal points"],

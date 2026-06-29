@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+﻿import { notFound } from "next/navigation";
 import Footer1 from "@/components/footers/Footer1";
 import ImageBackground from "@/components/common/ImageBackground";
 import HeaderTWW from "@/components/headers/HeaderTWW";
@@ -96,7 +96,7 @@ export default function DecorativeRockPage() {
               <section
                 className="page-section amw-fixed-bg-host amw-service-cta-section"
               >
-                <ImageBackground src="/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833.jpeg" alt="" fixed />
+                <ImageBackground src="/assets/tww-assets/client-images/after4-800h.webp" alt="" fixed />
                 <div className="container position-relative">
                   <div className="row">
                     <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center">
@@ -115,7 +115,7 @@ export default function DecorativeRockPage() {
                       data-wow-offset={0}
                     >
                       <ImageBackground
-                        src="/assets/tww-assets/tww-images/Patio_pavers_installed_in_backyard_202605131833_2.jpeg"
+                        src="/assets/tww-assets/client-images/luxury-custom-inground-swimming-pool-800h.webp"
                         alt="Decorative rock installation - Client Business Name"
                         sizes="(max-width: 991px) 100vw, 66vw"
                         objectPosition="center 52%"

@@ -3,15 +3,14 @@ import Link from "next/link";
 import "@/components/homes/tww/TWWAbout.module.css";
 
 const claims = [
-  "AZ Licensed & Insured — License #000000",
-  "Structural pool shell engineered for Arizona soil & heat expansion",
-  "Authorized Gator finish installer — one of Arizona's premier pool finish brands",
-  "Seamless beveled coping corners — the detail that separates craft from standard",
-  "Proper pitch, drainage & base prep on every hardscape install",
-  "Equipment sized correctly — pumps, heaters & filtration matched to your pool",
+  "AZ ROC Licensed & Insured — ROC 340539 & ROC 347588",
+  "Pool repair, resurfacing & renovation specialists",
+  "Deck repair & resurfacing — structural integrity & aesthetics",
+  "Equipment diagnosis, install & repair — pumps, heaters & filtration",
   "Clean jobsites, clear communication & no surprise charges",
   "Written scope of work provided before any project begins",
-  "Serving Client City, Gilbert, Mesa, Chandler & the Service Area",
+  "One team accountable from first call to final inspection",
+  "Serving Gilbert, Mesa, Tempe, Chandler, Ahwatukee, Paradise Valley & Scottsdale",
 ];
 
 export default function TWWAbout() {
@@ -23,10 +22,10 @@ export default function TWWAbout() {
           data-wow-delay="0.1s"
           data-wow-duration="1.2s"
           role="img"
-          aria-label="Client Business Name custom pool build — City, ST"
+          aria-label="Uprise Pools — East Valley, AZ"
         >
           <Image
-            src="/assets/tww-assets/tww-images/architectual_photo_of_arizona_house_202605131833_2.jpeg"
+            src="/assets/tww-assets/client-images/1.jpg"
             alt=""
             fill
             sizes="(max-width: 991px) 100vw, 50vw"
@@ -38,10 +37,10 @@ export default function TWWAbout() {
             Who We Are
           </h2>
           <p className="text-gray mb-28 wow fadeInUp amw-about-intro" data-wow-delay="0.3s">
-            Client Business Name is owner-operated, which means the person overseeing your build has an eye for the details most contractors never notice — the way a beveled coping corner meets, whether the waterline tile runs true, how the finish looks in different light. That standard of care doesn&apos;t come from a checklist. It comes from someone who genuinely cares about the craft.
+            Uprise Pools was founded in 2022 by Shane — a hands-on pool professional who got tired of watching homeowners get overcharged for misdiagnosed repairs. We built the company around one principle: diagnose it correctly, fix it right the first time, and be straight with you about what it takes to get there.
           </p>
           <p className="text-gray mb-28 wow fadeInUp amw-about-intro" data-wow-delay="0.35s">
-            Based in Client City, we handle every phase in-house — design, excavation, plumbing, structural shell, decking, tile, coping, and finish. One team, one standard, accountable from permit to first swim.
+            Whether your pool needs a crack repaired, a full resurface, new tile, a deck replacement, or equipment rebuilt — every job gets the same level of attention. Shane is on-site at every stage, assessing the problem, scoping the work, and verifying the result before we call it done.
           </p>
           <ul className="amw-about-claims wow fadeInUp" data-wow-delay="0.4s">
             {claims.map((c, i) => (
