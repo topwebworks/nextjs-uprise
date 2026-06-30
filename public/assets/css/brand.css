@@ -198,10 +198,22 @@ body {
 }
 
 /* ─── Hero height — compensate for body padding-top from topbar ─────────── */
-/* body gets padding-top: topbar-height, which pushes the 100vh hero below  */
-/* the viewport. Subtract that offset so the scroll arrow stays in view.    */
+/* Keep the hero shell and its inner viewport-height content on the same math. */
 #home.home-section {
-  height: calc(100vh - var(--topbar-height, 4px));
+  --hero-available-height: calc(100vh - var(--topbar-height, 4px));
+  height: var(--hero-available-height);
+  min-height: var(--hero-available-height);
+  overflow: hidden;
+}
+
+@supports (height: 100svh) {
+  #home.home-section {
+    --hero-available-height: calc(100svh - var(--topbar-height, 4px));
+  }
+}
+
+#home.home-section .min-height-100vh {
+  min-height: var(--hero-available-height) !important;
 }
 
 /* ─── Services dropdown width ────────────────────────────────────────────── */
