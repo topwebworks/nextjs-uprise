@@ -99,7 +99,7 @@ function ProjectModal({ project, onClose }) {
             </ul>
             <div className="qp-lightbox-cta">
               <Link href="/#contact-form" className="qp-lightbox-btn" onClick={onClose}>
-                Start Your Project
+                Request a Free Estimate
               </Link>
             </div>
           </div>

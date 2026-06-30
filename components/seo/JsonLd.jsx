@@ -66,7 +66,7 @@ export default function JsonLd() {
     image: `${site.url}${site.ogImage}`,
     logo: `${site.url}${site.logoLight}`,
     description:
-      "Uprise Pools is a licensed pool repair and resurfacing contractor serving Gilbert, Mesa, Tempe, Chandler, Ahwatukee, Paradise Valley, Scottsdale, and Queen Creek, AZ. Specializing in pool repair, resurfacing & renovation, deck repair & resurfacing, and equipment install & repair.",
+      "Uprise Pools is a licensed pool repair and resurfacing contractor serving Gilbert, Mesa, Tempe, Chandler, Ahwatukee, Paradise Valley, and Scottsdale, AZ. Specializing in pool repair, resurfacing & renovation, deck repair & resurfacing, and equipment install & repair.",
     address: {
       "@type": "PostalAddress",
       addressLocality: site.address.city,

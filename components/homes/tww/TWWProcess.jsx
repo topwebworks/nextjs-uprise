@@ -3,7 +3,7 @@ import "@/components/homes/tww/TWWProcess.module.css";
 const steps = [
   {
     title: "Free On-Site Consultation",
-    description: "We visit your property, assess the space, and listen to what you want. No pressure — just an honest conversation about what's possible and what it takes to get there.",
+    description: "We come to your pool, assess the condition, and listen to what's going on. No pressure — just an honest conversation about what's wrong and what it takes to fix it right.",
   },
   {
     title: "Written Scope & Material Selection",
@@ -15,7 +15,7 @@ const steps = [
   },
   {
     title: "Final Walkthrough & Handoff",
-    description: "We walk the completed project with you detail by detail. We don't call it done until you're fully satisfied — and we make sure you know how to care for everything we built.",
+    description: "We walk the completed project with you detail by detail. We don't call it done until you're fully satisfied — and we make sure you know how to care for everything we repaired or installed.",
   },
 ];
 

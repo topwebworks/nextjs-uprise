@@ -23,7 +23,7 @@ export const metadata = {
     default: site.name,
     template: `%s | ${site.name}`,
   },
-  description: "Uprise Pools — licensed pool remodeling, repair, resurfacing & deck services in Gilbert, Mesa, Chandler & the East Valley. ROC#340539. Free estimates.",
+  description: "Uprise Pools — licensed pool repair, resurfacing & deck restoration in Gilbert, Mesa, Chandler & the East Valley. ROC 340539 & ROC 347588. Free estimates.",
   metadataBase: new URL(site.url),
 };
 

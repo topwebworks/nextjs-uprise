@@ -45,7 +45,7 @@ function MobileMenu({ onClose }) {
       </div>
 
       <nav className="tww-mobile-nav">
-        <Link href="/about" className={`tww-mobile-nav-link${pathname === "/about" ? " active" : ""}`} onClick={onClose}>About</Link>
+        <Link href="/#about" className="tww-mobile-nav-link" onClick={onClose}>About</Link>
 
         <div className="tww-mobile-nav-item">
           <button
@@ -164,7 +164,7 @@ export default function HeaderTWW() {
                 ))}
               </ul>
             </li>
-            <li><Link href="/about" className={pathname === "/about" ? "active" : ""} onClick={closeMobileMenu}>About</Link></li>
+            <li><Link href="/#about" onClick={closeMobileMenu}>About</Link></li>
             <li>
               <Link href="/#contact-form" onClick={closeMobileMenu} className="tww-nav-cta">
                 Free Estimate

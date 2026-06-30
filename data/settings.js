@@ -38,12 +38,11 @@ const settings = {
 
   // ─── Services ───────────────────────────────────────────────────────────────
   // Drives: header nav dropdown, footer services column, sitemap
-  // ponytail: placeholder services — update with actual Uprise Pools offerings
   services: [
-    { slug: "pool-repair-maintenance",    navLabel: "Pool Repair",   label: "Pool Repair & Maintenance",    href: "/services/pool-repair-maintenance"    },
-    { slug: "pool-resurfacing-renovation",navLabel: "Resurfacing",   label: "Pool Resurfacing & Renovation",href: "/services/pool-resurfacing-renovation"},
-    { slug: "deck-repair-resurfacing",    navLabel: "Deck Repair",   label: "Deck Repair & Resurfacing",    href: "/services/deck-repair-resurfacing"    },
-    { slug: "equipment-install-repair",   navLabel: "Equipment",     label: "Equipment Install & Repair",   href: "/services/equipment-install-repair"   },
+    { slug: "pool-repair-maintenance",    navLabel: "Pool Repair",   label: "Pool Repair & Maintenance",    href: "/#service-pool-repair"       },
+    { slug: "pool-resurfacing-renovation",navLabel: "Resurfacing",   label: "Pool Resurfacing & Renovation",href: "/#service-pool-resurfacing"  },
+    { slug: "deck-repair-resurfacing",    navLabel: "Deck Repair",   label: "Deck Repair & Resurfacing",    href: "/#service-deck-repair"       },
+    { slug: "equipment-install-repair",   navLabel: "Equipment",     label: "Equipment Install & Repair",   href: "/#service-equipment"         },
   ],
 
   // ─── Social Media ───────────────────────────────────────────────────────────

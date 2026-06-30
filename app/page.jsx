@@ -7,7 +7,7 @@ import TWWProtoBanner from "@/components/common/TWWProtoBanner";
 import { buildMetadata } from "@/utils/seo";
 
 export const metadata = buildMetadata({
-  title: "Uprise Pools | Pool Repair & Resurfacing — Gilbert, AZ",
+  title: "Pool Repair & Resurfacing — Gilbert, AZ",
   description:
     "Uprise Pools specializes in pool repair, resurfacing, deck restoration, and equipment repair across Gilbert, Mesa, Tempe, Chandler, and Scottsdale, AZ. Owner-operated. Free estimates.",
   path: "/",

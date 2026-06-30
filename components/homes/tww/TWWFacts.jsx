@@ -19,7 +19,7 @@ const trustSignals = [
   {
     icon: null,
     label: "5-Star Rated",
-    sub: "Exceptional work on every project",
+    sub: "Yelp & Google — verified reviews",
   },
 ];
 

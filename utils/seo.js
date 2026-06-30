@@ -15,7 +15,7 @@ export function buildMetadata({ title, description, path = "", image, tags, publ
     : `${site.url}${site.ogImage}`;
 
   const base = {
-    title: `${title} | ${site.name}`,
+    title: { absolute: `${title} | ${site.name}` },
     description,
     keywords: tags?.join(", "),
     alternates: { canonical: url },

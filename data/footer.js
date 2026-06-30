@@ -25,11 +25,9 @@ export const serviceLinks = settings.services.map((s) => ({
 }));
 
 export const navigationLinks = [
-  { href: "/services",       text: "Services" },
+  { href: "/#services",      text: "Services" },
   { href: "/#portfolio",     text: "Our Work" },
-  { href: "/about",          text: "About" },
-  { href: "/blog",           text: "Blog" },
-  { href: "/support",        text: "Contact Us" },
+  { href: "/#about",         text: "About" },
   { href: "/#contact-form",  text: "Free Estimate" },
 ];
 

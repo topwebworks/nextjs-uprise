@@ -75,7 +75,7 @@ export default function TWWHome() {
                 Precision. Craft. Built to last.
               </h2>
               <p className="section-descr mb-24 wow fadeInUp" data-wow-delay="0.1s">
-                Quality craftsmanship built to stand the test of time. Every project is handled with care from start to finish.
+                We diagnose correctly, repair completely, and stand behind our work. Whether it&rsquo;s a structural crack, a failing surface, or worn-out equipment — the job gets done once, and done right.
               </p>
               <div className="wow fadeInUp" data-wow-delay="0.2s">
                 <Link href="#contact-form" className="btn btn-mod btn-w btn-large btn-round btn-hover-anim" onClick={(e) => { e.preventDefault(); const el = document.getElementById("contact-form"); if (el) el.scrollIntoView({ behavior: "smooth" }); }}>
@@ -121,7 +121,7 @@ export default function TWWHome() {
                 <TWWProcess />
                 <div>
                   <Link href="#contact-form" className="btn btn-mod btn-large btn-round btn-hover-anim">
-                    <span>Start Your Project</span>
+                    <span>Get a Free Estimate</span>
                   </Link>
                 </div>
               </div>
