@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 10px 20px;
+  padding: 10px 44px;
   background: #111;
   border-top: 1px solid rgba(255, 107, 0, 0.4);
   font-size: 13px;
@@ -39,6 +39,24 @@
 .cta:hover {
   color: #ff8a33;
   text-decoration: underline;
+}
+
+.dismiss {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.6;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.dismiss:hover {
+  opacity: 1;
 }
 
 @media (max-width: 575px) {
