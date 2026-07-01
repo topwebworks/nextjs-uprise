@@ -28,7 +28,7 @@ export default function Home() {
           <TWWHome />
         </main>
         <Footer1 />
-        {/* <TWWProtoBanner /> */}
+        <TWWProtoBanner />
       </div>
     </div>
   );
